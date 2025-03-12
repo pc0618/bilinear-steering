@@ -165,10 +165,10 @@ def main():
     parser = argparse.ArgumentParser(description="Finetune TinyLlama to a bilinear variant")
     parser.add_argument("--wandb_project", type=str, default="tinyllama-bilinear", help="Weights & Biases project name")
     parser.add_argument("--wandb_entity", type=str, default=None, help="Weights & Biases entity name")
-    parser.add_argument("--batch_size", type=int, default=64, help="Batch size for training")
+    parser.add_argument("--batch_size", type=int, default=32, help="Batch size for training")
     parser.add_argument("--grad_accum", type=int, default=1, help="Gradient accumulation steps")
     parser.add_argument("--lr", type=float, default=3e-5, help="Learning rate")
-    parser.add_argument("--output_dir", type=str, default="./bilinear_tinyllama", help="Output directory")
+    parser.add_argument("--output_dir", type=str, default="./bilinear_tinyllama_chat", help="Output directory")
     parser.add_argument("--total_tokens", type=int, default=500_000_000, help="Total tokens for training")
     parser.add_argument("--seed", type=int, default=32, help="Random seed")
     parser.add_argument("--debug", action="store_true", help="Run in debug mode")
@@ -194,7 +194,7 @@ def main():
             entity=args.wandb_entity,
             name=run_name,
             config={
-                "model": "TinyLlama-1.1B",
+                "model": "TinyLlama_1.1B",
                 "total_tokens": args.total_tokens,
                 "interpolation_schedule": "linear_30_percent",
                 "batch_size": args.batch_size,
@@ -211,7 +211,8 @@ def main():
         logger.info("Loading TinyLlama model and tokenizer")
     start_time = time.time()
     
-    model_name = "TinyLlama/TinyLlama-1.1B-intermediate-step-1431k-3T"
+    #model_name = "TinyLlama/TinyLlama_v1.1"
+    model_name = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     
     # Load model on the current device

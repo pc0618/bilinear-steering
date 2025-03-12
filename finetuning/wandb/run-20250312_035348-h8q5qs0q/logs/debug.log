@@ -1,0 +1,23 @@
+2025-03-12 03:53:48,929 INFO    MainThread:1370 [wandb_setup.py:_flush():67] Current SDK version is 0.19.8
+2025-03-12 03:53:48,930 INFO    MainThread:1370 [wandb_setup.py:_flush():67] Configure stats pid to 1370
+2025-03-12 03:53:48,930 INFO    MainThread:1370 [wandb_setup.py:_flush():67] Loading settings from /root/.config/wandb/settings
+2025-03-12 03:53:48,931 INFO    MainThread:1370 [wandb_setup.py:_flush():67] Loading settings from /workspace/finetuning/wandb/settings
+2025-03-12 03:53:48,931 INFO    MainThread:1370 [wandb_setup.py:_flush():67] Loading settings from environment variables
+2025-03-12 03:53:48,932 INFO    MainThread:1370 [wandb_init.py:setup_run_log_directory():647] Logging user logs to /workspace/finetuning/wandb/run-20250312_035348-h8q5qs0q/logs/debug.log
+2025-03-12 03:53:48,932 INFO    MainThread:1370 [wandb_init.py:setup_run_log_directory():648] Logging internal logs to /workspace/finetuning/wandb/run-20250312_035348-h8q5qs0q/logs/debug-internal.log
+2025-03-12 03:53:48,933 INFO    MainThread:1370 [wandb_init.py:init():761] calling init triggers
+2025-03-12 03:53:48,933 INFO    MainThread:1370 [wandb_init.py:init():766] wandb.init called with sweep_config: {}
+config: {'model': 'TinyLlama/TinyLlama-1.1B-intermediate-step-1431k-3T', 'beta_decay_function': 'linear', 'beta_decay_point': 0.3, 'max_seq_length': 2048, 'batch_size': 4, 'gradient_accumulation_steps': 4, 'learning_rate': 5e-05, '_wandb': {}}
+2025-03-12 03:53:48,934 INFO    MainThread:1370 [wandb_init.py:init():784] starting backend
+2025-03-12 03:53:48,935 INFO    MainThread:1370 [wandb_init.py:init():788] sending inform_init request
+2025-03-12 03:53:48,947 INFO    MainThread:1370 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-03-12 03:53:48,948 INFO    MainThread:1370 [wandb_init.py:init():798] backend started and connected
+2025-03-12 03:53:48,952 INFO    MainThread:1370 [wandb_init.py:init():891] updated telemetry
+2025-03-12 03:53:48,959 INFO    MainThread:1370 [wandb_init.py:init():915] communicating run to backend with 90.0 second timeout
+2025-03-12 03:53:49,419 INFO    MainThread:1370 [wandb_init.py:init():990] starting run threads in backend
+2025-03-12 03:53:49,613 INFO    MainThread:1370 [wandb_run.py:_console_start():2375] atexit reg
+2025-03-12 03:53:49,614 INFO    MainThread:1370 [wandb_run.py:_redirect():2227] redirect: wrap_raw
+2025-03-12 03:53:49,615 INFO    MainThread:1370 [wandb_run.py:_redirect():2292] Wrapping output streams.
+2025-03-12 03:53:49,615 INFO    MainThread:1370 [wandb_run.py:_redirect():2315] Redirects installed.
+2025-03-12 03:53:49,618 INFO    MainThread:1370 [wandb_init.py:init():1032] run started, returning control to user process
+2025-03-12 03:55:32,725 INFO    MsgRouterThr:1370 [mailbox.py:close():129] Closing mailbox, abandoning 1 handles.

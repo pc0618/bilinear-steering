@@ -1,0 +1,1 @@
+{"_timestamp":1.7417548519256191e+09,"_runtime":43.491639486,"_step":0,"_wandb":{"runtime":43},"error":"'LlamaForCausalLM' object has no attribute 'transformer'"}

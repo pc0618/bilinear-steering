@@ -1,0 +1,1 @@
+{"_wandb":{"runtime":148},"_timestamp":1.7417586794789276e+09,"beta":1,"train/global_step":0,"_step":0,"error":"\"_amp_foreach_non_finite_check_and_unscale_cuda\" not implemented for 'BFloat16'","_runtime":148.239494294,"alpha":0,"updated_modules":22}

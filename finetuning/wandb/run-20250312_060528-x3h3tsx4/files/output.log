@@ -1,0 +1,177 @@
+2025-03-12 06:05:28,705 - __main__ - INFO - Loading TinyLlama model and tokenizer
+2025-03-12 06:05:29,579 - __main__ - INFO - Model loaded in 0.87 seconds
+2025-03-12 06:05:29,579 - __main__ - INFO - Model has 1,100,048,384 parameters
+2025-03-12 06:05:29,579 - __main__ - INFO - Loading FineWeb dataset
+Resolving data files: 100%|██████████████████████████████████████████████████████████████████████████████| 25868/25868 [00:02<00:00, 12801.06it/s]
+Resolving data files: 100%|█████████████████████████████████████████████████████████████████████████████| 25868/25868 [00:00<00:00, 849873.54it/s]
+2025-03-12 06:05:43,471 - __main__ - INFO - Training config: 500,000,000 tokens, 15,258 steps
+2025-03-12 06:05:43,471 - __main__ - INFO - First 4,577 steps (30%) will interpolate β to 0
+2025-03-12 06:05:43,471 - __main__ - INFO - Preparing sample batch for hook-based replacer
+2025-03-12 06:05:44,041 - __main__ - INFO - Running hook-based SiLU replacement
+2025-03-12 06:05:44,041 - hook_solution - INFO - Starting full SiLU replacement process...
+2025-03-12 06:05:44,041 - hook_solution - INFO - Collecting SiLU activations...
+2025-03-12 06:05:44,041 - hook_solution - INFO - Finding SiLU modules in the model...
+2025-03-12 06:05:44,042 - hook_solution - INFO - Found 22 SiLU modules in 0.00 seconds
+2025-03-12 06:05:44,042 - hook_solution - INFO - Sample paths: ['model.layers.0.mlp.act_fn', 'model.layers.1.mlp.act_fn', 'model.layers.2.mlp.act_fn']
+2025-03-12 06:05:53,722 - hook_solution - INFO - Collected 22 activations in 9.68 seconds
+2025-03-12 06:05:53,722 - hook_solution - INFO - Computing bilinear approximations...
+2025-03-12 06:05:53,722 - hook_solution - INFO - Module 0: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 06:05:57,708 - hook_solution - INFO - Module 0: Input shape torch.Size([10, 512, 5632]), feature dim 5632, solution shape torch.Size([5632, 5632])
+2025-03-12 06:05:57,709 - hook_solution - INFO - Module 1: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 06:06:02,215 - hook_solution - INFO - Module 1: Input shape torch.Size([10, 512, 5632]), feature dim 5632, solution shape torch.Size([5632, 5632])
+2025-03-12 06:06:02,216 - hook_solution - INFO - Module 2: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 06:06:07,101 - hook_solution - INFO - Module 2: Input shape torch.Size([10, 512, 5632]), feature dim 5632, solution shape torch.Size([5632, 5632])
+2025-03-12 06:06:07,101 - hook_solution - INFO - Module 3: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 06:06:11,799 - hook_solution - INFO - Module 4: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 06:06:16,611 - hook_solution - INFO - Module 5: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 06:06:21,502 - hook_solution - INFO - Module 6: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 06:06:26,215 - hook_solution - INFO - Module 7: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 06:06:30,903 - hook_solution - INFO - Module 8: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 06:06:35,688 - hook_solution - INFO - Module 9: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 06:06:40,411 - hook_solution - INFO - Module 10: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 06:06:45,311 - hook_solution - INFO - Module 11: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 06:06:50,114 - hook_solution - INFO - Module 12: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 06:06:55,617 - hook_solution - INFO - Module 13: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 06:07:00,692 - hook_solution - INFO - Module 14: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 06:07:05,412 - hook_solution - INFO - Module 15: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 06:07:09,794 - hook_solution - INFO - Module 16: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 06:07:15,019 - hook_solution - INFO - Module 17: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 06:07:21,199 - hook_solution - INFO - Module 18: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 06:07:27,588 - hook_solution - INFO - Module 19: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 06:07:33,797 - hook_solution - INFO - Module 20: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 06:07:39,616 - hook_solution - INFO - Module 21: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 06:07:45,508 - hook_solution - INFO - Computed 22 bilinear approximations in 111.79 seconds
+2025-03-12 06:07:45,509 - hook_solution - INFO - Replacing SiLU modules with InterpolatedSiLU...
+2025-03-12 06:07:45,509 - hook_solution - INFO - Finding SiLU modules in the model...
+2025-03-12 06:07:45,509 - hook_solution - INFO - Found 22 SiLU modules in 0.00 seconds
+2025-03-12 06:07:45,510 - hook_solution - INFO - Sample paths: ['model.layers.0.mlp.act_fn', 'model.layers.1.mlp.act_fn', 'model.layers.2.mlp.act_fn']
+2025-03-12 06:07:45,510 - hook_solution - INFO - Using input dimensions from forward pass: samples [5632, 5632, 5632]...
+2025-03-12 06:07:45,510 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.0.mlp.act_fn
+2025-03-12 06:07:45,673 - hook_solution - INFO - Replaced SiLU at model.layers.0.mlp.act_fn
+2025-03-12 06:07:45,673 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.1.mlp.act_fn
+2025-03-12 06:07:45,831 - hook_solution - INFO - Replaced SiLU at model.layers.1.mlp.act_fn
+2025-03-12 06:07:45,831 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.2.mlp.act_fn
+2025-03-12 06:07:45,989 - hook_solution - INFO - Replaced SiLU at model.layers.2.mlp.act_fn
+2025-03-12 06:07:45,989 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.3.mlp.act_fn
+2025-03-12 06:07:46,147 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.4.mlp.act_fn
+2025-03-12 06:07:46,305 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.5.mlp.act_fn
+2025-03-12 06:07:46,463 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.6.mlp.act_fn
+2025-03-12 06:07:46,622 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.7.mlp.act_fn
+2025-03-12 06:07:46,780 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.8.mlp.act_fn
+2025-03-12 06:07:46,938 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.9.mlp.act_fn
+2025-03-12 06:07:47,096 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.10.mlp.act_fn
+2025-03-12 06:07:47,254 - hook_solution - INFO - Replaced SiLU at model.layers.10.mlp.act_fn
+2025-03-12 06:07:47,254 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.11.mlp.act_fn
+2025-03-12 06:07:47,412 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.12.mlp.act_fn
+2025-03-12 06:07:47,570 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.13.mlp.act_fn
+2025-03-12 06:07:47,728 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.14.mlp.act_fn
+2025-03-12 06:07:47,886 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.15.mlp.act_fn
+2025-03-12 06:07:48,044 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.16.mlp.act_fn
+2025-03-12 06:07:48,202 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.17.mlp.act_fn
+2025-03-12 06:07:48,360 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.18.mlp.act_fn
+2025-03-12 06:07:48,518 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.19.mlp.act_fn
+2025-03-12 06:07:48,676 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.20.mlp.act_fn
+2025-03-12 06:07:48,834 - hook_solution - INFO - Replaced SiLU at model.layers.20.mlp.act_fn
+2025-03-12 06:07:48,835 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.21.mlp.act_fn
+2025-03-12 06:07:48,992 - hook_solution - INFO - Replaced 22 SiLU modules in 3.48 seconds
+2025-03-12 06:07:48,993 - hook_solution - INFO - Updating bilinear approximations in model...
+2025-03-12 06:07:49,001 - hook_solution - INFO - Updated module 0 (model.layers.0.mlp.act_fn)
+2025-03-12 06:07:49,006 - hook_solution - INFO - Updated module 1 (model.layers.1.mlp.act_fn)
+2025-03-12 06:07:49,011 - hook_solution - INFO - Updated module 2 (model.layers.2.mlp.act_fn)
+2025-03-12 06:07:49,276 - hook_solution - INFO - Updated module 10 (model.layers.10.mlp.act_fn)
+2025-03-12 06:07:49,492 - hook_solution - INFO - Updated module 20 (model.layers.20.mlp.act_fn)
+2025-03-12 06:07:49,494 - hook_solution - INFO - Updated 22 modules in 0.50 seconds
+2025-03-12 06:07:49,494 - hook_solution - INFO - SiLU replacement process completed
+2025-03-12 06:07:52,230 - __main__ - INFO - Starting training
+[34m[1mwandb[0m: [33mWARNING[0m The `run_name` is currently set to the same value as `TrainingArguments.output_dir`. If this was not intended, please specify a different run name by setting the `TrainingArguments.run_name` parameter.
+  0%|                                                                                                                   | 0/15258 [00:00<?, ?it/s]2025-03-12 06:07:57,611 - __main__ - INFO - Step 0/15258: alpha = 0.0000, beta = 1.0000, updated 22 modules
+  0%|                                                                                                        | 1/15258 [00:06<28:23:05,  6.70s/it]2025-03-12 06:07:59,098 - __main__ - INFO - Step 1/15258: alpha = 0.0002, beta = 0.9998, updated 22 modules
+  1%|▋                                                                                                      | 100/15258 [01:37<3:51:58,  1.09it/s]2025-03-12 06:09:30,303 - __main__ - INFO - Step 100/15258: alpha = 0.0218, beta = 0.9782, updated 22 modules
+{'loss': 2.3609, 'grad_norm': 2.309434652328491, 'learning_rate': 3.289473684210527e-05, 'epoch': 0.01}
+  1%|█▎                                                                                                     | 200/15258 [03:10<3:51:44,  1.08it/s]2025-03-12 06:11:02,590 - __main__ - INFO - Step 200/15258: alpha = 0.0437, beta = 0.9563, updated 22 modules
+{'loss': 2.3557, 'grad_norm': 1.8178681135177612, 'learning_rate': 4.9841122732689e-05, 'epoch': 0.01}
+  2%|██                                                                                                     | 300/15258 [04:42<3:50:02,  1.08it/s]2025-03-12 06:12:34,861 - __main__ - INFO - Step 300/15258: alpha = 0.0655, beta = 0.9345, updated 22 modules
+{'loss': 2.3563, 'grad_norm': 1.8016334772109985, 'learning_rate': 4.951012842579108e-05, 'epoch': 0.02}
+  3%|██▊                                                                                                          | 400/15258 [06:14<3:48:47,  1.08it/s]2025-03-12 06:14:07,085 - __main__ - INFO - Step 400/15258: alpha = 0.0874, beta = 0.9126, updated 22 modules
+{'loss': 2.3101, 'grad_norm': 1.7721904516220093, 'learning_rate': 4.9179134118893154e-05, 'epoch': 0.03}
+  3%|███▌                                                                                                         | 500/15258 [07:46<3:46:36,  1.09it/s]2025-03-12 06:15:39,327 - __main__ - INFO - Step 500/15258: alpha = 0.1092, beta = 0.8908, updated 22 modules
+{'loss': 2.2942, 'grad_norm': 1.7877851724624634, 'learning_rate': 4.884813981199524e-05, 'epoch': 0.03}
+  4%|████▎                                                                                                        | 600/15258 [09:19<3:45:01,  1.09it/s]2025-03-12 06:17:11,532 - __main__ - INFO - Step 600/15258: alpha = 0.1311, beta = 0.8689, updated 22 modules
+{'loss': 2.304, 'grad_norm': 1.800844430923462, 'learning_rate': 4.851714550509731e-05, 'epoch': 0.04}
+  5%|█████                                                                                                        | 700/15258 [10:51<3:43:15,  1.09it/s]2025-03-12 06:18:43,745 - __main__ - INFO - Step 700/15258: alpha = 0.1529, beta = 0.8471, updated 22 modules
+{'loss': 2.3261, 'grad_norm': 1.7562922239303589, 'learning_rate': 4.818615119819939e-05, 'epoch': 0.05}
+  5%|█████▋                                                                                                       | 800/15258 [12:23<3:41:36,  1.09it/s]2025-03-12 06:20:15,725 - __main__ - INFO - Step 800/15258: alpha = 0.1748, beta = 0.8252, updated 22 modules
+{'loss': 2.362, 'grad_norm': 1.6687532663345337, 'learning_rate': 4.785515689130147e-05, 'epoch': 0.05}
+  6%|██████▍                                                                                                      | 900/15258 [13:55<3:39:54,  1.09it/s]2025-03-12 06:21:47,710 - __main__ - INFO - Step 900/15258: alpha = 0.1966, beta = 0.8034, updated 22 modules
+{'loss': 2.4278, 'grad_norm': 1.8062764406204224, 'learning_rate': 4.7524162584403556e-05, 'epoch': 0.06}
+  7%|███████                                                                                                     | 1000/15258 [15:27<3:38:27,  1.09it/s]2025-03-12 06:23:19,686 - __main__ - INFO - Step 1000/15258: alpha = 0.2185, beta = 0.7815, updated 22 modules
+{'loss': 2.4269, 'grad_norm': 1.7835370302200317, 'learning_rate': 4.7193168277505625e-05, 'epoch': 0.07}
+  7%|███████▊                                                                                                    | 1100/15258 [16:59<3:36:50,  1.09it/s]2025-03-12 06:24:51,690 - __main__ - INFO - Step 1100/15258: alpha = 0.2403, beta = 0.7597, updated 22 modules
+{'loss': 2.3787, 'grad_norm': 1.7306734323501587, 'learning_rate': 4.686217397060771e-05, 'epoch': 0.07}
+  8%|████████▍                                                                                                   | 1200/15258 [18:31<3:35:23,  1.09it/s]2025-03-12 06:26:23,607 - __main__ - INFO - Step 1200/15258: alpha = 0.2622, beta = 0.7378, updated 22 modules
+{'loss': 2.3621, 'grad_norm': 1.7718747854232788, 'learning_rate': 4.6531179663709785e-05, 'epoch': 0.08}
+  9%|█████████▏                                                                                                  | 1300/15258 [20:03<3:33:36,  1.09it/s]2025-03-12 06:27:55,540 - __main__ - INFO - Step 1300/15258: alpha = 0.2840, beta = 0.7160, updated 22 modules
+{'loss': 2.3532, 'grad_norm': 1.805467963218689, 'learning_rate': 4.620018535681187e-05, 'epoch': 0.09}
+  9%|█████████▉                                                                                                  | 1400/15258 [21:35<3:32:30,  1.09it/s]2025-03-12 06:29:27,453 - __main__ - INFO - Step 1400/15258: alpha = 0.3059, beta = 0.6941, updated 22 modules
+{'loss': 2.3766, 'grad_norm': 1.7906404733657837, 'learning_rate': 4.5869191049913944e-05, 'epoch': 0.09}
+ 10%|██████████▌                                                                                                 | 1500/15258 [23:07<3:30:44,  1.09it/s]2025-03-12 06:30:59,398 - __main__ - INFO - Step 1500/15258: alpha = 0.3277, beta = 0.6723, updated 22 modules
+{'loss': 2.4, 'grad_norm': 1.722899317741394, 'learning_rate': 4.553819674301602e-05, 'epoch': 0.1}
+ 10%|███████████▎                                                                                                | 1600/15258 [24:54<3:29:09,  1.09it/s]2025-03-12 06:32:46,706 - __main__ - INFO - Step 1600/15258: alpha = 0.3496, beta = 0.6504, updated 22 modules
+{'loss': 2.46, 'grad_norm': 1.6518312692642212, 'learning_rate': 4.52072024361181e-05, 'epoch': 0.1}
+ 11%|████████████                                                                                                | 1700/15258 [26:26<3:28:09,  1.09it/s]2025-03-12 06:34:18,683 - __main__ - INFO - Step 1700/15258: alpha = 0.3714, beta = 0.6286, updated 22 modules
+{'loss': 2.479, 'grad_norm': 1.7655293941497803, 'learning_rate': 4.487620812922018e-05, 'epoch': 0.11}
+ 12%|████████████▋                                                                                               | 1800/15258 [27:58<3:26:30,  1.09it/s]2025-03-12 06:35:50,883 - __main__ - INFO - Step 1800/15258: alpha = 0.3933, beta = 0.6067, updated 22 modules
+{'loss': 2.4591, 'grad_norm': 1.6921989917755127, 'learning_rate': 4.4545213822322256e-05, 'epoch': 0.12}
+ 12%|█████████████▍                                                                                              | 1900/15258 [29:30<3:24:54,  1.09it/s]2025-03-12 06:37:22,730 - __main__ - INFO - Step 1900/15258: alpha = 0.4151, beta = 0.5849, updated 22 modules
+{'loss': 2.425, 'grad_norm': 1.8398494720458984, 'learning_rate': 4.421421951542434e-05, 'epoch': 0.12}
+ 13%|██████████████▏                                                                                             | 2000/15258 [31:02<3:24:02,  1.08it/s]2025-03-12 06:38:54,777 - __main__ - INFO - Step 2000/15258: alpha = 0.4370, beta = 0.5630, updated 22 modules
+{'loss': 2.402, 'grad_norm': 1.7438552379608154, 'learning_rate': 4.3883225208526415e-05, 'epoch': 0.13}
+ 14%|██████████████▊                                                                                             | 2100/15258 [32:34<3:23:05,  1.08it/s]2025-03-12 06:40:27,031 - __main__ - INFO - Step 2100/15258: alpha = 0.4588, beta = 0.5412, updated 22 modules
+{'loss': 2.4388, 'grad_norm': 1.676495909690857, 'learning_rate': 4.355223090162849e-05, 'epoch': 0.14}
+ 14%|███████████████▌                                                                                            | 2200/15258 [34:06<3:19:52,  1.09it/s]2025-03-12 06:41:59,091 - __main__ - INFO - Step 2200/15258: alpha = 0.4807, beta = 0.5193, updated 22 modules
+{'loss': 2.4234, 'grad_norm': 1.8502641916275024, 'learning_rate': 4.3221236594730574e-05, 'epoch': 0.14}
+ 15%|████████████████▎                                                                                           | 2300/15258 [35:38<3:18:45,  1.09it/s]2025-03-12 06:43:31,017 - __main__ - INFO - Step 2300/15258: alpha = 0.5025, beta = 0.4975, updated 22 modules
+{'loss': 2.4738, 'grad_norm': 1.7386858463287354, 'learning_rate': 4.289024228783265e-05, 'epoch': 0.15}
+ 16%|████████████████▉                                                                                           | 2400/15258 [37:10<3:16:37,  1.09it/s]2025-03-12 06:45:02,887 - __main__ - INFO - Step 2400/15258: alpha = 0.5244, beta = 0.4756, updated 22 modules
+{'loss': 2.5083, 'grad_norm': 1.8623838424682617, 'learning_rate': 4.255924798093473e-05, 'epoch': 0.16}
+ 16%|█████████████████▋                                                                                          | 2500/15258 [38:42<3:15:07,  1.09it/s]2025-03-12 06:46:34,816 - __main__ - INFO - Step 2500/15258: alpha = 0.5462, beta = 0.4538, updated 22 modules
+{'loss': 2.5161, 'grad_norm': 1.9187724590301514, 'learning_rate': 4.222825367403681e-05, 'epoch': 0.16}
+ 17%|██████████████████▍                                                                                         | 2600/15258 [40:14<3:13:51,  1.09it/s]2025-03-12 06:48:06,800 - __main__ - INFO - Step 2600/15258: alpha = 0.5681, beta = 0.4319, updated 22 modules
+{'loss': 2.4874, 'grad_norm': 1.6587069034576416, 'learning_rate': 4.1897259367138886e-05, 'epoch': 0.17}
+ 18%|███████████████████                                                                                         | 2700/15258 [41:46<3:12:34,  1.09it/s]2025-03-12 06:49:38,740 - __main__ - INFO - Step 2700/15258: alpha = 0.5899, beta = 0.4101, updated 22 modules
+{'loss': 2.4786, 'grad_norm': 1.8088469505310059, 'learning_rate': 4.156626506024097e-05, 'epoch': 0.18}
+ 18%|███████████████████▊                                                                                        | 2800/15258 [43:18<3:11:51,  1.08it/s]2025-03-12 06:51:10,959 - __main__ - INFO - Step 2800/15258: alpha = 0.6118, beta = 0.3882, updated 22 modules
+{'loss': 2.4661, 'grad_norm': 1.8341343402862549, 'learning_rate': 4.1235270753343046e-05, 'epoch': 0.18}
+ 19%|████████████████████▌                                                                                       | 2900/15258 [44:50<3:09:48,  1.09it/s]2025-03-12 06:52:43,199 - __main__ - INFO - Step 2900/15258: alpha = 0.6336, beta = 0.3664, updated 22 modules
+{'loss': 2.4663, 'grad_norm': 1.801255226135254, 'learning_rate': 4.090427644644512e-05, 'epoch': 0.19}
+ 20%|█████████████████████▏                                                                                      | 3000/15258 [46:23<3:07:57,  1.09it/s]2025-03-12 06:54:15,467 - __main__ - INFO - Step 3000/15258: alpha = 0.6555, beta = 0.3445, updated 22 modules
+{'loss': 2.4931, 'grad_norm': 1.9174431562423706, 'learning_rate': 4.0573282139547205e-05, 'epoch': 0.2}
+ 20%|█████████████████████▉                                                                                      | 3100/15258 [48:10<3:06:39,  1.09it/s]2025-03-12 06:56:02,966 - __main__ - INFO - Step 3100/15258: alpha = 0.6773, beta = 0.3227, updated 22 modules
+{'loss': 2.5486, 'grad_norm': 1.8113967180252075, 'learning_rate': 4.024228783264928e-05, 'epoch': 0.2}
+ 20%|██████████████████████                                                                                      | 3110/15258 [48:19<3:06:46,  1.08it/s]Traceback (most recent call last):
+  File "/workspace/finetuning/simplified_finetuning.py", line 313, in <module>
+    main()
+  File "/workspace/finetuning/simplified_finetuning.py", line 283, in main
+    trainer.train()
+  File "/usr/local/lib/python3.11/dist-packages/transformers/trainer.py", line 2241, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/trainer.py", line 2500, in _inner_training_loop
+    batch_samples, num_items_in_batch = self.get_batch_samples(epoch_iterator, num_batches)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/trainer.py", line 5180, in get_batch_samples
+    batch_samples += [next(epoch_iterator)]
+                      ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/accelerate/data_loader.py", line 864, in __iter__
+    batch = send_to_device(batch, self.state.device, non_blocking=self._non_blocking)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/accelerate/utils/operations.py", line 155, in send_to_device
+    return tensor.to(device, non_blocking=non_blocking)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/tokenization_utils_base.py", line 820, in to
+    self.data = {
+                ^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/tokenization_utils_base.py", line 821, in <dictcomp>
+    k: v.to(device=device, non_blocking=non_blocking) if isinstance(v, torch.Tensor) else v
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

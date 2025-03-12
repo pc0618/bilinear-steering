@@ -1,0 +1,31 @@
+03/12/2025 04:01:19 - INFO - __main__ - Loading model from TinyLlama/TinyLlama-1.1B-intermediate-step-1431k-3T
+03/12/2025 04:01:19 - INFO - __main__ - Setting pad_token to eos_token since it was not set
+03/12/2025 04:01:20 - INFO - __main__ - Replacing SwiGLU activations with beta-controlled versions
+03/12/2025 04:01:20 - INFO - __main__ - Model architecture: LlamaForCausalLM
+03/12/2025 04:01:20 - INFO - __main__ - Found 22 transformer layers to modify
+03/12/2025 04:01:20 - INFO - __main__ - Modified 22 activation functions with beta-controlled Swish
+03/12/2025 04:01:20 - INFO - __main__ - Loading dataset
+03/12/2025 04:01:20 - WARNING - __main__ - Using dummy dataset. Replace with actual data for real training.
+03/12/2025 04:01:20 - INFO - __main__ - Estimated total tokens: 0.03M
+03/12/2025 04:01:20 - INFO - __main__ - Tokenizing dataset
+Tokenizing dataset: 100%|████████████████████████████████████████████████████████████████████████████████████████████████| 2000/2000 [00:01<00:00, 1301.32 examples/s]
+03/12/2025 04:01:21 - INFO - __main__ - Checking tokenized dataset sample:
+03/12/2025 04:01:21 - INFO - __main__ -   input_ids: [1, 910, 338, 263, 20254, 1426, 363, 6724, 278, 2691]... (length 2048)
+03/12/2025 04:01:21 - INFO - __main__ -   attention_mask: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]... (length 2048)
+03/12/2025 04:01:21 - INFO - __main__ -   labels: [1, 910, 338, 263, 20254, 1426, 363, 6724, 278, 2691]... (length 2048)
+/workspace/finetuning/tinyllama_finetune.py:605: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+03/12/2025 04:01:22 - INFO - __main__ - Starting training
+[34m[1mwandb[0m: [33mWARNING[0m The `run_name` is currently set to the same value as `TrainingArguments.output_dir`. If this was not intended, please specify a different run name by setting the `TrainingArguments.run_name` parameter.
+  8%|██████████▊                                                                                                                     | 63/750 [03:02<33:19,  2.91s/it]Traceback (most recent call last):
+  File "/workspace/finetuning/tinyllama_finetune.py", line 635, in <module>
+    main()
+  File "/workspace/finetuning/tinyllama_finetune.py", line 616, in main
+    trainer.train()
+  File "/usr/local/lib/python3.11/dist-packages/transformers/trainer.py", line 2241, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/trainer.py", line 2553, in _inner_training_loop
+    and (torch.isnan(tr_loss_step) or torch.isinf(tr_loss_step))
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

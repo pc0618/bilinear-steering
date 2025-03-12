@@ -1,0 +1,24 @@
+2025-03-12 05:19:10,464 - __main__ - INFO - Starting bilinear finetuning process
+2025-03-12 05:19:10,464 - __main__ - INFO - Loading model: TinyLlama/TinyLlama-1.1B-intermediate-step-1431k-3T
+tokenizer_config.json: 100%|████████████████████████████████████████████████████████████████████████████████████| 776/776 [00:00<00:00, 5.64MB/s]
+tokenizer.model: 100%|████████████████████████████████████████████████████████████████████████████████████████| 500k/500k [00:00<00:00, 57.1MB/s]
+tokenizer.json: 100%|███████████████████████████████████████████████████████████████████████████████████████| 1.84M/1.84M [00:00<00:00, 1.89MB/s]
+special_tokens_map.json: 100%|██████████████████████████████████████████████████████████████████████████████████| 414/414 [00:00<00:00, 3.15MB/s]
+config.json: 100%|██████████████████████████████████████████████████████████████████████████████████████████████| 560/560 [00:00<00:00, 5.07MB/s]
+model.safetensors: 100%|█████████████████████████████████████████████████████████████████████████████████████| 4.40G/4.40G [00:20<00:00, 216MB/s]
+generation_config.json: 100%|███████████████████████████████████████████████████████████████████████████████████| 129/129 [00:00<00:00, 1.12MB/s]
+2025-03-12 05:19:34,211 - __main__ - INFO - Model loaded. Total parameters: 1,100,048,384, Trainable: 1,100,048,384
+2025-03-12 05:19:34,212 - __main__ - INFO - Model and tokenizer loaded successfully
+2025-03-12 05:19:34,212 - __main__ - INFO - Loading FineWeb dataset
+2025-03-12 05:19:34,212 - __main__ - INFO - Training on 500,000,000 tokens, downloading 500,000,000 tokens total
+2025-03-12 05:19:34,212 - __main__ - INFO - Loading HuggingFaceFW/fineweb dataset
+README.md: 100%|████████████████████████████████████████████████████████████████████████████████████████████| 43.1k/43.1k [00:00<00:00, 26.9MB/s]
+Resolving data files: 100%|█████████████████████████████████████████████████████████████████████████████| 25868/25868 [00:02<00:00, 12625.21it/s]
+Resolving data files: 100%|████████████████████████████████████████████████████████████████████████████| 25868/25868 [00:00<00:00, 853960.60it/s]
+2025-03-12 05:19:50,457 - __main__ - INFO - Successfully loaded FineWeb dataset
+2025-03-12 05:19:50,457 - __main__ - INFO - Dataset preparation complete
+2025-03-12 05:19:50,458 - __main__ - INFO - Training configuration: 500000000 tokens, 122070 steps
+2025-03-12 05:19:50,458 - __main__ - INFO - First 36621 steps (30%) will linearly interpolate β to 0
+2025-03-12 05:19:50,458 - __main__ - INFO - Preparing sample data for gate replacement
+2025-03-12 05:19:51,412 - __main__ - INFO - Replacing gate components with interpolators
+You're using a LlamaTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.

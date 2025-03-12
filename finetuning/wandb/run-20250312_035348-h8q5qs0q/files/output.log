@@ -1,0 +1,66 @@
+03/12/2025 03:53:49 - INFO - __main__ - Loading model from TinyLlama/TinyLlama-1.1B-intermediate-step-1431k-3T
+tokenizer_config.json: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████| 776/776 [00:00<00:00, 1.90MB/s]
+tokenizer.model: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 500k/500k [00:00<00:00, 121MB/s]
+tokenizer.json: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1.84M/1.84M [00:00<00:00, 15.9MB/s]
+special_tokens_map.json: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 414/414 [00:00<00:00, 910kB/s]
+config.json: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 560/560 [00:00<00:00, 3.68MB/s]
+model.safetensors: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 4.40G/4.40G [00:20<00:00, 219MB/s]
+generation_config.json: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████| 129/129 [00:00<00:00, 848kB/s]
+03/12/2025 03:54:11 - INFO - __main__ - Replacing SwiGLU activations with beta-controlled versions
+03/12/2025 03:54:11 - INFO - __main__ - Model architecture: LlamaForCausalLM
+03/12/2025 03:54:11 - INFO - __main__ - Found 22 transformer layers to modify
+03/12/2025 03:54:11 - INFO - __main__ - Modified 22 activation functions with beta-controlled Swish
+03/12/2025 03:54:11 - INFO - __main__ - Loading dataset
+README.md: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3.61k/3.61k [00:00<00:00, 12.6MB/s]
+RedPajama-Data-1T-Sample.py: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 3.33k/3.33k [00:00<00:00, 8.87MB/s]
+arxiv_sample.jsonl: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████| 93.4M/93.4M [00:00<00:00, 236MB/s]
+book_sample.jsonl: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████| 111M/111M [00:00<00:00, 238MB/s]
+c4_sample.jsonl: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 866M/866M [00:03<00:00, 248MB/s]
+cc_2019-30_sample.jsonl: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 689M/689M [00:03<00:00, 225MB/s]
+cc_2020-05_sample.jsonl: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 836M/836M [00:03<00:00, 237MB/s]
+cc_2021-04_sample.jsonl: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 802M/802M [00:03<00:00, 245MB/s]
+cc_2022-05_sample.jsonl: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 737M/737M [00:03<00:00, 232MB/s]
+cc_2023-06_sample.jsonl: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 857M/857M [00:03<00:00, 240MB/s]
+github_sample.jsonl: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████| 222M/222M [00:00<00:00, 238MB/s]
+stackexchange_sample.jsonl: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████| 80.5M/80.5M [00:00<00:00, 215MB/s]
+wikipedia_sample.jsonl: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 119M/119M [00:00<00:00, 245MB/s]
+Generating train split: 0 examples [00:00, ? examples/s]03/12/2025 03:54:38 - INFO - datasets_modules.datasets.togethercomputer--RedPajama-Data-1T-Sample.6ea3bc8ec2e84ec6d2df1930942e9028ace8c5b9d9143823cf911c50bbd92039.RedPajama-Data-1T-Sample - generating examples from = [/root/.cache/huggingface/hub/datasets--togethercomputer--RedPajama-Data-1T-Sample/snapshots/776f0cf8399524b53d817f4613cc75c6cd9c5a3b/arxiv_sample.jsonl (origin=https://huggingface.co/datasets/togethercomputer/RedPajama-Data-1T-Sample/resolve/776f0cf8399524b53d817f4613cc75c6cd9c5a3b/arxiv_sample.jsonl), /root/.cache/huggingface/hub/datasets--togethercomputer--RedPajama-Data-1T-Sample/snapshots/776f0cf8399524b53d817f4613cc75c6cd9c5a3b/book_sample.jsonl (origin=https://huggingface.co/datasets/togethercomputer/RedPajama-Data-1T-Sample/resolve/776f0cf8399524b53d817f4613cc75c6cd9c5a3b/book_sample.jsonl), /root/.cache/huggingface/hub/datasets--togethercomputer--RedPajama-Data-1T-Sample/snapshots/776f0cf8399524b53d817f4613cc75c6cd9c5a3b/c4_sample.jsonl (origin=https://huggingface.co/datasets/togethercomputer/RedPajama-Data-1T-Sample/resolve/776f0cf8399524b53d817f4613cc75c6cd9c5a3b/c4_sample.jsonl), /root/.cache/huggingface/hub/datasets--togethercomputer--RedPajama-Data-1T-Sample/snapshots/776f0cf8399524b53d817f4613cc75c6cd9c5a3b/cc_2019-30_sample.jsonl (origin=https://huggingface.co/datasets/togethercomputer/RedPajama-Data-1T-Sample/resolve/776f0cf8399524b53d817f4613cc75c6cd9c5a3b/cc_2019-30_sample.jsonl), /root/.cache/huggingface/hub/datasets--togethercomputer--RedPajama-Data-1T-Sample/snapshots/776f0cf8399524b53d817f4613cc75c6cd9c5a3b/cc_2020-05_sample.jsonl (origin=https://huggingface.co/datasets/togethercomputer/RedPajama-Data-1T-Sample/resolve/776f0cf8399524b53d817f4613cc75c6cd9c5a3b/cc_2020-05_sample.jsonl), /root/.cache/huggingface/hub/datasets--togethercomputer--RedPajama-Data-1T-Sample/snapshots/776f0cf8399524b53d817f4613cc75c6cd9c5a3b/cc_2021-04_sample.jsonl (origin=https://huggingface.co/datasets/togethercomputer/RedPajama-Data-1T-Sample/resolve/776f0cf8399524b53d817f4613cc75c6cd9c5a3b/cc_2021-04_sample.jsonl), /root/.cache/huggingface/hub/datasets--togethercomputer--RedPajama-Data-1T-Sample/snapshots/776f0cf8399524b53d817f4613cc75c6cd9c5a3b/cc_2022-05_sample.jsonl (origin=https://huggingface.co/datasets/togethercomputer/RedPajama-Data-1T-Sample/resolve/776f0cf8399524b53d817f4613cc75c6cd9c5a3b/cc_2022-05_sample.jsonl), /root/.cache/huggingface/hub/datasets--togethercomputer--RedPajama-Data-1T-Sample/snapshots/776f0cf8399524b53d817f4613cc75c6cd9c5a3b/cc_2023-06_sample.jsonl (origin=https://huggingface.co/datasets/togethercomputer/RedPajama-Data-1T-Sample/resolve/776f0cf8399524b53d817f4613cc75c6cd9c5a3b/cc_2023-06_sample.jsonl), /root/.cache/huggingface/hub/datasets--togethercomputer--RedPajama-Data-1T-Sample/snapshots/776f0cf8399524b53d817f4613cc75c6cd9c5a3b/github_sample.jsonl (origin=https://huggingface.co/datasets/togethercomputer/RedPajama-Data-1T-Sample/resolve/776f0cf8399524b53d817f4613cc75c6cd9c5a3b/github_sample.jsonl), /root/.cache/huggingface/hub/datasets--togethercomputer--RedPajama-Data-1T-Sample/snapshots/776f0cf8399524b53d817f4613cc75c6cd9c5a3b/stackexchange_sample.jsonl (origin=https://huggingface.co/datasets/togethercomputer/RedPajama-Data-1T-Sample/resolve/776f0cf8399524b53d817f4613cc75c6cd9c5a3b/stackexchange_sample.jsonl), /root/.cache/huggingface/hub/datasets--togethercomputer--RedPajama-Data-1T-Sample/snapshots/776f0cf8399524b53d817f4613cc75c6cd9c5a3b/wikipedia_sample.jsonl (origin=https://huggingface.co/datasets/togethercomputer/RedPajama-Data-1T-Sample/resolve/776f0cf8399524b53d817f4613cc75c6cd9c5a3b/wikipedia_sample.jsonl)]
+Generating train split: 930514 examples [00:44, 21094.27 examples/s]
+03/12/2025 03:55:22 - INFO - __main__ - Loaded togethercomputer/RedPajama-Data-1T-Sample dataset from Hugging Face Hub
+03/12/2025 03:55:32 - INFO - __main__ - Estimated total tokens: 17154.94M
+03/12/2025 03:55:32 - INFO - __main__ - Tokenizing dataset
+Tokenizing dataset:   0%|                                                                                                           | 0/930514 [00:00<?, ? examples/s]
+Traceback (most recent call last):
+  File "/workspace/finetuning/tinyllama_finetune.py", line 476, in <module>
+    main()
+  File "/workspace/finetuning/tinyllama_finetune.py", line 431, in main
+    tokenized_dataset = raw_dataset.map(
+                        ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/datasets/arrow_dataset.py", line 562, in wrapper
+    out: Union["Dataset", "DatasetDict"] = func(self, *args, **kwargs)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/datasets/arrow_dataset.py", line 3079, in map
+    for rank, done, content in Dataset._map_single(**dataset_kwargs):
+  File "/usr/local/lib/python3.11/dist-packages/datasets/arrow_dataset.py", line 3519, in _map_single
+    for i, batch in iter_outputs(shard_iterable):
+  File "/usr/local/lib/python3.11/dist-packages/datasets/arrow_dataset.py", line 3469, in iter_outputs
+    yield i, apply_function(example, i, offset=offset)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/datasets/arrow_dataset.py", line 3392, in apply_function
+    processed_inputs = function(*fn_args, *additional_args, **fn_kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/finetuning/tinyllama_finetune.py", line 424, in tokenize_function
+    return tokenizer(
+           ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/tokenization_utils_base.py", line 2877, in __call__
+    encodings = self._call_one(text=text, text_pair=text_pair, **all_kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/tokenization_utils_base.py", line 2965, in _call_one
+    return self.batch_encode_plus(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/tokenization_utils_base.py", line 3158, in batch_encode_plus
+    padding_strategy, truncation_strategy, max_length, kwargs = self._get_padding_truncation_strategies(
+                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/tokenization_utils_base.py", line 2779, in _get_padding_truncation_strategies
+    raise ValueError(
+ValueError: Asking to pad but the tokenizer does not have a padding token. Please select a token to use as `pad_token` `(tokenizer.pad_token = tokenizer.eos_token e.g.)` or add a new pad token via `tokenizer.add_special_tokens({'pad_token': '[PAD]'})`.

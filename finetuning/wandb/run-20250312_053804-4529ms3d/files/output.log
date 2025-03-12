@@ -1,0 +1,104 @@
+2025-03-12 05:38:04,358 - __main__ - INFO - Loading TinyLlama model and tokenizer
+2025-03-12 05:38:05,232 - __main__ - INFO - Model loaded in 0.87 seconds
+2025-03-12 05:38:05,233 - __main__ - INFO - Model has 1,100,048,384 parameters
+2025-03-12 05:38:05,233 - __main__ - INFO - Loading FineWeb dataset
+Resolving data files: 100%|██████████████████████████████████████████████████████████████████████████████| 25868/25868 [00:01<00:00, 15669.18it/s]
+Resolving data files: 100%|█████████████████████████████████████████████████████████████████████████████| 25868/25868 [00:00<00:00, 834499.26it/s]
+2025-03-12 05:38:56,874 - __main__ - INFO - Debug mode: using small sample
+2025-03-12 05:38:57,752 - __main__ - INFO - Running hook-based SiLU replacement
+2025-03-12 05:38:57,752 - hook_solution - INFO - Starting full SiLU replacement process...
+2025-03-12 05:38:57,752 - hook_solution - INFO - Collecting SiLU activations...
+2025-03-12 05:38:57,752 - hook_solution - INFO - Finding SiLU modules in the model...
+2025-03-12 05:38:57,752 - hook_solution - INFO - Found 22 SiLU modules in 0.00 seconds
+2025-03-12 05:38:57,752 - hook_solution - INFO - Sample paths: ['model.layers.0.mlp.act_fn', 'model.layers.1.mlp.act_fn', 'model.layers.2.mlp.act_fn']
+2025-03-12 05:39:07,419 - hook_solution - INFO - Collected 22 activations in 9.67 seconds
+2025-03-12 05:39:07,419 - hook_solution - INFO - Computing bilinear approximations...
+2025-03-12 05:39:07,420 - hook_solution - INFO - Module 0: Input dtype: torch.float32, Output dtype: torch.float32
+2025-03-12 05:39:11,911 - hook_solution - INFO - Module 0: Input shape torch.Size([10, 512, 5632]), solution shape torch.Size([5632, 5632])
+2025-03-12 05:39:11,912 - hook_solution - INFO - Module 1: Input dtype: torch.float32, Output dtype: torch.float32
+2025-03-12 05:39:16,507 - hook_solution - INFO - Module 1: Input shape torch.Size([10, 512, 5632]), solution shape torch.Size([5632, 5632])
+2025-03-12 05:39:16,507 - hook_solution - INFO - Module 2: Input dtype: torch.float32, Output dtype: torch.float32
+2025-03-12 05:39:26,414 - hook_solution - INFO - Module 2: Input shape torch.Size([10, 512, 5632]), solution shape torch.Size([5632, 5632])
+2025-03-12 05:39:26,414 - hook_solution - INFO - Module 3: Input dtype: torch.float32, Output dtype: torch.float32
+2025-03-12 05:39:31,102 - hook_solution - INFO - Module 4: Input dtype: torch.float32, Output dtype: torch.float32
+2025-03-12 05:39:35,991 - hook_solution - INFO - Module 5: Input dtype: torch.float32, Output dtype: torch.float32
+2025-03-12 05:39:40,806 - hook_solution - INFO - Module 6: Input dtype: torch.float32, Output dtype: torch.float32
+2025-03-12 05:39:45,613 - hook_solution - INFO - Module 7: Input dtype: torch.float32, Output dtype: torch.float32
+2025-03-12 05:39:50,204 - hook_solution - INFO - Module 8: Input dtype: torch.float32, Output dtype: torch.float32
+2025-03-12 05:39:54,804 - hook_solution - INFO - Module 9: Input dtype: torch.float32, Output dtype: torch.float32
+2025-03-12 05:39:59,405 - hook_solution - INFO - Module 10: Input dtype: torch.float32, Output dtype: torch.float32
+2025-03-12 05:40:04,000 - hook_solution - INFO - Module 11: Input dtype: torch.float32, Output dtype: torch.float32
+2025-03-12 05:40:08,597 - hook_solution - INFO - Module 12: Input dtype: torch.float32, Output dtype: torch.float32
+2025-03-12 05:40:13,314 - hook_solution - INFO - Module 13: Input dtype: torch.float32, Output dtype: torch.float32
+2025-03-12 05:40:18,412 - hook_solution - INFO - Module 14: Input dtype: torch.float32, Output dtype: torch.float32
+2025-03-12 05:40:23,291 - hook_solution - INFO - Module 15: Input dtype: torch.float32, Output dtype: torch.float32
+2025-03-12 05:40:28,412 - hook_solution - INFO - Module 16: Input dtype: torch.float32, Output dtype: torch.float32
+2025-03-12 05:40:33,103 - hook_solution - INFO - Module 17: Input dtype: torch.float32, Output dtype: torch.float32
+2025-03-12 05:40:38,378 - hook_solution - INFO - Module 18: Input dtype: torch.float32, Output dtype: torch.float32
+2025-03-12 05:40:42,901 - hook_solution - INFO - Module 19: Input dtype: torch.float32, Output dtype: torch.float32
+2025-03-12 05:40:47,500 - hook_solution - INFO - Module 20: Input dtype: torch.float32, Output dtype: torch.float32
+2025-03-12 05:40:52,111 - hook_solution - INFO - Module 21: Input dtype: torch.float32, Output dtype: torch.float32
+2025-03-12 05:40:56,718 - hook_solution - INFO - Computed 22 bilinear approximations in 109.30 seconds
+2025-03-12 05:40:56,718 - hook_solution - INFO - Replacing SiLU modules with InterpolatedSiLU...
+2025-03-12 05:40:56,718 - hook_solution - INFO - Finding SiLU modules in the model...
+2025-03-12 05:40:56,719 - hook_solution - INFO - Found 22 SiLU modules in 0.00 seconds
+2025-03-12 05:40:56,719 - hook_solution - INFO - Sample paths: ['model.layers.0.mlp.act_fn', 'model.layers.1.mlp.act_fn', 'model.layers.2.mlp.act_fn']
+2025-03-12 05:40:56,719 - hook_solution - INFO - Found input dim 2048 from previous Linear layer down_proj
+2025-03-12 05:40:56,746 - hook_solution - INFO - Replaced SiLU at model.layers.0.mlp.act_fn
+2025-03-12 05:40:56,746 - hook_solution - INFO - Found input dim 2048 from previous Linear layer down_proj
+2025-03-12 05:40:56,799 - hook_solution - INFO - Replaced SiLU at model.layers.1.mlp.act_fn
+2025-03-12 05:40:56,799 - hook_solution - INFO - Found input dim 2048 from previous Linear layer down_proj
+2025-03-12 05:40:56,826 - hook_solution - INFO - Replaced SiLU at model.layers.2.mlp.act_fn
+2025-03-12 05:40:56,826 - hook_solution - INFO - Found input dim 2048 from previous Linear layer down_proj
+2025-03-12 05:40:56,852 - hook_solution - INFO - Found input dim 2048 from previous Linear layer down_proj
+2025-03-12 05:40:56,876 - hook_solution - INFO - Found input dim 2048 from previous Linear layer down_proj
+2025-03-12 05:40:56,899 - hook_solution - INFO - Found input dim 2048 from previous Linear layer down_proj
+2025-03-12 05:40:56,923 - hook_solution - INFO - Found input dim 2048 from previous Linear layer down_proj
+2025-03-12 05:40:56,947 - hook_solution - INFO - Found input dim 2048 from previous Linear layer down_proj
+2025-03-12 05:40:56,984 - hook_solution - INFO - Found input dim 2048 from previous Linear layer down_proj
+2025-03-12 05:40:57,007 - hook_solution - INFO - Found input dim 2048 from previous Linear layer down_proj
+2025-03-12 05:40:57,030 - hook_solution - INFO - Replaced SiLU at model.layers.10.mlp.act_fn
+2025-03-12 05:40:57,031 - hook_solution - INFO - Found input dim 2048 from previous Linear layer down_proj
+2025-03-12 05:40:57,054 - hook_solution - INFO - Found input dim 2048 from previous Linear layer down_proj
+2025-03-12 05:40:57,077 - hook_solution - INFO - Found input dim 2048 from previous Linear layer down_proj
+2025-03-12 05:40:57,100 - hook_solution - INFO - Found input dim 2048 from previous Linear layer down_proj
+2025-03-12 05:40:57,123 - hook_solution - INFO - Found input dim 2048 from previous Linear layer down_proj
+2025-03-12 05:40:57,146 - hook_solution - INFO - Found input dim 2048 from previous Linear layer down_proj
+2025-03-12 05:40:57,169 - hook_solution - INFO - Found input dim 2048 from previous Linear layer down_proj
+2025-03-12 05:40:57,193 - hook_solution - INFO - Found input dim 2048 from previous Linear layer down_proj
+2025-03-12 05:40:57,216 - hook_solution - INFO - Found input dim 2048 from previous Linear layer down_proj
+2025-03-12 05:40:57,239 - hook_solution - INFO - Found input dim 2048 from previous Linear layer down_proj
+2025-03-12 05:40:57,262 - hook_solution - INFO - Replaced SiLU at model.layers.20.mlp.act_fn
+2025-03-12 05:40:57,262 - hook_solution - INFO - Found input dim 2048 from previous Linear layer down_proj
+2025-03-12 05:40:57,291 - hook_solution - INFO - Replaced 22 SiLU modules in 0.57 seconds
+2025-03-12 05:40:57,291 - hook_solution - INFO - Updating bilinear approximations in model...
+2025-03-12 05:40:57,291 - hook_solution - WARNING - Module 0: Shape mismatch: approximation torch.Size([5632, 5632]) vs. bilinear 2048x2048
+2025-03-12 05:40:57,291 - hook_solution - INFO - Updated module 0
+2025-03-12 05:40:57,291 - hook_solution - WARNING - Module 1: Shape mismatch: approximation torch.Size([5632, 5632]) vs. bilinear 2048x2048
+2025-03-12 05:40:57,291 - hook_solution - INFO - Updated module 1
+2025-03-12 05:40:57,291 - hook_solution - WARNING - Module 2: Shape mismatch: approximation torch.Size([5632, 5632]) vs. bilinear 2048x2048
+2025-03-12 05:40:57,291 - hook_solution - INFO - Updated module 2
+2025-03-12 05:40:57,292 - hook_solution - WARNING - Module 3: Shape mismatch: approximation torch.Size([5632, 5632]) vs. bilinear 2048x2048
+2025-03-12 05:40:57,292 - hook_solution - WARNING - Module 4: Shape mismatch: approximation torch.Size([5632, 5632]) vs. bilinear 2048x2048
+2025-03-12 05:40:57,292 - hook_solution - WARNING - Module 5: Shape mismatch: approximation torch.Size([5632, 5632]) vs. bilinear 2048x2048
+2025-03-12 05:40:57,292 - hook_solution - WARNING - Module 6: Shape mismatch: approximation torch.Size([5632, 5632]) vs. bilinear 2048x2048
+2025-03-12 05:40:57,292 - hook_solution - WARNING - Module 7: Shape mismatch: approximation torch.Size([5632, 5632]) vs. bilinear 2048x2048
+2025-03-12 05:40:57,292 - hook_solution - WARNING - Module 8: Shape mismatch: approximation torch.Size([5632, 5632]) vs. bilinear 2048x2048
+2025-03-12 05:40:57,292 - hook_solution - WARNING - Module 9: Shape mismatch: approximation torch.Size([5632, 5632]) vs. bilinear 2048x2048
+2025-03-12 05:40:57,292 - hook_solution - WARNING - Module 10: Shape mismatch: approximation torch.Size([5632, 5632]) vs. bilinear 2048x2048
+2025-03-12 05:40:57,292 - hook_solution - INFO - Updated module 10
+2025-03-12 05:40:57,292 - hook_solution - WARNING - Module 11: Shape mismatch: approximation torch.Size([5632, 5632]) vs. bilinear 2048x2048
+2025-03-12 05:40:57,292 - hook_solution - WARNING - Module 12: Shape mismatch: approximation torch.Size([5632, 5632]) vs. bilinear 2048x2048
+2025-03-12 05:40:57,292 - hook_solution - WARNING - Module 13: Shape mismatch: approximation torch.Size([5632, 5632]) vs. bilinear 2048x2048
+2025-03-12 05:40:57,292 - hook_solution - WARNING - Module 14: Shape mismatch: approximation torch.Size([5632, 5632]) vs. bilinear 2048x2048
+2025-03-12 05:40:57,292 - hook_solution - WARNING - Module 15: Shape mismatch: approximation torch.Size([5632, 5632]) vs. bilinear 2048x2048
+2025-03-12 05:40:57,292 - hook_solution - WARNING - Module 16: Shape mismatch: approximation torch.Size([5632, 5632]) vs. bilinear 2048x2048
+2025-03-12 05:40:57,292 - hook_solution - WARNING - Module 17: Shape mismatch: approximation torch.Size([5632, 5632]) vs. bilinear 2048x2048
+2025-03-12 05:40:57,292 - hook_solution - WARNING - Module 18: Shape mismatch: approximation torch.Size([5632, 5632]) vs. bilinear 2048x2048
+2025-03-12 05:40:57,292 - hook_solution - WARNING - Module 19: Shape mismatch: approximation torch.Size([5632, 5632]) vs. bilinear 2048x2048
+2025-03-12 05:40:57,292 - hook_solution - WARNING - Module 20: Shape mismatch: approximation torch.Size([5632, 5632]) vs. bilinear 2048x2048
+2025-03-12 05:40:57,292 - hook_solution - INFO - Updated module 20
+2025-03-12 05:40:57,293 - hook_solution - WARNING - Module 21: Shape mismatch: approximation torch.Size([5632, 5632]) vs. bilinear 2048x2048
+2025-03-12 05:40:57,293 - hook_solution - INFO - Updated 22 modules in 0.00 seconds
+2025-03-12 05:40:57,293 - hook_solution - INFO - SiLU replacement process completed
+2025-03-12 05:40:57,466 - __main__ - INFO - Debug completed, exiting

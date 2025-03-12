@@ -1,0 +1,26 @@
+2025-03-12 04:53:12,356 INFO    MainThread:6545 [wandb_setup.py:_flush():67] Current SDK version is 0.19.8
+2025-03-12 04:53:12,356 INFO    MainThread:6545 [wandb_setup.py:_flush():67] Configure stats pid to 6545
+2025-03-12 04:53:12,357 INFO    MainThread:6545 [wandb_setup.py:_flush():67] Loading settings from /root/.config/wandb/settings
+2025-03-12 04:53:12,357 INFO    MainThread:6545 [wandb_setup.py:_flush():67] Loading settings from /workspace/finetuning/wandb/settings
+2025-03-12 04:53:12,357 INFO    MainThread:6545 [wandb_setup.py:_flush():67] Loading settings from environment variables
+2025-03-12 04:53:12,358 INFO    MainThread:6545 [wandb_init.py:setup_run_log_directory():647] Logging user logs to /workspace/finetuning/wandb/run-20250312_045312-bhuhjjxg/logs/debug.log
+2025-03-12 04:53:12,359 INFO    MainThread:6545 [wandb_init.py:setup_run_log_directory():648] Logging internal logs to /workspace/finetuning/wandb/run-20250312_045312-bhuhjjxg/logs/debug-internal.log
+2025-03-12 04:53:12,359 INFO    MainThread:6545 [wandb_init.py:init():761] calling init triggers
+2025-03-12 04:53:12,360 INFO    MainThread:6545 [wandb_init.py:init():766] wandb.init called with sweep_config: {}
+config: {'model': 'TinyLlama-1.1B', 'total_tokens': 500000000, 'download_tokens': 500000000, 'interpolation_schedule': 'linear_30_percent', 'batch_size': 32, 'gradient_accumulation_steps': 4, 'learning_rate': 5e-05, 'seed': 42, '_wandb': {}}
+2025-03-12 04:53:12,360 INFO    MainThread:6545 [wandb_init.py:init():784] starting backend
+2025-03-12 04:53:12,360 INFO    MainThread:6545 [wandb_init.py:init():788] sending inform_init request
+2025-03-12 04:53:12,372 INFO    MainThread:6545 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-03-12 04:53:12,372 INFO    MainThread:6545 [wandb_init.py:init():798] backend started and connected
+2025-03-12 04:53:12,375 INFO    MainThread:6545 [wandb_init.py:init():891] updated telemetry
+2025-03-12 04:53:12,379 INFO    MainThread:6545 [wandb_init.py:init():915] communicating run to backend with 90.0 second timeout
+2025-03-12 04:53:12,667 INFO    MainThread:6545 [wandb_init.py:init():990] starting run threads in backend
+2025-03-12 04:53:12,857 INFO    MainThread:6545 [wandb_run.py:_console_start():2375] atexit reg
+2025-03-12 04:53:12,858 INFO    MainThread:6545 [wandb_run.py:_redirect():2227] redirect: wrap_raw
+2025-03-12 04:53:12,859 INFO    MainThread:6545 [wandb_run.py:_redirect():2292] Wrapping output streams.
+2025-03-12 04:53:12,859 INFO    MainThread:6545 [wandb_run.py:_redirect():2315] Redirects installed.
+2025-03-12 04:53:12,862 INFO    MainThread:6545 [wandb_init.py:init():1032] run started, returning control to user process
+2025-03-12 04:53:12,863 INFO    MainThread:6545 [wandb_run.py:_config_callback():1261] config_cb None None {'model_name': 'TinyLlama/TinyLlama-1.1B-intermediate-step-1431k-3T'}
+2025-03-12 04:53:14,194 INFO    MainThread:6545 [wandb_run.py:_config_callback():1261] config_cb None None {'total_params': 1100048384, 'trainable_params': 1100048384}
+2025-03-12 04:53:52,828 INFO    MainThread:6545 [wandb_run.py:_config_callback():1261] config_cb None None {'tokens_per_batch': 65536, 'total_steps': 7629, 'interpolation_steps': 2288, 'interpolation_percentage': 30.0}
+2025-03-12 04:53:54,074 INFO    MainThread:6545 [wandb_run.py:_config_callback():1261] config_cb None None {'gate_replacement_sample_size': 1000}

@@ -1,0 +1,1 @@
+{"updated_modules":22,"_runtime":195.408304577,"alpha":0.005461496450027308,"train/loss":2.3768,"train/epoch":0.0016384041943147375,"train/learning_rate":8.196721311475409e-06,"_timestamp":1.7417595016481316e+09,"train/global_step":100,"_wandb":{"runtime":195},"beta":0.9945385035499726,"_step":100,"train/grad_norm":4.039881706237793}

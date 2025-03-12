@@ -1,0 +1,47 @@
+{
+  "os": "Linux-6.8.0-49-generic-x86_64-with-glibc2.35",
+  "python": "CPython 3.11.10",
+  "startedAt": "2025-03-12T04:01:19.017686Z",
+  "args": [
+    "--model_name_or_path=TinyLlama/TinyLlama-1.1B-intermediate-step-1431k-3T",
+    "--dataset_path=/path/to/your/dataset",
+    "--output_dir=./results",
+    "--per_device_train_batch_size=2",
+    "--gradient_accumulation_steps=4",
+    "--fp16",
+    "--beta_decay_point=0.3"
+  ],
+  "program": "/workspace/finetuning/tinyllama_finetune.py",
+  "codePath": "tinyllama_finetune.py",
+  "email": "mhrohatgi@gmail.com",
+  "root": "/workspace/finetuning",
+  "host": "94026d9c8559",
+  "executable": "/usr/bin/python",
+  "codePathLocal": "tinyllama_finetune.py",
+  "cpu_count": 48,
+  "cpu_count_logical": 96,
+  "gpu": "NVIDIA A40",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "107374182400",
+      "used": "16075186176"
+    }
+  },
+  "memory": {
+    "total": "540644257792"
+  },
+  "cpu": {
+    "count": 48,
+    "countLogical": 96
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA A40",
+      "memoryTotal": "48305799168",
+      "cudaCores": 10752,
+      "architecture": "Ampere"
+    }
+  ],
+  "cudaVersion": "12.7"
+}

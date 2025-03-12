@@ -1,0 +1,83 @@
+2025-03-12 05:43:53,876 - __main__ - INFO - Loading TinyLlama model and tokenizer
+2025-03-12 05:43:55,130 - __main__ - INFO - Model loaded in 1.25 seconds
+2025-03-12 05:43:55,131 - __main__ - INFO - Model has 1,100,048,384 parameters
+2025-03-12 05:43:55,131 - __main__ - INFO - Loading FineWeb dataset
+Resolving data files: 100%|██████████████████████████████████████████████████████████████████████████████| 25868/25868 [00:01<00:00, 13173.44it/s]
+Resolving data files: 100%|█████████████████████████████████████████████████████████████████████████████| 25868/25868 [00:00<00:00, 791409.28it/s]
+2025-03-12 05:44:17,331 - __main__ - INFO - Debug mode: using small sample
+2025-03-12 05:44:17,969 - __main__ - INFO - Running hook-based SiLU replacement
+2025-03-12 05:44:17,969 - hook_solution - INFO - Starting full SiLU replacement process...
+2025-03-12 05:44:17,969 - hook_solution - INFO - Collecting SiLU activations...
+2025-03-12 05:44:17,969 - hook_solution - INFO - Finding SiLU modules in the model...
+2025-03-12 05:44:17,969 - hook_solution - INFO - Found 22 SiLU modules in 0.00 seconds
+2025-03-12 05:44:17,969 - hook_solution - INFO - Sample paths: ['model.layers.0.mlp.act_fn', 'model.layers.1.mlp.act_fn', 'model.layers.2.mlp.act_fn']
+2025-03-12 05:44:27,132 - hook_solution - INFO - Collected 22 activations in 9.16 seconds
+2025-03-12 05:44:27,132 - hook_solution - INFO - Computing bilinear approximations...
+2025-03-12 05:44:27,132 - hook_solution - INFO - Module 0: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:44:31,314 - hook_solution - INFO - Module 0: Input shape torch.Size([10, 512, 5632]), feature dim 5632, solution shape torch.Size([5632, 5632])
+2025-03-12 05:44:31,314 - hook_solution - INFO - Module 1: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:44:35,795 - hook_solution - INFO - Module 1: Input shape torch.Size([10, 512, 5632]), feature dim 5632, solution shape torch.Size([5632, 5632])
+2025-03-12 05:44:35,796 - hook_solution - INFO - Module 2: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:44:40,300 - hook_solution - INFO - Module 2: Input shape torch.Size([10, 512, 5632]), feature dim 5632, solution shape torch.Size([5632, 5632])
+2025-03-12 05:44:40,300 - hook_solution - INFO - Module 3: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:44:45,206 - hook_solution - INFO - Module 4: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:44:50,713 - hook_solution - INFO - Module 5: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:44:55,803 - hook_solution - INFO - Module 6: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:45:00,812 - hook_solution - INFO - Module 7: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:45:05,700 - hook_solution - INFO - Module 8: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:45:10,802 - hook_solution - INFO - Module 9: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:45:15,406 - hook_solution - INFO - Module 10: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:45:20,704 - hook_solution - INFO - Module 11: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:45:30,394 - hook_solution - INFO - Module 12: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:45:36,001 - hook_solution - INFO - Module 13: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:45:40,514 - hook_solution - INFO - Module 14: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:45:46,711 - hook_solution - INFO - Module 15: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:45:54,407 - hook_solution - INFO - Module 16: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:46:01,105 - hook_solution - INFO - Module 17: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:46:07,603 - hook_solution - INFO - Module 18: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:46:16,994 - hook_solution - INFO - Module 19: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:46:23,704 - hook_solution - INFO - Module 20: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:46:28,513 - hook_solution - INFO - Module 21: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:46:33,114 - hook_solution - INFO - Computed 22 bilinear approximations in 125.98 seconds
+2025-03-12 05:46:33,115 - hook_solution - INFO - Replacing SiLU modules with InterpolatedSiLU...
+2025-03-12 05:46:33,115 - hook_solution - INFO - Finding SiLU modules in the model...
+2025-03-12 05:46:33,115 - hook_solution - INFO - Found 22 SiLU modules in 0.00 seconds
+2025-03-12 05:46:33,115 - hook_solution - INFO - Sample paths: ['model.layers.0.mlp.act_fn', 'model.layers.1.mlp.act_fn', 'model.layers.2.mlp.act_fn']
+2025-03-12 05:46:33,115 - hook_solution - INFO - Using input dimensions from forward pass: samples [5632, 5632, 5632]...
+2025-03-12 05:46:33,116 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.0.mlp.act_fn
+2025-03-12 05:46:33,280 - hook_solution - INFO - Replaced SiLU at model.layers.0.mlp.act_fn
+2025-03-12 05:46:33,281 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.1.mlp.act_fn
+2025-03-12 05:46:33,442 - hook_solution - INFO - Replaced SiLU at model.layers.1.mlp.act_fn
+2025-03-12 05:46:33,442 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.2.mlp.act_fn
+2025-03-12 05:46:33,603 - hook_solution - INFO - Replaced SiLU at model.layers.2.mlp.act_fn
+2025-03-12 05:46:33,603 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.3.mlp.act_fn
+2025-03-12 05:46:33,766 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.4.mlp.act_fn
+2025-03-12 05:46:33,927 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.5.mlp.act_fn
+2025-03-12 05:46:34,088 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.6.mlp.act_fn
+2025-03-12 05:46:34,248 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.7.mlp.act_fn
+2025-03-12 05:46:34,410 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.8.mlp.act_fn
+2025-03-12 05:46:34,572 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.9.mlp.act_fn
+2025-03-12 05:46:34,733 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.10.mlp.act_fn
+2025-03-12 05:46:34,894 - hook_solution - INFO - Replaced SiLU at model.layers.10.mlp.act_fn
+2025-03-12 05:46:34,895 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.11.mlp.act_fn
+2025-03-12 05:46:35,055 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.12.mlp.act_fn
+2025-03-12 05:46:35,234 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.13.mlp.act_fn
+2025-03-12 05:46:35,401 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.14.mlp.act_fn
+2025-03-12 05:46:35,565 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.15.mlp.act_fn
+2025-03-12 05:46:35,734 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.16.mlp.act_fn
+2025-03-12 05:46:35,893 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.17.mlp.act_fn
+2025-03-12 05:46:36,052 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.18.mlp.act_fn
+2025-03-12 05:46:36,211 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.19.mlp.act_fn
+2025-03-12 05:46:36,371 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.20.mlp.act_fn
+2025-03-12 05:46:36,531 - hook_solution - INFO - Replaced SiLU at model.layers.20.mlp.act_fn
+2025-03-12 05:46:36,531 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.21.mlp.act_fn
+2025-03-12 05:46:36,692 - hook_solution - INFO - Replaced 22 SiLU modules in 3.58 seconds
+2025-03-12 05:46:36,692 - hook_solution - INFO - Updating bilinear approximations in model...
+2025-03-12 05:46:36,700 - hook_solution - INFO - Updated module 0 (model.layers.0.mlp.act_fn)
+2025-03-12 05:46:36,705 - hook_solution - INFO - Updated module 1 (model.layers.1.mlp.act_fn)
+2025-03-12 05:46:36,776 - hook_solution - INFO - Updated module 2 (model.layers.2.mlp.act_fn)
+2025-03-12 05:46:36,976 - hook_solution - INFO - Updated module 10 (model.layers.10.mlp.act_fn)
+2025-03-12 05:46:37,077 - hook_solution - INFO - Updated module 20 (model.layers.20.mlp.act_fn)
+2025-03-12 05:46:37,079 - hook_solution - INFO - Updated 22 modules in 0.39 seconds
+2025-03-12 05:46:37,080 - hook_solution - INFO - SiLU replacement process completed
+2025-03-12 05:46:37,241 - __main__ - INFO - Debug completed, exiting

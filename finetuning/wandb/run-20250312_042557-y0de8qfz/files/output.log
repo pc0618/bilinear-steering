@@ -1,0 +1,15 @@
+2025-03-12 04:25:58,561 - __main__ - INFO - Starting bilinear finetuning process
+2025-03-12 04:25:58,562 - __main__ - INFO - Loading model: TinyLlama/TinyLlama-1.1B-intermediate-step-1431k-3T
+2025-03-12 04:26:00,194 - __main__ - INFO - Model loaded. Total parameters: 1,100,048,384, Trainable: 1,100,048,384
+2025-03-12 04:26:00,196 - __main__ - INFO - Model and tokenizer loaded successfully
+2025-03-12 04:26:00,197 - __main__ - INFO - Loading FineWeb dataset
+2025-03-12 04:26:00,198 - __main__ - INFO - Training on 500,000,000 tokens, downloading 500,000,000 tokens total
+2025-03-12 04:26:00,199 - __main__ - INFO - Loading HuggingFaceFW/fineweb dataset
+Resolving data files: 100%|█████████████████████████████████████████████████████████████████████████████████████| 25868/25868 [00:13<00:00, 1930.26it/s]
+Resolving data files: 100%|███████████████████████████████████████████████████████████████████████████████████| 25868/25868 [00:00<00:00, 239234.30it/s]
+2025-03-12 04:27:19,109 - __main__ - INFO - Successfully loaded FineWeb dataset
+2025-03-12 04:27:19,111 - __main__ - INFO - Dataset preparation complete
+2025-03-12 04:27:19,114 - __main__ - INFO - Training configuration: 500000000 tokens, 7629 steps
+2025-03-12 04:27:19,115 - __main__ - INFO - First 2288 steps (30%) will linearly interpolate β to 0
+2025-03-12 04:27:19,115 - __main__ - INFO - Preparing sample data for gate replacement
+2025-03-12 04:27:19,118 - __main__ - INFO - Replacing gate components with interpolators

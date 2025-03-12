@@ -1,0 +1,119 @@
+2025-03-12 05:53:51,098 - __main__ - INFO - Loading TinyLlama model and tokenizer
+2025-03-12 05:53:52,012 - __main__ - INFO - Model loaded in 0.91 seconds
+2025-03-12 05:53:52,013 - __main__ - INFO - Model has 1,100,048,384 parameters
+2025-03-12 05:53:52,013 - __main__ - INFO - Loading FineWeb dataset
+Resolving data files: 100%|██████████████████████████████████████████████████████████████████████████████| 25868/25868 [00:01<00:00, 13373.20it/s]
+Resolving data files: 100%|█████████████████████████████████████████████████████████████████████████████| 25868/25868 [00:00<00:00, 830945.81it/s]
+2025-03-12 05:54:05,986 - __main__ - INFO - Training config: 500,000,000 tokens, 122,070 steps
+2025-03-12 05:54:05,986 - __main__ - INFO - First 36,621 steps (30%) will interpolate β to 0
+2025-03-12 05:54:05,986 - __main__ - INFO - Preparing sample batch for hook-based replacer
+2025-03-12 05:54:06,427 - __main__ - INFO - Running hook-based SiLU replacement
+2025-03-12 05:54:06,428 - hook_solution - INFO - Starting full SiLU replacement process...
+2025-03-12 05:54:06,428 - hook_solution - INFO - Collecting SiLU activations...
+2025-03-12 05:54:06,428 - hook_solution - INFO - Finding SiLU modules in the model...
+2025-03-12 05:54:06,428 - hook_solution - INFO - Found 22 SiLU modules in 0.00 seconds
+2025-03-12 05:54:06,428 - hook_solution - INFO - Sample paths: ['model.layers.0.mlp.act_fn', 'model.layers.1.mlp.act_fn', 'model.layers.2.mlp.act_fn']
+2025-03-12 05:54:15,220 - hook_solution - INFO - Collected 22 activations in 8.79 seconds
+2025-03-12 05:54:15,221 - hook_solution - INFO - Computing bilinear approximations...
+2025-03-12 05:54:15,221 - hook_solution - INFO - Module 0: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:54:19,203 - hook_solution - INFO - Module 0: Input shape torch.Size([10, 512, 5632]), feature dim 5632, solution shape torch.Size([5632, 5632])
+2025-03-12 05:54:19,203 - hook_solution - INFO - Module 1: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:54:23,913 - hook_solution - INFO - Module 1: Input shape torch.Size([10, 512, 5632]), feature dim 5632, solution shape torch.Size([5632, 5632])
+2025-03-12 05:54:23,913 - hook_solution - INFO - Module 2: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:54:29,718 - hook_solution - INFO - Module 2: Input shape torch.Size([10, 512, 5632]), feature dim 5632, solution shape torch.Size([5632, 5632])
+2025-03-12 05:54:29,718 - hook_solution - INFO - Module 3: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:54:35,401 - hook_solution - INFO - Module 4: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:54:41,016 - hook_solution - INFO - Module 5: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:54:47,311 - hook_solution - INFO - Module 6: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:54:51,909 - hook_solution - INFO - Module 7: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:54:56,819 - hook_solution - INFO - Module 8: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:55:02,111 - hook_solution - INFO - Module 9: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:55:06,687 - hook_solution - INFO - Module 10: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:55:11,114 - hook_solution - INFO - Module 11: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:55:15,796 - hook_solution - INFO - Module 12: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:55:20,404 - hook_solution - INFO - Module 13: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:55:25,199 - hook_solution - INFO - Module 14: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:55:29,712 - hook_solution - INFO - Module 15: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:55:34,385 - hook_solution - INFO - Module 16: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:55:38,818 - hook_solution - INFO - Module 17: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:55:48,816 - hook_solution - INFO - Module 18: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:55:53,795 - hook_solution - INFO - Module 19: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:55:58,516 - hook_solution - INFO - Module 20: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:56:03,495 - hook_solution - INFO - Module 21: Input dtype: torch.float32, shape: torch.Size([10, 512, 5632])
+2025-03-12 05:56:07,909 - hook_solution - INFO - Computed 22 bilinear approximations in 112.69 seconds
+2025-03-12 05:56:07,910 - hook_solution - INFO - Replacing SiLU modules with InterpolatedSiLU...
+2025-03-12 05:56:07,910 - hook_solution - INFO - Finding SiLU modules in the model...
+2025-03-12 05:56:07,910 - hook_solution - INFO - Found 22 SiLU modules in 0.00 seconds
+2025-03-12 05:56:07,910 - hook_solution - INFO - Sample paths: ['model.layers.0.mlp.act_fn', 'model.layers.1.mlp.act_fn', 'model.layers.2.mlp.act_fn']
+2025-03-12 05:56:07,910 - hook_solution - INFO - Using input dimensions from forward pass: samples [5632, 5632, 5632]...
+2025-03-12 05:56:07,911 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.0.mlp.act_fn
+2025-03-12 05:56:08,077 - hook_solution - INFO - Replaced SiLU at model.layers.0.mlp.act_fn
+2025-03-12 05:56:08,077 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.1.mlp.act_fn
+2025-03-12 05:56:08,239 - hook_solution - INFO - Replaced SiLU at model.layers.1.mlp.act_fn
+2025-03-12 05:56:08,240 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.2.mlp.act_fn
+2025-03-12 05:56:08,402 - hook_solution - INFO - Replaced SiLU at model.layers.2.mlp.act_fn
+2025-03-12 05:56:08,403 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.3.mlp.act_fn
+2025-03-12 05:56:08,565 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.4.mlp.act_fn
+2025-03-12 05:56:08,728 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.5.mlp.act_fn
+2025-03-12 05:56:08,890 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.6.mlp.act_fn
+2025-03-12 05:56:09,051 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.7.mlp.act_fn
+2025-03-12 05:56:09,213 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.8.mlp.act_fn
+2025-03-12 05:56:09,375 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.9.mlp.act_fn
+2025-03-12 05:56:09,537 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.10.mlp.act_fn
+2025-03-12 05:56:09,699 - hook_solution - INFO - Replaced SiLU at model.layers.10.mlp.act_fn
+2025-03-12 05:56:09,699 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.11.mlp.act_fn
+2025-03-12 05:56:09,861 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.12.mlp.act_fn
+2025-03-12 05:56:10,023 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.13.mlp.act_fn
+2025-03-12 05:56:10,185 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.14.mlp.act_fn
+2025-03-12 05:56:10,348 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.15.mlp.act_fn
+2025-03-12 05:56:10,510 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.16.mlp.act_fn
+2025-03-12 05:56:10,671 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.17.mlp.act_fn
+2025-03-12 05:56:10,832 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.18.mlp.act_fn
+2025-03-12 05:56:10,993 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.19.mlp.act_fn
+2025-03-12 05:56:11,154 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.20.mlp.act_fn
+2025-03-12 05:56:11,314 - hook_solution - INFO - Replaced SiLU at model.layers.20.mlp.act_fn
+2025-03-12 05:56:11,315 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.21.mlp.act_fn
+2025-03-12 05:56:11,476 - hook_solution - INFO - Replaced 22 SiLU modules in 3.57 seconds
+2025-03-12 05:56:11,477 - hook_solution - INFO - Updating bilinear approximations in model...
+2025-03-12 05:56:11,486 - hook_solution - INFO - Updated module 0 (model.layers.0.mlp.act_fn)
+2025-03-12 05:56:11,576 - hook_solution - INFO - Updated module 1 (model.layers.1.mlp.act_fn)
+2025-03-12 05:56:11,590 - hook_solution - INFO - Updated module 2 (model.layers.2.mlp.act_fn)
+2025-03-12 05:56:11,989 - hook_solution - INFO - Updated module 10 (model.layers.10.mlp.act_fn)
+2025-03-12 05:56:12,386 - hook_solution - INFO - Updated module 20 (model.layers.20.mlp.act_fn)
+2025-03-12 05:56:12,388 - hook_solution - INFO - Updated 22 modules in 0.91 seconds
+2025-03-12 05:56:12,388 - hook_solution - INFO - SiLU replacement process completed
+2025-03-12 05:56:15,123 - __main__ - INFO - Starting training
+[34m[1mwandb[0m: [33mWARNING[0m The `run_name` is currently set to the same value as `TrainingArguments.output_dir`. If this was not intended, please specify a different run name by setting the `TrainingArguments.run_name` parameter.
+  0%|                                                                                                                  | 0/122070 [00:00<?, ?it/s]2025-03-12 05:56:18,183 - __main__ - INFO - Step 0/122070: alpha = 0.0000, beta = 1.0000, updated 22 modules
+  0%|                                                                                                      | 1/122070 [00:03<127:15:26,  3.75s/it]2025-03-12 05:56:19,138 - __main__ - INFO - Step 1/122070: alpha = 0.0000, beta = 1.0000, updated 22 modules
+  0%|                                                                                                      | 100/122070 [00:26<7:49:09,  4.33it/s]2025-03-12 05:56:42,322 - __main__ - INFO - Step 100/122070: alpha = 0.0027, beta = 0.9973, updated 22 modules
+{'loss': 2.4258, 'grad_norm': 4.9734063148498535, 'learning_rate': 4.098360655737704e-06, 'epoch': 0.0}
+  0%|▏                                                                                                     | 200/122070 [00:50<7:54:32,  4.28it/s]2025-03-12 05:57:05,715 - __main__ - INFO - Step 200/122070: alpha = 0.0055, beta = 0.9945, updated 22 modules
+{'loss': 2.3273, 'grad_norm': 5.775951385498047, 'learning_rate': 8.196721311475409e-06, 'epoch': 0.0}
+  0%|▎                                                                                                     | 300/122070 [01:13<7:49:09,  4.33it/s]2025-03-12 05:57:29,206 - __main__ - INFO - Step 300/122070: alpha = 0.0082, beta = 0.9918, updated 22 modules
+{'loss': 2.3635, 'grad_norm': 4.711182117462158, 'learning_rate': 1.2295081967213116e-05, 'epoch': 0.0}
+  0%|▎                                                                                                     | 400/122070 [01:37<7:57:14,  4.25it/s]2025-03-12 05:57:52,614 - __main__ - INFO - Step 400/122070: alpha = 0.0109, beta = 0.9891, updated 22 modules
+{'loss': 2.3531, 'grad_norm': 4.949185848236084, 'learning_rate': 1.6393442622950818e-05, 'epoch': 0.0}
+  0%|▍                                                                                                     | 476/122070 [01:55<7:53:58,  4.28it/s]Traceback (most recent call last):
+  File "/workspace/finetuning/simplified_finetuning.py", line 313, in <module>
+    main()
+  File "/workspace/finetuning/simplified_finetuning.py", line 283, in main
+    trainer.train()
+  File "/usr/local/lib/python3.11/dist-packages/transformers/trainer.py", line 2241, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/trainer.py", line 2548, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/trainer.py", line 3740, in training_step
+    self.accelerator.backward(loss, **kwargs)
+  File "/usr/local/lib/python3.11/dist-packages/accelerate/accelerator.py", line 2329, in backward
+    loss.backward(**kwargs)
+  File "/usr/local/lib/python3.11/dist-packages/torch/_tensor.py", line 521, in backward
+    torch.autograd.backward(
+  File "/usr/local/lib/python3.11/dist-packages/torch/autograd/__init__.py", line 289, in backward
+    _engine_run_backward(
+  File "/usr/local/lib/python3.11/dist-packages/torch/autograd/graph.py", line 769, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

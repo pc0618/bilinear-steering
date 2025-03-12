@@ -1,0 +1,33 @@
+2025-03-12 04:46:48,421 INFO    MainThread:6125 [wandb_setup.py:_flush():67] Current SDK version is 0.19.8
+2025-03-12 04:46:48,422 INFO    MainThread:6125 [wandb_setup.py:_flush():67] Configure stats pid to 6125
+2025-03-12 04:46:48,422 INFO    MainThread:6125 [wandb_setup.py:_flush():67] Loading settings from /root/.config/wandb/settings
+2025-03-12 04:46:48,422 INFO    MainThread:6125 [wandb_setup.py:_flush():67] Loading settings from /workspace/finetuning/wandb/settings
+2025-03-12 04:46:48,423 INFO    MainThread:6125 [wandb_setup.py:_flush():67] Loading settings from environment variables
+2025-03-12 04:46:48,423 INFO    MainThread:6125 [wandb_init.py:setup_run_log_directory():647] Logging user logs to /workspace/finetuning/wandb/run-20250312_044648-qqnlc3v1/logs/debug.log
+2025-03-12 04:46:48,424 INFO    MainThread:6125 [wandb_init.py:setup_run_log_directory():648] Logging internal logs to /workspace/finetuning/wandb/run-20250312_044648-qqnlc3v1/logs/debug-internal.log
+2025-03-12 04:46:48,424 INFO    MainThread:6125 [wandb_init.py:init():761] calling init triggers
+2025-03-12 04:46:48,425 INFO    MainThread:6125 [wandb_init.py:init():766] wandb.init called with sweep_config: {}
+config: {'model': 'TinyLlama-1.1B', 'total_tokens': 500000000, 'download_tokens': 500000000, 'interpolation_schedule': 'linear_30_percent', 'batch_size': 32, 'gradient_accumulation_steps': 4, 'learning_rate': 5e-05, 'seed': 42, '_wandb': {}}
+2025-03-12 04:46:48,425 INFO    MainThread:6125 [wandb_init.py:init():784] starting backend
+2025-03-12 04:46:48,425 INFO    MainThread:6125 [wandb_init.py:init():788] sending inform_init request
+2025-03-12 04:46:48,433 INFO    MainThread:6125 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-03-12 04:46:48,433 INFO    MainThread:6125 [wandb_init.py:init():798] backend started and connected
+2025-03-12 04:46:48,436 INFO    MainThread:6125 [wandb_init.py:init():891] updated telemetry
+2025-03-12 04:46:48,440 INFO    MainThread:6125 [wandb_init.py:init():915] communicating run to backend with 90.0 second timeout
+2025-03-12 04:46:48,781 INFO    MainThread:6125 [wandb_init.py:init():990] starting run threads in backend
+2025-03-12 04:46:49,004 INFO    MainThread:6125 [wandb_run.py:_console_start():2375] atexit reg
+2025-03-12 04:46:49,009 INFO    MainThread:6125 [wandb_run.py:_redirect():2227] redirect: wrap_raw
+2025-03-12 04:46:49,010 INFO    MainThread:6125 [wandb_run.py:_redirect():2292] Wrapping output streams.
+2025-03-12 04:46:49,011 INFO    MainThread:6125 [wandb_run.py:_redirect():2315] Redirects installed.
+2025-03-12 04:46:49,013 INFO    MainThread:6125 [wandb_init.py:init():1032] run started, returning control to user process
+2025-03-12 04:46:49,016 INFO    MainThread:6125 [wandb_run.py:_config_callback():1261] config_cb None None {'model_name': 'TinyLlama/TinyLlama-1.1B-intermediate-step-1431k-3T'}
+2025-03-12 04:46:50,393 INFO    MainThread:6125 [wandb_run.py:_config_callback():1261] config_cb None None {'total_params': 1100048384, 'trainable_params': 1100048384}
+2025-03-12 04:47:30,970 INFO    MainThread:6125 [wandb_run.py:_config_callback():1261] config_cb None None {'tokens_per_batch': 65536, 'total_steps': 7629, 'interpolation_steps': 2288, 'interpolation_percentage': 30.0}
+2025-03-12 04:47:31,818 INFO    MainThread:6125 [wandb_run.py:_config_callback():1261] config_cb None None {'gate_replacement_sample_size': 1000}
+2025-03-12 04:47:31,925 INFO    MainThread:6125 [wandb_run.py:_finish():2112] finishing run mhrohatgi-stanford-university/tinyllama-bilinear/qqnlc3v1
+2025-03-12 04:47:31,927 INFO    MainThread:6125 [wandb_run.py:_atexit_cleanup():2340] got exitcode: 1
+2025-03-12 04:47:31,928 INFO    MainThread:6125 [wandb_run.py:_restore():2322] restore
+2025-03-12 04:47:31,929 INFO    MainThread:6125 [wandb_run.py:_restore():2328] restore done
+2025-03-12 04:47:32,453 INFO    MainThread:6125 [wandb_run.py:_footer_history_summary_info():3956] rendering history
+2025-03-12 04:47:32,453 INFO    MainThread:6125 [wandb_run.py:_footer_history_summary_info():3988] rendering summary
+2025-03-12 04:47:32,454 INFO    MainThread:6125 [wandb_run.py:_footer_sync_info():3917] logging synced files

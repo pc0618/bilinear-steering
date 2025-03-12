@@ -1,0 +1,16 @@
+{"time":"2025-03-12T04:00:05.427745967Z","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/workspace/finetuning/wandb/run-20250312_040005-lyatve1l/logs/debug-core.log"}
+{"time":"2025-03-12T04:00:05.552440407Z","level":"INFO","msg":"created new stream","id":"lyatve1l"}
+{"time":"2025-03-12T04:00:05.553051864Z","level":"INFO","msg":"handler: started","stream_id":"lyatve1l"}
+{"time":"2025-03-12T04:00:05.553185838Z","level":"INFO","msg":"stream: started","id":"lyatve1l"}
+{"time":"2025-03-12T04:00:05.553251644Z","level":"INFO","msg":"writer: Do: started","stream_id":"lyatve1l"}
+{"time":"2025-03-12T04:00:05.553241091Z","level":"INFO","msg":"sender: started","stream_id":"lyatve1l"}
+{"time":"2025-03-12T04:00:05.745124429Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-12T04:00:26.685528969Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-12T04:00:26.687571949Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-12T04:00:27.097806728Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-12T04:00:27.225794956Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-03-12T04:00:27.232888492Z","level":"INFO","msg":"stream: closing","id":"lyatve1l"}
+{"time":"2025-03-12T04:00:27.233383026Z","level":"INFO","msg":"handler: closed","stream_id":"lyatve1l"}
+{"time":"2025-03-12T04:00:27.233423966Z","level":"INFO","msg":"writer: Close: closed","stream_id":"lyatve1l"}
+{"time":"2025-03-12T04:00:27.233438685Z","level":"INFO","msg":"sender: closed","stream_id":"lyatve1l"}
+{"time":"2025-03-12T04:00:27.236737253Z","level":"INFO","msg":"stream: closed","id":"lyatve1l"}

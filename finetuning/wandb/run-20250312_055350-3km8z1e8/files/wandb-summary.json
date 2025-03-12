@@ -1,0 +1,1 @@
+{"train/loss":2.3531,"train/epoch":0.003276808388629475,"alpha":0.010922694628764917,"_wandb":{"runtime":260},"_step":400,"train/grad_norm":4.949185848236084,"_timestamp":1.7417590726142771e+09,"_runtime":260.535168868,"train/global_step":400,"updated_modules":22,"train/learning_rate":1.6393442622950818e-05,"beta":0.9890773053712351}

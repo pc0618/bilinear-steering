@@ -1,0 +1,37 @@
+2025-03-12 05:35:20,348 - __main__ - INFO - Loading TinyLlama model and tokenizer
+tokenizer_config.json: 100%|█████████████████████████████████████████████████████████████████████████████████████| 776/776 [00:00<00:00, 6.54MB/s]
+tokenizer.model: 100%|█████████████████████████████████████████████████████████████████████████████████████████| 500k/500k [00:00<00:00, 79.3MB/s]
+tokenizer.json: 100%|████████████████████████████████████████████████████████████████████████████████████████| 1.84M/1.84M [00:00<00:00, 15.0MB/s]
+special_tokens_map.json: 100%|███████████████████████████████████████████████████████████████████████████████████| 414/414 [00:00<00:00, 3.27MB/s]
+config.json: 100%|███████████████████████████████████████████████████████████████████████████████████████████████| 560/560 [00:00<00:00, 5.14MB/s]
+model.safetensors: 100%|██████████████████████████████████████████████████████████████████████████████████████| 4.40G/4.40G [00:24<00:00, 181MB/s]
+generation_config.json: 100%|████████████████████████████████████████████████████████████████████████████████████| 129/129 [00:00<00:00, 1.14MB/s]
+2025-03-12 05:35:46,541 - __main__ - INFO - Model loaded in 26.19 seconds
+2025-03-12 05:35:46,542 - __main__ - INFO - Model has 1,100,048,384 parameters
+2025-03-12 05:35:46,542 - __main__ - INFO - Loading FineWeb dataset
+README.md: 100%|█████████████████████████████████████████████████████████████████████████████████████████████| 43.1k/43.1k [00:00<00:00, 42.4MB/s]
+Resolving data files: 100%|██████████████████████████████████████████████████████████████████████████████| 25668/25668 [00:02<00:00, 11064.96it/s]
+Resolving data files: 100%|█████████████████████████████████████████████████████████████████████████████| 25868/25868 [00:00<00:00, 681196.51it/s]
+2025-03-12 05:36:18,815 - __main__ - INFO - Debug mode: using small sample
+2025-03-12 05:36:19,701 - __main__ - INFO - Running hook-based SiLU replacement
+2025-03-12 05:36:19,701 - hook_solution - INFO - Starting full SiLU replacement process...
+2025-03-12 05:36:19,701 - hook_solution - INFO - Collecting SiLU activations...
+2025-03-12 05:36:19,701 - hook_solution - INFO - Finding SiLU modules in the model...
+2025-03-12 05:36:19,701 - hook_solution - INFO - Found 22 SiLU modules in 0.00 seconds
+2025-03-12 05:36:19,701 - hook_solution - INFO - Sample paths: ['model.layers.0.mlp.act_fn', 'model.layers.1.mlp.act_fn', 'model.layers.2.mlp.act_fn']
+2025-03-12 05:36:29,821 - hook_solution - INFO - Collected 22 activations in 10.12 seconds
+2025-03-12 05:36:29,821 - hook_solution - INFO - Computing bilinear approximations...
+2025-03-12 05:36:29,822 - __main__ - ERROR - Error: This function doesn't handle types other than float and double
+Traceback (most recent call last):
+  File "/workspace/finetuning/simplified_finetuning.py", line 309, in <module>
+    main()
+  File "/workspace/finetuning/simplified_finetuning.py", line 193, in main
+    model = replacer.run_full_replacement(model, sample_input_ids)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/finetuning/hook_solution.py", line 240, in run_full_replacement
+    approximations = self.compute_bilinear_approximation()
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/finetuning/hook_solution.py", line 124, in compute_bilinear_approximation
+    solution = torch.linalg.lstsq(flat_inputs, flat_outputs).solution
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: This function doesn't handle types other than float and double

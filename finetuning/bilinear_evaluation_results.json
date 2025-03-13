@@ -1,0 +1,28 @@
+{
+  "squad": {
+    "dataset": "SQuAD",
+    "accuracy": 0.15,
+    "samples": 20,
+    "time_taken": 34.24914002418518,
+    "time_per_sample": 1.712457001209259
+  },
+  "truthfulqa": {
+    "dataset": "TruthfulQA",
+    "accuracy": 0.0,
+    "samples": 20,
+    "time_taken": 33.13290739059448,
+    "time_per_sample": 1.656645369529724
+  },
+  "gsm8k": {
+    "dataset": "GSM8K",
+    "accuracy": 0.0,
+    "samples": 10,
+    "time_taken": 33.36697483062744,
+    "time_per_sample": 3.336697483062744
+  },
+  "model_info": {
+    "bilinear_model_path": "./bilinear_tinyllama_chat",
+    "original_model": "TinyLlama/TinyLlama_v1.1",
+    "evaluation_date": "2025-03-13 07:19:38"
+  }
+}

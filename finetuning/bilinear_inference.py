@@ -338,28 +338,50 @@ def register_custom_modules():
         logger.warning(f"Error registering custom modules: {str(e)}")
         logger.warning("Model loading may fail if it contains custom modules")
 
-def generate_answer(model, tokenizer, prompt, max_new_tokens=128):
+def generate_answer(model, tokenizer, prompt, max_new_tokens=128, use_beam_search=False):
     """
-    Generate an answer from the model given a prompt.
+    Generate an answer from the model given a prompt with improved decoding strategy.
     
     Args:
         model: The language model
         tokenizer: The tokenizer
         prompt: The prompt string
         max_new_tokens: Maximum number of tokens to generate
+        use_beam_search: Whether to use beam search (may be slower but can produce better results)
         
     Returns:
         answer: The generated answer
     """
     inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
     
-    # Set up generation config
-    generation_config = GenerationConfig(
-        max_new_tokens=max_new_tokens,
-        temperature=0.7,
-        top_p=0.9,
-        do_sample=True,
-    )
+    # We'll provide two alternative decoding strategies
+    if use_beam_search:
+        # Option 1: Beam search with diversity
+        generation_config = GenerationConfig(
+            max_new_tokens=max_new_tokens,
+            num_beams=4,                 # Use beam search with 4 beams
+            num_beam_groups=2,           # Use diverse beam groups
+            diversity_penalty=0.5,       # Strong diversity between beam groups
+            temperature=0.7,             # Temperature still applies with beam search
+            do_sample=True,              # Sample from beams
+            repetition_penalty=1.3,      # Strong repetition penalty
+            no_repeat_ngram_size=3,      # No 3-gram repetition
+            encoder_repetition_penalty=1.2  # Penalize tokens from input
+        )
+    else:
+        # Option 2: Sampling-based approach (faster and still effective)
+        generation_config = GenerationConfig(
+            max_new_tokens=max_new_tokens,
+            temperature=0.85,            # Higher temperature for more diversity
+            top_p=0.92,                  # Control the randomness
+            top_k=50,                    # Limit to top 50 tokens at each step
+            do_sample=True,              # Use sampling
+            repetition_penalty=1.3,      # Strong repetition penalty
+            no_repeat_ngram_size=3,      # No 3-gram repetition
+            encoder_repetition_penalty=1.2,  # Penalize tokens from input
+            typical_p=0.95,              # Add typical sampling (helps with repetition)
+            # frequency_penalty=0.25,    # Optional: penalize frequent tokens (not in all versions)
+        )
     
     # Generate answer
     with torch.no_grad():
@@ -376,7 +398,7 @@ def generate_answer(model, tokenizer, prompt, max_new_tokens=128):
     
     return answer
 
-def evaluate_squad(model, tokenizer, num_samples=100):
+def evaluate_squad(model, tokenizer, num_samples=100, use_beam_search=False):
     """
     Evaluate the model on SQuAD dataset.
     
@@ -384,6 +406,7 @@ def evaluate_squad(model, tokenizer, num_samples=100):
         model: The language model
         tokenizer: The tokenizer
         num_samples: Number of samples to evaluate
+        use_beam_search: Whether to use beam search decoding
         
     Returns:
         results: Dictionary with evaluation metrics
@@ -411,8 +434,8 @@ def evaluate_squad(model, tokenizer, num_samples=100):
             
             prompt = format_qa_prompt(question, context)
             
-            # Generate answer
-            answer = generate_answer(model, tokenizer, prompt)
+            # Generate answer with improved decoding
+            answer = generate_answer(model, tokenizer, prompt, use_beam_search=use_beam_search)
             answer = answer.lower()
             
             # Simple exact match evaluation
@@ -441,7 +464,7 @@ def evaluate_squad(model, tokenizer, num_samples=100):
         logger.error(f"Error evaluating on SQuAD: {str(e)}")
         return {"dataset": "SQuAD", "error": str(e)}
 
-def evaluate_truthfulqa(model, tokenizer, num_samples=100):
+def evaluate_truthfulqa(model, tokenizer, num_samples=100, use_beam_search=False):
     """
     Evaluate the model on TruthfulQA dataset.
     
@@ -449,6 +472,7 @@ def evaluate_truthfulqa(model, tokenizer, num_samples=100):
         model: The language model
         tokenizer: The tokenizer
         num_samples: Number of samples to evaluate
+        use_beam_search: Whether to use beam search decoding
         
     Returns:
         results: Dictionary with evaluation metrics
@@ -472,9 +496,9 @@ def evaluate_truthfulqa(model, tokenizer, num_samples=100):
         for example in tqdm(dataset, desc="Evaluating TruthfulQA"):
             question = example["question"]
             
-            # Generate answer
+            # Generate answer with improved decoding
             prompt = format_qa_prompt(question)
-            generated_answer = generate_answer(model, tokenizer, prompt)
+            generated_answer = generate_answer(model, tokenizer, prompt, use_beam_search=use_beam_search)
             
             # Check against correct answers
             correct_answers = example["mc1_targets"]["labels"]
@@ -509,7 +533,7 @@ def evaluate_truthfulqa(model, tokenizer, num_samples=100):
         logger.error(f"Error evaluating on TruthfulQA: {str(e)}")
         return {"dataset": "TruthfulQA", "error": str(e)}
 
-def evaluate_gsm8k(model, tokenizer, num_samples=50):
+def evaluate_gsm8k(model, tokenizer, num_samples=50, use_beam_search=False):
     """
     Evaluate the model on GSM8K math reasoning dataset.
     
@@ -517,6 +541,7 @@ def evaluate_gsm8k(model, tokenizer, num_samples=50):
         model: The language model
         tokenizer: The tokenizer
         num_samples: Number of samples to evaluate
+        use_beam_search: Whether to use beam search decoding
         
     Returns:
         results: Dictionary with evaluation metrics
@@ -544,9 +569,9 @@ def evaluate_gsm8k(model, tokenizer, num_samples=50):
             # Extract just the final number
             ground_truth = example["answer"].split("####")[-1].strip()
             
-            # Generate answer with more tokens for math reasoning
+            # Generate answer with more tokens for math reasoning and improved decoding
             prompt = f"Solve the following math problem step-by-step:\n\n{question}\n\nSolution:"
-            answer = generate_answer(model, tokenizer, prompt, max_new_tokens=256)
+            answer = generate_answer(model, tokenizer, prompt, max_new_tokens=256, use_beam_search=use_beam_search)
             
             # Try to extract numbers from the answer
             import re
@@ -663,7 +688,7 @@ def compare_inference_speed(original_model_path, bilinear_model_path, tokenizer,
         logger.error(f"Error comparing inference speed: {str(e)}")
         return {"error": str(e)}
 
-def process_cli_input(model, tokenizer, user_input, max_tokens=256, show_time=True):
+def process_cli_input(model, tokenizer, user_input, max_tokens=150, show_time=True, direct_prompt=False, use_beam_search=False):
     """
     Process a single input from command line and generate a response.
     
@@ -673,26 +698,38 @@ def process_cli_input(model, tokenizer, user_input, max_tokens=256, show_time=Tr
         user_input: User's input string
         max_tokens: Maximum tokens to generate
         show_time: Whether to show generation time
+        direct_prompt: Whether to pass the input directly without formatting
+        use_beam_search: Whether to use beam search decoding
         
     Returns:
         answer: The generated answer
     """
-    # Process input for potential context
-    if "Context:" in user_input and "Question:" in user_input:
-        # Split into context and question
-        parts = user_input.split("Question:")
-        context = parts[0].replace("Context:", "").strip()
-        question = parts[1].strip()
-        prompt = format_qa_prompt(question, context)
+    # Determine if we should use direct prompt or formatted prompt
+    if direct_prompt:
+        prompt = user_input  # Use the input directly as prompt
     else:
-        # Just a question
-        prompt = format_qa_prompt(user_input)
+        # Process input for potential context
+        if "Context:" in user_input and "Question:" in user_input:
+            # Split into context and question
+            parts = user_input.split("Question:")
+            context = parts[0].replace("Context:", "").strip()
+            question = parts[1].strip()
+            prompt = format_qa_prompt(question, context)
+        else:
+            # Just a question
+            prompt = format_qa_prompt(user_input)
     
     # Track generation time
     start_time = time.time()
     
-    # Generate response
-    answer = generate_answer(model, tokenizer, prompt, max_new_tokens=max_tokens)
+    # Generate response with updated function
+    answer = generate_answer(
+        model, 
+        tokenizer, 
+        prompt, 
+        max_new_tokens=max_tokens,
+        use_beam_search=use_beam_search
+    )
     
     # Calculate generation time
     generation_time = time.time() - start_time
@@ -701,7 +738,12 @@ def process_cli_input(model, tokenizer, user_input, max_tokens=256, show_time=Tr
     if show_time:
         print(f"[Generated in {generation_time:.2f} seconds]")
     
-    return answer
+    # For direct prompts, we can't reliably extract just the "answer" part
+    if direct_prompt:
+        full_response = prompt + answer
+        return full_response
+    else:
+        return answer
 
 def main():
     """Main function to run the bilinear model inference and evaluation"""
@@ -724,7 +766,7 @@ def main():
                         help="Number of samples for speed benchmarking")
     parser.add_argument("--input", type=str, default=None,
                         help="User input string to process (can include 'Context:' and 'Question:' markers)")
-    parser.add_argument("--max_tokens", type=int, default=256,
+    parser.add_argument("--max_tokens", type=int, default=150,
                         help="Maximum number of tokens to generate in response")
     parser.add_argument("--question", type=str, default=None,
                         help="Single question to answer (without running full benchmarks)")
@@ -732,6 +774,10 @@ def main():
                         help="Optional context for the question")
     parser.add_argument("--no_timing", action="store_true",
                         help="Hide generation timing information")
+    parser.add_argument("--direct_prompt", action="store_true",
+                        help="Pass input directly to the model without Q&A formatting")
+    parser.add_argument("--use_beam_search", action="store_true",
+                        help="Use beam search decoding (slower but potentially better quality)")
     args = parser.parse_args()
     
     logger.info(f"Starting evaluation of bilinear TinyLlama model")
@@ -747,7 +793,9 @@ def main():
             tokenizer, 
             args.input, 
             max_tokens=args.max_tokens,
-            show_time=not args.no_timing
+            show_time=not args.no_timing,
+            direct_prompt=args.direct_prompt,
+            use_beam_search=args.use_beam_search
         )
         print(answer)
         return
@@ -756,7 +804,13 @@ def main():
         prompt = format_qa_prompt(args.question, args.context)
         
         start_time = time.time()
-        answer = generate_answer(model, tokenizer, prompt, max_new_tokens=args.max_tokens)
+        answer = generate_answer(
+            model, 
+            tokenizer, 
+            prompt, 
+            max_new_tokens=args.max_tokens,
+            use_beam_search=args.use_beam_search
+        )
         generation_time = time.time() - start_time
         
         print("\nQuestion:", args.question)

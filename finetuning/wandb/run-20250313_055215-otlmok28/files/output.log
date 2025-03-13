@@ -1,0 +1,31 @@
+  0%|                                                                                                                              | 452/488281 [00:39<11:44:03, 11.55it/s]Traceback (most recent call last):
+{'loss': 1.4535, 'grad_norm': 9.3125, 'learning_rate': 9.997951998951424e-06, 'epoch': 0.0, 'alpha': 0.000682667016192179}
+{'loss': 1.3783, 'grad_norm': 12.5625, 'learning_rate': 9.995903997902848e-06, 'epoch': 0.0, 'alpha': 0.001365334032384358}
+{'loss': 1.3913, 'grad_norm': 10.875, 'learning_rate': 9.993855996854271e-06, 'epoch': 0.0, 'alpha': 0.002048001048576537}
+{'loss': 1.3662, 'grad_norm': 11.375, 'learning_rate': 9.991807995805694e-06, 'epoch': 0.0, 'alpha': 0.002730668064768716}
+  File "/workspace/bilinear-steering/finetuning/dooms_finetuning.py", line 403, in <module>
+    main()
+  File "/workspace/bilinear-steering/finetuning/dooms_finetuning.py", line 394, in main
+    trainer.train()
+  File "/usr/local/lib/python3.11/dist-packages/transformers/trainer.py", line 2241, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/trainer.py", line 2500, in _inner_training_loop
+    batch_samples, num_items_in_batch = self.get_batch_samples(epoch_iterator, num_batches)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/trainer.py", line 5180, in get_batch_samples
+    batch_samples += [next(epoch_iterator)]
+                      ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/accelerate/data_loader.py", line 573, in __iter__
+    current_batch = send_to_device(current_batch, self.device, non_blocking=self._non_blocking)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/accelerate/utils/operations.py", line 155, in send_to_device
+    return tensor.to(device, non_blocking=non_blocking)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/tokenization_utils_base.py", line 820, in to
+    self.data = {
+                ^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/tokenization_utils_base.py", line 821, in <dictcomp>
+    k: v.to(device=device, non_blocking=non_blocking) if isinstance(v, torch.Tensor) else v
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

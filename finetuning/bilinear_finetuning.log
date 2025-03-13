@@ -1,0 +1,741 @@
+2025-03-13 09:04:54,462 - __main__ - INFO - Starting bilinear fine-tuning with configuration:
+2025-03-13 09:04:54,462 - __main__ - INFO -   model_path: ./bilinear_tinyllama_chat
+2025-03-13 09:04:54,462 - __main__ - INFO -   output_dir: ./bilinear_tinyllama_regularized
+2025-03-13 09:04:54,462 - __main__ - INFO -   transformer_indices: 10,11
+2025-03-13 09:04:54,462 - __main__ - INFO -   probe_weights_paths: /workspace/bilinear-steering/finetuning/linear_probes/model_layers_10_mlp/probe.pt,/workspace/bilinear-steering/finetuning/linear_probes/model_layers_11_mlp/probe.pt
+2025-03-13 09:04:54,462 - __main__ - INFO -   output_dim: 1
+2025-03-13 09:04:54,462 - __main__ - INFO -   batch_size: 4
+2025-03-13 09:04:54,462 - __main__ - INFO -   grad_accum: 1
+2025-03-13 09:04:54,462 - __main__ - INFO -   learning_rate: 3e-05
+2025-03-13 09:04:54,462 - __main__ - INFO -   max_steps: 10000
+2025-03-13 09:04:54,462 - __main__ - INFO -   warmup_steps: 100
+2025-03-13 09:04:54,462 - __main__ - INFO -   max_length: 1024
+2025-03-13 09:04:54,462 - __main__ - INFO -   lambda_reg: 0.01
+2025-03-13 09:04:54,462 - __main__ - INFO -   auto_adjust_lambda: True
+2025-03-13 09:04:54,462 - __main__ - INFO -   weight_decay: 0.01
+2025-03-13 09:04:54,462 - __main__ - INFO -   adam_beta1: 0.9
+2025-03-13 09:04:54,462 - __main__ - INFO -   adam_beta2: 0.999
+2025-03-13 09:04:54,462 - __main__ - INFO -   adam_epsilon: 1e-08
+2025-03-13 09:04:54,463 - __main__ - INFO -   max_grad_norm: 1.0
+2025-03-13 09:04:54,463 - __main__ - INFO -   lr_scheduler_type: linear
+2025-03-13 09:04:54,463 - __main__ - INFO -   total_tokens: 100000000
+2025-03-13 09:04:54,463 - __main__ - INFO -   logging_steps: 10
+2025-03-13 09:04:54,463 - __main__ - INFO -   save_steps: 0
+2025-03-13 09:04:54,463 - __main__ - INFO -   wandb_project: bilinear-tinyllama
+2025-03-13 09:04:54,463 - __main__ - INFO -   wandb_entity: None
+2025-03-13 09:04:54,463 - __main__ - INFO -   wandb_name: None
+2025-03-13 09:04:54,463 - __main__ - INFO -   wandb_tags: None
+2025-03-13 09:04:54,463 - __main__ - INFO -   save_to_wandb: False
+2025-03-13 09:04:54,463 - __main__ - INFO -   seed: 42
+2025-03-13 09:04:54,463 - __main__ - INFO -   use_bf16: False
+2025-03-13 09:04:54,553 - __main__ - INFO - Loading model from ./bilinear_tinyllama_chat
+2025-03-13 09:04:55,707 - __main__ - INFO - Target transformer blocks: [10, 11]
+2025-03-13 09:04:55,707 - __main__ - INFO - Probe weights mapping:
+2025-03-13 09:04:55,707 - __main__ - INFO -   Block 10: /workspace/bilinear-steering/finetuning/linear_probes/model_layers_10_mlp/probe.pt
+2025-03-13 09:04:55,707 - __main__ - INFO -   Block 11: /workspace/bilinear-steering/finetuning/linear_probes/model_layers_11_mlp/probe.pt
+2025-03-13 09:04:55,707 - __main__ - INFO - Checking bilinear transformer blocks: [10, 11]
+2025-03-13 09:04:55,707 - __main__ - WARNING - Layer 10 has standard SiLU activation, expected InterpolatedSiLU
+2025-03-13 09:04:55,868 - __main__ - INFO - Replaced SiLU in layer 10 with InterpolatedSiLU (alpha=0.0)
+2025-03-13 09:04:55,869 - __main__ - WARNING - Layer 11 has standard SiLU activation, expected InterpolatedSiLU
+2025-03-13 09:04:56,031 - __main__ - INFO - Replaced SiLU in layer 11 with InterpolatedSiLU (alpha=0.0)
+2025-03-13 09:04:56,031 - __main__ - WARNING - Had to replace 2 standard SiLU activations with InterpolatedSiLU. Please verify that the model checkpoint was actually in bilinear form.
+2025-03-13 09:04:56,908 - __main__ - INFO - Using GPU: NVIDIA H200 with 139.72 GB memory
+2025-03-13 09:04:56,908 - __main__ - INFO - Loading linear probe weights for block 10 from /workspace/bilinear-steering/finetuning/linear_probes/model_layers_10_mlp/probe.pt
+2025-03-13 09:04:56,908 - __main__ - INFO - Loading linear probe weights for block 11 from /workspace/bilinear-steering/finetuning/linear_probes/model_layers_11_mlp/probe.pt
+2025-03-13 09:08:31,952 - __main__ - INFO - Starting bilinear fine-tuning with configuration:
+2025-03-13 09:08:31,952 - __main__ - INFO -   model_path: ./bilinear_tinyllama_chat
+2025-03-13 09:08:31,952 - __main__ - INFO -   output_dir: ./bilinear_tinyllama_regularized
+2025-03-13 09:08:31,952 - __main__ - INFO -   transformer_indices: 10,11
+2025-03-13 09:08:31,952 - __main__ - INFO -   probe_weights_paths: /workspace/bilinear-steering/finetuning/linear_probes/model_layers_10_mlp/probe.pt,/workspace/bilinear-steering/finetuning/linear_probes/model_layers_11_mlp/probe.pt
+2025-03-13 09:08:31,952 - __main__ - INFO -   output_dim: 1
+2025-03-13 09:08:31,952 - __main__ - INFO -   batch_size: 4
+2025-03-13 09:08:31,952 - __main__ - INFO -   grad_accum: 1
+2025-03-13 09:08:31,952 - __main__ - INFO -   learning_rate: 3e-05
+2025-03-13 09:08:31,952 - __main__ - INFO -   max_steps: 10000
+2025-03-13 09:08:31,952 - __main__ - INFO -   warmup_steps: 100
+2025-03-13 09:08:31,953 - __main__ - INFO -   max_length: 1024
+2025-03-13 09:08:31,953 - __main__ - INFO -   lambda_reg: 0.01
+2025-03-13 09:08:31,953 - __main__ - INFO -   auto_adjust_lambda: True
+2025-03-13 09:08:31,953 - __main__ - INFO -   weight_decay: 0.01
+2025-03-13 09:08:31,953 - __main__ - INFO -   adam_beta1: 0.9
+2025-03-13 09:08:31,953 - __main__ - INFO -   adam_beta2: 0.999
+2025-03-13 09:08:31,953 - __main__ - INFO -   adam_epsilon: 1e-08
+2025-03-13 09:08:31,953 - __main__ - INFO -   max_grad_norm: 1.0
+2025-03-13 09:08:31,953 - __main__ - INFO -   lr_scheduler_type: linear
+2025-03-13 09:08:31,953 - __main__ - INFO -   total_tokens: 100000000
+2025-03-13 09:08:31,953 - __main__ - INFO -   logging_steps: 10
+2025-03-13 09:08:31,953 - __main__ - INFO -   save_steps: 0
+2025-03-13 09:08:31,953 - __main__ - INFO -   wandb_project: bilinear-tinyllama
+2025-03-13 09:08:31,953 - __main__ - INFO -   wandb_entity: None
+2025-03-13 09:08:31,953 - __main__ - INFO -   wandb_name: None
+2025-03-13 09:08:31,953 - __main__ - INFO -   wandb_tags: None
+2025-03-13 09:08:31,953 - __main__ - INFO -   save_to_wandb: False
+2025-03-13 09:08:31,953 - __main__ - INFO -   seed: 42
+2025-03-13 09:08:31,953 - __main__ - INFO -   use_bf16: False
+2025-03-13 09:08:32,044 - __main__ - INFO - Loading model from ./bilinear_tinyllama_chat
+2025-03-13 09:08:33,204 - __main__ - INFO - Target transformer blocks: [10, 11]
+2025-03-13 09:08:33,205 - __main__ - INFO - Probe weights mapping:
+2025-03-13 09:08:33,205 - __main__ - INFO -   Block 10: /workspace/bilinear-steering/finetuning/linear_probes/model_layers_10_mlp/probe.pt
+2025-03-13 09:08:33,205 - __main__ - INFO -   Block 11: /workspace/bilinear-steering/finetuning/linear_probes/model_layers_11_mlp/probe.pt
+2025-03-13 09:08:33,205 - __main__ - INFO - Checking bilinear transformer blocks: [10, 11]
+2025-03-13 09:08:33,205 - __main__ - WARNING - Layer 10 has standard SiLU activation, expected InterpolatedSiLU
+2025-03-13 09:08:33,364 - __main__ - INFO - Replaced SiLU in layer 10 with InterpolatedSiLU (alpha=0.0)
+2025-03-13 09:08:33,364 - __main__ - WARNING - Layer 11 has standard SiLU activation, expected InterpolatedSiLU
+2025-03-13 09:08:33,526 - __main__ - INFO - Replaced SiLU in layer 11 with InterpolatedSiLU (alpha=0.0)
+2025-03-13 09:08:33,526 - __main__ - WARNING - Had to replace 2 standard SiLU activations with InterpolatedSiLU. Please verify that the model checkpoint was actually in bilinear form.
+2025-03-13 09:08:34,398 - __main__ - INFO - Using GPU: NVIDIA H200 with 139.72 GB memory
+2025-03-13 09:08:34,398 - __main__ - INFO - Loading linear probe weights for block 10 from /workspace/bilinear-steering/finetuning/linear_probes/model_layers_10_mlp/probe.pt
+2025-03-13 09:08:34,398 - __main__ - WARNING - Multiple keys in probe file, available keys: ['model.weight', 'model.bias']
+2025-03-13 09:08:34,398 - __main__ - INFO - Using tensor from key 'model.weight' as probe weights
+2025-03-13 09:08:34,398 - __main__ - INFO - Loading linear probe weights for block 11 from /workspace/bilinear-steering/finetuning/linear_probes/model_layers_11_mlp/probe.pt
+2025-03-13 09:08:34,399 - __main__ - WARNING - Multiple keys in probe file, available keys: ['model.weight', 'model.bias']
+2025-03-13 09:08:34,399 - __main__ - INFO - Using tensor from key 'model.weight' as probe weights
+2025-03-13 09:08:34,408 - __main__ - INFO - Loading FineWeb dataset
+2025-03-13 09:08:49,495 - __main__ - INFO - Trainable parameters (4): ['model.layers.10.mlp.gate_proj.weight', 'model.layers.10.mlp.up_proj.weight', 'model.layers.11.mlp.gate_proj.weight', 'model.layers.11.mlp.up_proj.weight']...
+2025-03-13 09:08:49,495 - __main__ - INFO - Non-trainable parameters: 199 parameters are frozen
+2025-03-13 09:08:49,498 - __main__ - INFO - Starting epoch 1
+2025-03-13 09:08:50,579 - __main__ - WARNING - Failed: expected mat1 and mat2 to have the same dtype, but got: c10::Half != float
+2025-03-13 09:11:31,952 - __main__ - INFO - Starting bilinear fine-tuning with configuration:
+2025-03-13 09:11:31,952 - __main__ - INFO -   model_path: ./bilinear_tinyllama_chat
+2025-03-13 09:11:31,952 - __main__ - INFO -   output_dir: ./bilinear_tinyllama_regularized
+2025-03-13 09:11:31,952 - __main__ - INFO -   transformer_indices: 10,11
+2025-03-13 09:11:31,952 - __main__ - INFO -   probe_weights_paths: /workspace/bilinear-steering/finetuning/linear_probes/model_layers_10_mlp/probe.pt,/workspace/bilinear-steering/finetuning/linear_probes/model_layers_11_mlp/probe.pt
+2025-03-13 09:11:31,952 - __main__ - INFO -   output_dim: 1
+2025-03-13 09:11:31,953 - __main__ - INFO -   batch_size: 4
+2025-03-13 09:11:31,953 - __main__ - INFO -   grad_accum: 1
+2025-03-13 09:11:31,953 - __main__ - INFO -   learning_rate: 3e-05
+2025-03-13 09:11:31,953 - __main__ - INFO -   max_steps: 10000
+2025-03-13 09:11:31,953 - __main__ - INFO -   warmup_steps: 100
+2025-03-13 09:11:31,953 - __main__ - INFO -   max_length: 1024
+2025-03-13 09:11:31,953 - __main__ - INFO -   lambda_reg: 0.01
+2025-03-13 09:11:31,953 - __main__ - INFO -   auto_adjust_lambda: True
+2025-03-13 09:11:31,953 - __main__ - INFO -   weight_decay: 0.01
+2025-03-13 09:11:31,953 - __main__ - INFO -   adam_beta1: 0.9
+2025-03-13 09:11:31,953 - __main__ - INFO -   adam_beta2: 0.999
+2025-03-13 09:11:31,953 - __main__ - INFO -   adam_epsilon: 1e-08
+2025-03-13 09:11:31,953 - __main__ - INFO -   max_grad_norm: 1.0
+2025-03-13 09:11:31,953 - __main__ - INFO -   lr_scheduler_type: linear
+2025-03-13 09:11:31,953 - __main__ - INFO -   total_tokens: 100000000
+2025-03-13 09:11:31,953 - __main__ - INFO -   logging_steps: 10
+2025-03-13 09:11:31,953 - __main__ - INFO -   save_steps: 0
+2025-03-13 09:11:31,953 - __main__ - INFO -   wandb_project: bilinear-tinyllama
+2025-03-13 09:11:31,953 - __main__ - INFO -   wandb_entity: None
+2025-03-13 09:11:31,953 - __main__ - INFO -   wandb_name: None
+2025-03-13 09:11:31,953 - __main__ - INFO -   wandb_tags: None
+2025-03-13 09:11:31,953 - __main__ - INFO -   save_to_wandb: False
+2025-03-13 09:11:31,953 - __main__ - INFO -   seed: 42
+2025-03-13 09:11:31,953 - __main__ - INFO -   use_bf16: False
+2025-03-13 09:11:32,042 - __main__ - INFO - Loading model from ./bilinear_tinyllama_chat
+2025-03-13 09:11:33,200 - __main__ - INFO - Target transformer blocks: [10, 11]
+2025-03-13 09:11:33,200 - __main__ - INFO - Probe weights mapping:
+2025-03-13 09:11:33,200 - __main__ - INFO -   Block 10: /workspace/bilinear-steering/finetuning/linear_probes/model_layers_10_mlp/probe.pt
+2025-03-13 09:11:33,200 - __main__ - INFO -   Block 11: /workspace/bilinear-steering/finetuning/linear_probes/model_layers_11_mlp/probe.pt
+2025-03-13 09:11:33,200 - __main__ - INFO - Checking bilinear transformer blocks: [10, 11]
+2025-03-13 09:11:33,200 - __main__ - WARNING - Layer 10 has standard SiLU activation, expected InterpolatedSiLU
+2025-03-13 09:11:33,361 - __main__ - INFO - Replaced SiLU in layer 10 with InterpolatedSiLU (alpha=0.0)
+2025-03-13 09:11:33,361 - __main__ - WARNING - Layer 11 has standard SiLU activation, expected InterpolatedSiLU
+2025-03-13 09:11:33,524 - __main__ - INFO - Replaced SiLU in layer 11 with InterpolatedSiLU (alpha=0.0)
+2025-03-13 09:11:33,524 - __main__ - WARNING - Had to replace 2 standard SiLU activations with InterpolatedSiLU. Please verify that the model checkpoint was actually in bilinear form.
+2025-03-13 09:11:34,349 - __main__ - INFO - Using GPU: NVIDIA H200 with 139.72 GB memory
+2025-03-13 09:11:34,349 - __main__ - INFO - Loading linear probe weights for block 10 from /workspace/bilinear-steering/finetuning/linear_probes/model_layers_10_mlp/probe.pt
+2025-03-13 09:11:34,350 - __main__ - WARNING - Multiple keys in probe file, available keys: ['model.weight', 'model.bias']
+2025-03-13 09:11:34,350 - __main__ - INFO - Using tensor from key 'model.weight' as probe weights
+2025-03-13 09:11:34,350 - __main__ - INFO - Loading linear probe weights for block 11 from /workspace/bilinear-steering/finetuning/linear_probes/model_layers_11_mlp/probe.pt
+2025-03-13 09:11:34,350 - __main__ - WARNING - Multiple keys in probe file, available keys: ['model.weight', 'model.bias']
+2025-03-13 09:11:34,350 - __main__ - INFO - Using tensor from key 'model.weight' as probe weights
+2025-03-13 09:11:34,359 - __main__ - INFO - Loading FineWeb dataset
+2025-03-13 09:11:46,285 - __main__ - INFO - Trainable parameters (4): ['model.layers.10.mlp.gate_proj.weight', 'model.layers.10.mlp.up_proj.weight', 'model.layers.11.mlp.gate_proj.weight', 'model.layers.11.mlp.up_proj.weight']...
+2025-03-13 09:11:46,285 - __main__ - INFO - Non-trainable parameters: 199 parameters are frozen
+2025-03-13 09:11:46,288 - __main__ - INFO - Starting epoch 1
+2025-03-13 09:11:47,422 - __main__ - WARNING - Failed: expected mat1 and mat2 to have the same dtype, but got: c10::Half != float
+2025-03-13 09:18:25,106 - __main__ - INFO - Starting bilinear fine-tuning with configuration:
+2025-03-13 09:18:25,106 - __main__ - INFO -   model_path: ./bilinear_tinyllama_chat
+2025-03-13 09:18:25,106 - __main__ - INFO -   output_dir: ./bilinear_tinyllama_regularized
+2025-03-13 09:18:25,106 - __main__ - INFO -   transformer_indices: 10,11
+2025-03-13 09:18:25,106 - __main__ - INFO -   probe_weights_paths: /workspace/bilinear-steering/finetuning/linear_probes/model_layers_10_mlp/probe.pt,/workspace/bilinear-steering/finetuning/linear_probes/model_layers_11_mlp/probe.pt
+2025-03-13 09:18:25,106 - __main__ - INFO -   output_dim: 1
+2025-03-13 09:18:25,106 - __main__ - INFO -   batch_size: 4
+2025-03-13 09:18:25,106 - __main__ - INFO -   grad_accum: 1
+2025-03-13 09:18:25,106 - __main__ - INFO -   learning_rate: 3e-05
+2025-03-13 09:18:25,106 - __main__ - INFO -   max_steps: 10000
+2025-03-13 09:18:25,106 - __main__ - INFO -   warmup_steps: 100
+2025-03-13 09:18:25,106 - __main__ - INFO -   max_length: 1024
+2025-03-13 09:18:25,106 - __main__ - INFO -   lambda_reg: 0.01
+2025-03-13 09:18:25,106 - __main__ - INFO -   auto_adjust_lambda: True
+2025-03-13 09:18:25,106 - __main__ - INFO -   weight_decay: 0.01
+2025-03-13 09:18:25,106 - __main__ - INFO -   adam_beta1: 0.9
+2025-03-13 09:18:25,106 - __main__ - INFO -   adam_beta2: 0.999
+2025-03-13 09:18:25,106 - __main__ - INFO -   adam_epsilon: 1e-08
+2025-03-13 09:18:25,107 - __main__ - INFO -   max_grad_norm: 1.0
+2025-03-13 09:18:25,107 - __main__ - INFO -   lr_scheduler_type: linear
+2025-03-13 09:18:25,107 - __main__ - INFO -   total_tokens: 100000000
+2025-03-13 09:18:25,107 - __main__ - INFO -   logging_steps: 10
+2025-03-13 09:18:25,107 - __main__ - INFO -   save_steps: 0
+2025-03-13 09:18:25,107 - __main__ - INFO -   wandb_project: bilinear-tinyllama
+2025-03-13 09:18:25,107 - __main__ - INFO -   wandb_entity: None
+2025-03-13 09:18:25,107 - __main__ - INFO -   wandb_name: None
+2025-03-13 09:18:25,107 - __main__ - INFO -   wandb_tags: None
+2025-03-13 09:18:25,107 - __main__ - INFO -   save_to_wandb: False
+2025-03-13 09:18:25,107 - __main__ - INFO -   seed: 42
+2025-03-13 09:18:25,107 - __main__ - INFO -   use_bf16: False
+2025-03-13 09:18:25,195 - __main__ - INFO - Loading model from ./bilinear_tinyllama_chat
+2025-03-13 09:18:26,314 - __main__ - INFO - Target transformer blocks: [10, 11]
+2025-03-13 09:18:26,314 - __main__ - INFO - Probe weights mapping:
+2025-03-13 09:18:26,315 - __main__ - INFO -   Block 10: /workspace/bilinear-steering/finetuning/linear_probes/model_layers_10_mlp/probe.pt
+2025-03-13 09:18:26,315 - __main__ - INFO -   Block 11: /workspace/bilinear-steering/finetuning/linear_probes/model_layers_11_mlp/probe.pt
+2025-03-13 09:18:26,315 - __main__ - INFO - Checking bilinear transformer blocks: [10, 11]
+2025-03-13 09:18:26,315 - __main__ - WARNING - Layer 10 has standard SiLU activation, expected InterpolatedSiLU
+2025-03-13 09:18:26,551 - __main__ - INFO - Replaced SiLU in layer 10 with InterpolatedSiLU (alpha=0.0)
+2025-03-13 09:18:26,551 - __main__ - WARNING - Layer 11 has standard SiLU activation, expected InterpolatedSiLU
+2025-03-13 09:18:26,713 - __main__ - INFO - Replaced SiLU in layer 11 with InterpolatedSiLU (alpha=0.0)
+2025-03-13 09:18:26,714 - __main__ - WARNING - Had to replace 2 standard SiLU activations with InterpolatedSiLU. Please verify that the model checkpoint was actually in bilinear form.
+2025-03-13 09:18:27,584 - __main__ - INFO - Using GPU: NVIDIA H200 with 139.72 GB memory
+2025-03-13 09:18:27,584 - __main__ - INFO - Loading linear probe weights for block 10 from /workspace/bilinear-steering/finetuning/linear_probes/model_layers_10_mlp/probe.pt
+2025-03-13 09:18:27,585 - __main__ - INFO - Loading linear probe weights for block 11 from /workspace/bilinear-steering/finetuning/linear_probes/model_layers_11_mlp/probe.pt
+2025-03-13 09:18:27,585 - __main__ - INFO - Loading FineWeb dataset
+2025-03-13 09:18:56,441 - __main__ - INFO - Trainable parameters (4): ['model.layers.10.mlp.gate_proj.weight', 'model.layers.10.mlp.up_proj.weight', 'model.layers.11.mlp.gate_proj.weight', 'model.layers.11.mlp.up_proj.weight']...
+2025-03-13 09:18:56,441 - __main__ - INFO - Non-trainable parameters: 199 parameters are frozen
+2025-03-13 09:18:56,444 - __main__ - INFO - Starting epoch 1
+2025-03-13 09:18:57,560 - __main__ - WARNING - Failed: expected mat1 and mat2 to have the same dtype, but got: c10::Half != float
+2025-03-13 09:27:09,009 - __main__ - INFO - Starting bilinear fine-tuning with configuration:
+2025-03-13 09:27:09,009 - __main__ - INFO -   model_path: ./bilinear_tinyllama_chat
+2025-03-13 09:27:09,009 - __main__ - INFO -   output_dir: ./bilinear_tinyllama_regularized
+2025-03-13 09:27:09,009 - __main__ - INFO -   transformer_indices: 10,11
+2025-03-13 09:27:09,009 - __main__ - INFO -   probe_weights_paths: /workspace/bilinear-steering/finetuning/linear_probes/model_layers_10_mlp/probe.pt,/workspace/bilinear-steering/finetuning/linear_probes/model_layers_11_mlp/probe.pt
+2025-03-13 09:27:09,010 - __main__ - INFO -   output_dim: 1
+2025-03-13 09:27:09,010 - __main__ - INFO -   batch_size: 4
+2025-03-13 09:27:09,010 - __main__ - INFO -   grad_accum: 1
+2025-03-13 09:27:09,010 - __main__ - INFO -   learning_rate: 3e-05
+2025-03-13 09:27:09,010 - __main__ - INFO -   max_steps: 10000
+2025-03-13 09:27:09,010 - __main__ - INFO -   warmup_steps: 100
+2025-03-13 09:27:09,010 - __main__ - INFO -   max_length: 1024
+2025-03-13 09:27:09,010 - __main__ - INFO -   lambda_reg: 0.01
+2025-03-13 09:27:09,010 - __main__ - INFO -   auto_adjust_lambda: True
+2025-03-13 09:27:09,010 - __main__ - INFO -   weight_decay: 0.01
+2025-03-13 09:27:09,010 - __main__ - INFO -   adam_beta1: 0.9
+2025-03-13 09:27:09,010 - __main__ - INFO -   adam_beta2: 0.999
+2025-03-13 09:27:09,010 - __main__ - INFO -   adam_epsilon: 1e-08
+2025-03-13 09:27:09,010 - __main__ - INFO -   max_grad_norm: 1.0
+2025-03-13 09:27:09,010 - __main__ - INFO -   lr_scheduler_type: linear
+2025-03-13 09:27:09,010 - __main__ - INFO -   total_tokens: 100000000
+2025-03-13 09:27:09,010 - __main__ - INFO -   logging_steps: 10
+2025-03-13 09:27:09,010 - __main__ - INFO -   save_steps: 0
+2025-03-13 09:27:09,010 - __main__ - INFO -   wandb_project: bilinear-tinyllama
+2025-03-13 09:27:09,010 - __main__ - INFO -   wandb_entity: None
+2025-03-13 09:27:09,010 - __main__ - INFO -   wandb_name: None
+2025-03-13 09:27:09,010 - __main__ - INFO -   wandb_tags: None
+2025-03-13 09:27:09,010 - __main__ - INFO -   save_to_wandb: False
+2025-03-13 09:27:09,011 - __main__ - INFO -   seed: 42
+2025-03-13 09:27:09,011 - __main__ - INFO -   use_bf16: False
+2025-03-13 09:27:09,101 - __main__ - INFO - Loading model from ./bilinear_tinyllama_chat
+2025-03-13 09:27:10,304 - __main__ - INFO - Model loaded with dtype: torch.float16
+2025-03-13 09:27:10,304 - __main__ - INFO - Target transformer blocks: [10, 11]
+2025-03-13 09:27:10,304 - __main__ - INFO - Probe weights mapping:
+2025-03-13 09:27:10,304 - __main__ - INFO -   Block 10: /workspace/bilinear-steering/finetuning/linear_probes/model_layers_10_mlp/probe.pt
+2025-03-13 09:27:10,304 - __main__ - INFO -   Block 11: /workspace/bilinear-steering/finetuning/linear_probes/model_layers_11_mlp/probe.pt
+2025-03-13 09:27:10,304 - __main__ - INFO - Checking bilinear transformer blocks: [10, 11]
+2025-03-13 09:27:10,304 - __main__ - WARNING - Layer 10 has standard SiLU activation, expected InterpolatedSiLU
+2025-03-13 09:27:10,465 - __main__ - INFO - Replaced SiLU in layer 10 with InterpolatedSiLU (alpha=0.0)
+2025-03-13 09:27:10,465 - __main__ - WARNING - Layer 11 has standard SiLU activation, expected InterpolatedSiLU
+2025-03-13 09:27:10,627 - __main__ - INFO - Replaced SiLU in layer 11 with InterpolatedSiLU (alpha=0.0)
+2025-03-13 09:27:10,627 - __main__ - WARNING - Had to replace 2 standard SiLU activations with InterpolatedSiLU. Please verify that the model checkpoint was actually in bilinear form.
+2025-03-13 09:27:11,581 - __main__ - INFO - Model moved to cuda
+2025-03-13 09:27:11,583 - __main__ - INFO - Total parameters: 1,163,487,232
+2025-03-13 09:27:11,583 - __main__ - INFO - Trainable parameters: 46,137,344 (4 parameter groups)
+2025-03-13 09:27:11,583 - __main__ - INFO - Frozen parameters: 1,117,349,888 (199 parameter groups)
+2025-03-13 09:27:11,583 - __main__ - INFO - Trainable parameters: ['model.layers.10.mlp.gate_proj.weight', 'model.layers.10.mlp.up_proj.weight', 'model.layers.11.mlp.gate_proj.weight', 'model.layers.11.mlp.up_proj.weight']
+2025-03-13 09:27:11,585 - __main__ - INFO - Using GPU: NVIDIA H200 with 139.72 GB memory
+2025-03-13 09:27:11,585 - __main__ - INFO - Model dtype: torch.float16, device: cuda:0
+2025-03-13 09:27:11,585 - __main__ - INFO - Loading linear probe weights for block 10 from /workspace/bilinear-steering/finetuning/linear_probes/model_layers_10_mlp/probe.pt
+2025-03-13 09:27:11,586 - __main__ - INFO - Loaded dict with keys: ['model.weight', 'model.bias']
+2025-03-13 09:27:11,586 - __main__ - INFO - Using model.weight tensor, shape: torch.Size([1, 2048]), dtype: torch.float32
+2025-03-13 09:27:11,586 - __main__ - INFO - Converted u_vector from torch.float32 to torch.float16 for block 10
+2025-03-13 09:27:11,586 - __main__ - INFO - Loading linear probe weights for block 11 from /workspace/bilinear-steering/finetuning/linear_probes/model_layers_11_mlp/probe.pt
+2025-03-13 09:27:11,586 - __main__ - INFO - Loaded dict with keys: ['model.weight', 'model.bias']
+2025-03-13 09:27:11,586 - __main__ - INFO - Using model.weight tensor, shape: torch.Size([1, 2048]), dtype: torch.float32
+2025-03-13 09:27:11,586 - __main__ - INFO - Converted u_vector from torch.float32 to torch.float16 for block 11
+2025-03-13 09:27:11,587 - __main__ - INFO - Moved u_vector for block 10 from torch.float16 to torch.float16
+2025-03-13 09:27:11,587 - __main__ - INFO - Moved u_vector for block 11 from torch.float16 to torch.float16
+2025-03-13 09:27:11,587 - __main__ - INFO - Loading FineWeb dataset
+2025-03-13 09:28:08,310 - __main__ - INFO - Optimizer will train 46,137,344 parameters
+2025-03-13 09:28:08,311 - __main__ - INFO - Starting epoch 1
+2025-03-13 09:28:08,877 - __main__ - INFO - Input IDs shape: torch.Size([4, 916]), dtype: torch.int64
+2025-03-13 09:28:09,519 - __main__ - ERROR - Error during training step 0: expected mat1 and mat2 to have the same dtype, but got: c10::Half != float
+2025-03-13 09:28:09,521 - __main__ - ERROR - Traceback: Traceback (most recent call last):
+  File "/workspace/bilinear-steering/finetuning/interaction_matrix_reg_finetuning.py", line 723, in train_bilinear_model
+    outputs = model(input_ids)
+              ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/models/llama/modeling_llama.py", line 842, in forward
+    outputs = self.model(
+              ^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/models/llama/modeling_llama.py", line 594, in forward
+    layer_outputs = decoder_layer(
+                    ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/models/llama/modeling_llama.py", line 352, in forward
+    hidden_states = self.mlp(hidden_states)
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/models/llama/modeling_llama.py", line 190, in forward
+    down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/bilinear-steering/finetuning/interaction_matrix_reg_finetuning.py", line 96, in forward
+    bilinear_activation = self.bilinear(x) * x
+                          ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py", line 117, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: expected mat1 and mat2 to have the same dtype, but got: c10::Half != float
+
+2025-03-13 09:28:09,524 - __main__ - ERROR - Training failed: expected mat1 and mat2 to have the same dtype, but got: c10::Half != float
+2025-03-13 09:28:09,524 - __main__ - ERROR - Traceback: Traceback (most recent call last):
+  File "/workspace/bilinear-steering/finetuning/interaction_matrix_reg_finetuning.py", line 723, in train_bilinear_model
+    outputs = model(input_ids)
+              ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/models/llama/modeling_llama.py", line 842, in forward
+    outputs = self.model(
+              ^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/models/llama/modeling_llama.py", line 594, in forward
+    layer_outputs = decoder_layer(
+                    ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/models/llama/modeling_llama.py", line 352, in forward
+    hidden_states = self.mlp(hidden_states)
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/models/llama/modeling_llama.py", line 190, in forward
+    down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/bilinear-steering/finetuning/interaction_matrix_reg_finetuning.py", line 96, in forward
+    bilinear_activation = self.bilinear(x) * x
+                          ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py", line 117, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: expected mat1 and mat2 to have the same dtype, but got: c10::Half != float
+
+2025-03-13 09:32:03,590 - __main__ - INFO - Starting bilinear fine-tuning with configuration:
+2025-03-13 09:32:03,590 - __main__ - INFO -   model_path: ./bilinear_tinyllama_chat
+2025-03-13 09:32:03,590 - __main__ - INFO -   output_dir: ./bilinear_tinyllama_regularized
+2025-03-13 09:32:03,590 - __main__ - INFO -   transformer_indices: 10,11
+2025-03-13 09:32:03,590 - __main__ - INFO -   probe_weights_paths: /workspace/bilinear-steering/finetuning/linear_probes/model_layers_10_mlp/probe.pt,/workspace/bilinear-steering/finetuning/linear_probes/model_layers_11_mlp/probe.pt
+2025-03-13 09:32:03,590 - __main__ - INFO -   output_dim: 1
+2025-03-13 09:32:03,590 - __main__ - INFO -   batch_size: 4
+2025-03-13 09:32:03,590 - __main__ - INFO -   grad_accum: 1
+2025-03-13 09:32:03,591 - __main__ - INFO -   learning_rate: 3e-05
+2025-03-13 09:32:03,591 - __main__ - INFO -   max_steps: 10000
+2025-03-13 09:32:03,591 - __main__ - INFO -   warmup_steps: 100
+2025-03-13 09:32:03,591 - __main__ - INFO -   max_length: 1024
+2025-03-13 09:32:03,591 - __main__ - INFO -   lambda_reg: 0.01
+2025-03-13 09:32:03,591 - __main__ - INFO -   auto_adjust_lambda: True
+2025-03-13 09:32:03,591 - __main__ - INFO -   weight_decay: 0.01
+2025-03-13 09:32:03,591 - __main__ - INFO -   adam_beta1: 0.9
+2025-03-13 09:32:03,591 - __main__ - INFO -   adam_beta2: 0.999
+2025-03-13 09:32:03,591 - __main__ - INFO -   adam_epsilon: 1e-08
+2025-03-13 09:32:03,591 - __main__ - INFO -   max_grad_norm: 1.0
+2025-03-13 09:32:03,591 - __main__ - INFO -   lr_scheduler_type: linear
+2025-03-13 09:32:03,591 - __main__ - INFO -   total_tokens: 100000000
+2025-03-13 09:32:03,591 - __main__ - INFO -   logging_steps: 10
+2025-03-13 09:32:03,591 - __main__ - INFO -   save_steps: 0
+2025-03-13 09:32:03,591 - __main__ - INFO -   wandb_project: bilinear-tinyllama
+2025-03-13 09:32:03,591 - __main__ - INFO -   wandb_entity: None
+2025-03-13 09:32:03,591 - __main__ - INFO -   wandb_name: None
+2025-03-13 09:32:03,591 - __main__ - INFO -   wandb_tags: None
+2025-03-13 09:32:03,591 - __main__ - INFO -   save_to_wandb: False
+2025-03-13 09:32:03,591 - __main__ - INFO -   seed: 42
+2025-03-13 09:32:03,591 - __main__ - INFO -   use_bf16: False
+2025-03-13 09:32:03,679 - __main__ - INFO - Loading model from ./bilinear_tinyllama_chat
+2025-03-13 09:32:04,797 - __main__ - INFO - Model loaded with dtype: torch.float16
+2025-03-13 09:32:04,797 - __main__ - INFO - Target transformer blocks: [10, 11]
+2025-03-13 09:32:04,797 - __main__ - INFO - Probe weights mapping:
+2025-03-13 09:32:04,797 - __main__ - INFO -   Block 10: /workspace/bilinear-steering/finetuning/linear_probes/model_layers_10_mlp/probe.pt
+2025-03-13 09:32:04,797 - __main__ - INFO -   Block 11: /workspace/bilinear-steering/finetuning/linear_probes/model_layers_11_mlp/probe.pt
+2025-03-13 09:32:04,797 - __main__ - INFO - Checking bilinear transformer blocks: [10, 11]
+2025-03-13 09:32:04,797 - __main__ - INFO - Model dtype: torch.float16
+2025-03-13 09:32:04,797 - __main__ - WARNING - Layer 10 has standard SiLU activation, expected InterpolatedSiLU
+2025-03-13 09:32:04,797 - __main__ - INFO - Creating InterpolatedSiLU with hidden_size=2048 for layer 10
+2025-03-13 09:32:04,819 - __main__ - INFO - New InterpolatedSiLU bilinear weight dtype: torch.float16
+2025-03-13 09:32:04,819 - __main__ - INFO - Replaced SiLU in layer 10 with InterpolatedSiLU (alpha=0.0)
+2025-03-13 09:32:04,820 - __main__ - WARNING - Layer 11 has standard SiLU activation, expected InterpolatedSiLU
+2025-03-13 09:32:04,820 - __main__ - INFO - Creating InterpolatedSiLU with hidden_size=2048 for layer 11
+2025-03-13 09:32:04,841 - __main__ - INFO - New InterpolatedSiLU bilinear weight dtype: torch.float16
+2025-03-13 09:32:04,841 - __main__ - INFO - Replaced SiLU in layer 11 with InterpolatedSiLU (alpha=0.0)
+2025-03-13 09:32:04,841 - __main__ - WARNING - Had to replace 2 standard SiLU activations with InterpolatedSiLU. Please verify that the model checkpoint was actually in bilinear form.
+2025-03-13 09:32:05,786 - __main__ - INFO - Model moved to cuda
+2025-03-13 09:32:05,786 - __main__ - INFO - Ensuring all bilinear weights have dtype: torch.float16
+2025-03-13 09:32:05,786 - __main__ - INFO - Checked 2 InterpolatedSiLU modules, converted 0 to torch.float16
+2025-03-13 09:32:05,788 - __main__ - INFO - Total parameters: 1,108,436,992
+2025-03-13 09:32:05,788 - __main__ - INFO - Trainable parameters: 46,137,344 (4 parameter groups)
+2025-03-13 09:32:05,788 - __main__ - INFO - Frozen parameters: 1,062,299,648 (199 parameter groups)
+2025-03-13 09:32:05,788 - __main__ - INFO - Trainable parameters: ['model.layers.10.mlp.gate_proj.weight', 'model.layers.10.mlp.up_proj.weight', 'model.layers.11.mlp.gate_proj.weight', 'model.layers.11.mlp.up_proj.weight']
+2025-03-13 09:32:05,789 - __main__ - INFO - Using GPU: NVIDIA H200 with 139.72 GB memory
+2025-03-13 09:32:05,789 - __main__ - INFO - Model dtype: torch.float16, device: cuda:0
+2025-03-13 09:32:05,789 - __main__ - INFO - Loading linear probe weights for block 10 from /workspace/bilinear-steering/finetuning/linear_probes/model_layers_10_mlp/probe.pt
+2025-03-13 09:32:05,790 - __main__ - INFO - Loaded dict with keys: ['model.weight', 'model.bias']
+2025-03-13 09:32:05,790 - __main__ - INFO - Using model.weight tensor, shape: torch.Size([1, 2048]), dtype: torch.float32
+2025-03-13 09:32:05,790 - __main__ - INFO - Converted u_vector from torch.float32 to torch.float16 for block 10
+2025-03-13 09:32:05,790 - __main__ - INFO - Loading linear probe weights for block 11 from /workspace/bilinear-steering/finetuning/linear_probes/model_layers_11_mlp/probe.pt
+2025-03-13 09:32:05,791 - __main__ - INFO - Loaded dict with keys: ['model.weight', 'model.bias']
+2025-03-13 09:32:05,791 - __main__ - INFO - Using model.weight tensor, shape: torch.Size([1, 2048]), dtype: torch.float32
+2025-03-13 09:32:05,791 - __main__ - INFO - Converted u_vector from torch.float32 to torch.float16 for block 11
+2025-03-13 09:32:05,791 - __main__ - INFO - Moved u_vector for block 10 from torch.float16 to torch.float16
+2025-03-13 09:32:05,791 - __main__ - INFO - Moved u_vector for block 11 from torch.float16 to torch.float16
+2025-03-13 09:32:05,791 - __main__ - INFO - Loading FineWeb dataset
+2025-03-13 09:32:22,874 - __main__ - ERROR - Training failed: (ReadTimeoutError("HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: 373192f2-9629-4962-b878-68240181569b)')
+2025-03-13 09:32:22,878 - __main__ - ERROR - Traceback: Traceback (most recent call last):
+  File "/workspace/bilinear-steering/finetuning/interaction_matrix_reg_finetuning.py", line 685, in train_bilinear_model
+    raw_dataset = load_dataset(
+                  ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/datasets/load.py", line 2129, in load_dataset
+    builder_instance = load_dataset_builder(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/datasets/load.py", line 1849, in load_dataset_builder
+    dataset_module = dataset_module_factory(
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/datasets/load.py", line 1731, in dataset_module_factory
+    raise e1 from None
+  File "/usr/local/lib/python3.11/dist-packages/datasets/load.py", line 1696, in dataset_module_factory
+    ).get_module()
+      ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/datasets/load.py", line 1067, in get_module
+    data_files = DataFilesDict.from_patterns(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/datasets/data_files.py", line 721, in from_patterns
+    else DataFilesList.from_patterns(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/datasets/data_files.py", line 634, in from_patterns
+    origin_metadata = _get_origin_metadata(data_files, download_config=download_config)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/datasets/data_files.py", line 548, in _get_origin_metadata
+    return thread_map(
+           ^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/datasets/data_files.py", line 527, in _get_single_origin_metadata
+    resolved_path = fs.resolve_path(data_file)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/hf_file_system.py", line 198, in resolve_path
+    repo_and_revision_exist, err = self._repo_and_revision_exist(repo_type, repo_id, revision)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/hf_file_system.py", line 125, in _repo_and_revision_exist
+    self._api.repo_info(
+  File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/hf_api.py", line 2734, in repo_info
+    return method(
+           ^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/hf_api.py", line 2591, in dataset_info
+    r = get_session().get(path, headers=headers, timeout=timeout, params=params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_http.py", line 96, in send
+    return super().send(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/requests/adapters.py", line 713, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: (ReadTimeoutError("HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: 373192f2-9629-4962-b878-68240181569b)')
+
+2025-03-13 09:32:31,052 - __main__ - INFO - Starting bilinear fine-tuning with configuration:
+2025-03-13 09:32:31,053 - __main__ - INFO -   model_path: ./bilinear_tinyllama_chat
+2025-03-13 09:32:31,053 - __main__ - INFO -   output_dir: ./bilinear_tinyllama_regularized
+2025-03-13 09:32:31,053 - __main__ - INFO -   transformer_indices: 10,11
+2025-03-13 09:32:31,053 - __main__ - INFO -   probe_weights_paths: /workspace/bilinear-steering/finetuning/linear_probes/model_layers_10_mlp/probe.pt,/workspace/bilinear-steering/finetuning/linear_probes/model_layers_11_mlp/probe.pt
+2025-03-13 09:32:31,053 - __main__ - INFO -   output_dim: 1
+2025-03-13 09:32:31,053 - __main__ - INFO -   batch_size: 4
+2025-03-13 09:32:31,053 - __main__ - INFO -   grad_accum: 1
+2025-03-13 09:32:31,053 - __main__ - INFO -   learning_rate: 3e-05
+2025-03-13 09:32:31,053 - __main__ - INFO -   max_steps: 10000
+2025-03-13 09:32:31,053 - __main__ - INFO -   warmup_steps: 100
+2025-03-13 09:32:31,053 - __main__ - INFO -   max_length: 1024
+2025-03-13 09:32:31,053 - __main__ - INFO -   lambda_reg: 0.01
+2025-03-13 09:32:31,053 - __main__ - INFO -   auto_adjust_lambda: True
+2025-03-13 09:32:31,053 - __main__ - INFO -   weight_decay: 0.01
+2025-03-13 09:32:31,053 - __main__ - INFO -   adam_beta1: 0.9
+2025-03-13 09:32:31,053 - __main__ - INFO -   adam_beta2: 0.999
+2025-03-13 09:32:31,053 - __main__ - INFO -   adam_epsilon: 1e-08
+2025-03-13 09:32:31,053 - __main__ - INFO -   max_grad_norm: 1.0
+2025-03-13 09:32:31,053 - __main__ - INFO -   lr_scheduler_type: linear
+2025-03-13 09:32:31,053 - __main__ - INFO -   total_tokens: 100000000
+2025-03-13 09:32:31,054 - __main__ - INFO -   logging_steps: 10
+2025-03-13 09:32:31,054 - __main__ - INFO -   save_steps: 0
+2025-03-13 09:32:31,054 - __main__ - INFO -   wandb_project: bilinear-tinyllama
+2025-03-13 09:32:31,054 - __main__ - INFO -   wandb_entity: None
+2025-03-13 09:32:31,054 - __main__ - INFO -   wandb_name: None
+2025-03-13 09:32:31,054 - __main__ - INFO -   wandb_tags: None
+2025-03-13 09:32:31,054 - __main__ - INFO -   save_to_wandb: False
+2025-03-13 09:32:31,054 - __main__ - INFO -   seed: 42
+2025-03-13 09:32:31,054 - __main__ - INFO -   use_bf16: False
+2025-03-13 09:32:31,143 - __main__ - INFO - Loading model from ./bilinear_tinyllama_chat
+2025-03-13 09:32:32,214 - __main__ - INFO - Model loaded with dtype: torch.float16
+2025-03-13 09:32:32,214 - __main__ - INFO - Target transformer blocks: [10, 11]
+2025-03-13 09:32:32,215 - __main__ - INFO - Probe weights mapping:
+2025-03-13 09:32:32,215 - __main__ - INFO -   Block 10: /workspace/bilinear-steering/finetuning/linear_probes/model_layers_10_mlp/probe.pt
+2025-03-13 09:32:32,215 - __main__ - INFO -   Block 11: /workspace/bilinear-steering/finetuning/linear_probes/model_layers_11_mlp/probe.pt
+2025-03-13 09:32:32,215 - __main__ - INFO - Checking bilinear transformer blocks: [10, 11]
+2025-03-13 09:32:32,215 - __main__ - INFO - Model dtype: torch.float16
+2025-03-13 09:32:32,215 - __main__ - WARNING - Layer 10 has standard SiLU activation, expected InterpolatedSiLU
+2025-03-13 09:32:32,215 - __main__ - INFO - Creating InterpolatedSiLU with hidden_size=2048 for layer 10
+2025-03-13 09:32:32,309 - __main__ - INFO - New InterpolatedSiLU bilinear weight dtype: torch.float16
+2025-03-13 09:32:32,309 - __main__ - INFO - Replaced SiLU in layer 10 with InterpolatedSiLU (alpha=0.0)
+2025-03-13 09:32:32,309 - __main__ - WARNING - Layer 11 has standard SiLU activation, expected InterpolatedSiLU
+2025-03-13 09:32:32,309 - __main__ - INFO - Creating InterpolatedSiLU with hidden_size=2048 for layer 11
+2025-03-13 09:32:32,332 - __main__ - INFO - New InterpolatedSiLU bilinear weight dtype: torch.float16
+2025-03-13 09:32:32,332 - __main__ - INFO - Replaced SiLU in layer 11 with InterpolatedSiLU (alpha=0.0)
+2025-03-13 09:32:32,332 - __main__ - WARNING - Had to replace 2 standard SiLU activations with InterpolatedSiLU. Please verify that the model checkpoint was actually in bilinear form.
+2025-03-13 09:32:33,212 - __main__ - INFO - Model moved to cuda
+2025-03-13 09:32:33,212 - __main__ - INFO - Ensuring all bilinear weights have dtype: torch.float16
+2025-03-13 09:32:33,212 - __main__ - INFO - Checked 2 InterpolatedSiLU modules, converted 0 to torch.float16
+2025-03-13 09:32:33,214 - __main__ - INFO - Total parameters: 1,108,436,992
+2025-03-13 09:32:33,214 - __main__ - INFO - Trainable parameters: 46,137,344 (4 parameter groups)
+2025-03-13 09:32:33,214 - __main__ - INFO - Frozen parameters: 1,062,299,648 (199 parameter groups)
+2025-03-13 09:32:33,214 - __main__ - INFO - Trainable parameters: ['model.layers.10.mlp.gate_proj.weight', 'model.layers.10.mlp.up_proj.weight', 'model.layers.11.mlp.gate_proj.weight', 'model.layers.11.mlp.up_proj.weight']
+2025-03-13 09:32:33,216 - __main__ - INFO - Using GPU: NVIDIA H200 with 139.72 GB memory
+2025-03-13 09:32:33,216 - __main__ - INFO - Model dtype: torch.float16, device: cuda:0
+2025-03-13 09:32:33,216 - __main__ - INFO - Loading linear probe weights for block 10 from /workspace/bilinear-steering/finetuning/linear_probes/model_layers_10_mlp/probe.pt
+2025-03-13 09:32:33,216 - __main__ - INFO - Loaded dict with keys: ['model.weight', 'model.bias']
+2025-03-13 09:32:33,216 - __main__ - INFO - Using model.weight tensor, shape: torch.Size([1, 2048]), dtype: torch.float32
+2025-03-13 09:32:33,217 - __main__ - INFO - Converted u_vector from torch.float32 to torch.float16 for block 10
+2025-03-13 09:32:33,217 - __main__ - INFO - Loading linear probe weights for block 11 from /workspace/bilinear-steering/finetuning/linear_probes/model_layers_11_mlp/probe.pt
+2025-03-13 09:32:33,217 - __main__ - INFO - Loaded dict with keys: ['model.weight', 'model.bias']
+2025-03-13 09:32:33,217 - __main__ - INFO - Using model.weight tensor, shape: torch.Size([1, 2048]), dtype: torch.float32
+2025-03-13 09:32:33,217 - __main__ - INFO - Converted u_vector from torch.float32 to torch.float16 for block 11
+2025-03-13 09:32:33,217 - __main__ - INFO - Moved u_vector for block 10 from torch.float16 to torch.float16
+2025-03-13 09:32:33,217 - __main__ - INFO - Moved u_vector for block 11 from torch.float16 to torch.float16
+2025-03-13 09:32:33,217 - __main__ - INFO - Loading FineWeb dataset
+2025-03-13 09:32:49,809 - __main__ - INFO - Optimizer will train 46,137,344 parameters
+2025-03-13 09:32:49,810 - __main__ - INFO - Starting epoch 1
+2025-03-13 09:32:50,262 - __main__ - INFO - Input IDs shape: torch.Size([4, 916]), dtype: torch.int64
+2025-03-13 09:32:50,858 - __main__ - ERROR - Error during training step 0: mat1 and mat2 shapes cannot be multiplied (3664x5632 and 2048x2048)
+2025-03-13 09:32:50,860 - __main__ - ERROR - Traceback: Traceback (most recent call last):
+  File "/workspace/bilinear-steering/finetuning/interaction_matrix_reg_finetuning.py", line 789, in train_bilinear_model
+    outputs = model(input_ids)
+              ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/models/llama/modeling_llama.py", line 842, in forward
+    outputs = self.model(
+              ^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/models/llama/modeling_llama.py", line 594, in forward
+    layer_outputs = decoder_layer(
+                    ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/models/llama/modeling_llama.py", line 352, in forward
+    hidden_states = self.mlp(hidden_states)
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/models/llama/modeling_llama.py", line 190, in forward
+    down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/bilinear-steering/finetuning/interaction_matrix_reg_finetuning.py", line 102, in forward
+    bilinear_activation = self.bilinear(x) * x
+                          ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py", line 117, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (3664x5632 and 2048x2048)
+
+2025-03-13 09:32:50,863 - __main__ - ERROR - Training failed: mat1 and mat2 shapes cannot be multiplied (3664x5632 and 2048x2048)
+2025-03-13 09:32:50,863 - __main__ - ERROR - Traceback: Traceback (most recent call last):
+  File "/workspace/bilinear-steering/finetuning/interaction_matrix_reg_finetuning.py", line 789, in train_bilinear_model
+    outputs = model(input_ids)
+              ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/models/llama/modeling_llama.py", line 842, in forward
+    outputs = self.model(
+              ^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/models/llama/modeling_llama.py", line 594, in forward
+    layer_outputs = decoder_layer(
+                    ^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/models/llama/modeling_llama.py", line 352, in forward
+    hidden_states = self.mlp(hidden_states)
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/models/llama/modeling_llama.py", line 190, in forward
+    down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/bilinear-steering/finetuning/interaction_matrix_reg_finetuning.py", line 102, in forward
+    bilinear_activation = self.bilinear(x) * x
+                          ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py", line 117, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (3664x5632 and 2048x2048)
+

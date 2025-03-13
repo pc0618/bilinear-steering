@@ -1,0 +1,17 @@
+{"time":"2025-03-13T00:12:45.822430336Z","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/workspace/bilinear-steering/finetuning/wandb/run-20250313_001245-zo5o1sha/logs/debug-core.log"}
+{"time":"2025-03-13T00:12:45.935277252Z","level":"INFO","msg":"created new stream","id":"zo5o1sha"}
+{"time":"2025-03-13T00:12:45.935318774Z","level":"INFO","msg":"stream: started","id":"zo5o1sha"}
+{"time":"2025-03-13T00:12:45.935334305Z","level":"INFO","msg":"writer: Do: started","stream_id":"zo5o1sha"}
+{"time":"2025-03-13T00:12:45.935348002Z","level":"INFO","msg":"handler: started","stream_id":"zo5o1sha"}
+{"time":"2025-03-13T00:12:45.935355451Z","level":"INFO","msg":"sender: started","stream_id":"zo5o1sha"}
+{"time":"2025-03-13T00:12:46.225491869Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-13T03:30:01.470834787Z","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-03-13T04:33:02.638812396Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-13T04:33:02.639227959Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-13T04:33:03.111545528Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-13T04:33:03.24850091Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-03-13T04:33:03.25125143Z","level":"INFO","msg":"stream: closing","id":"zo5o1sha"}
+{"time":"2025-03-13T04:33:03.251266809Z","level":"INFO","msg":"handler: closed","stream_id":"zo5o1sha"}
+{"time":"2025-03-13T04:33:03.251273682Z","level":"INFO","msg":"writer: Close: closed","stream_id":"zo5o1sha"}
+{"time":"2025-03-13T04:33:03.251277342Z","level":"INFO","msg":"sender: closed","stream_id":"zo5o1sha"}
+{"time":"2025-03-13T04:33:03.251337661Z","level":"INFO","msg":"stream: closed","id":"zo5o1sha"}

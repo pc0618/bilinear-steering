@@ -1,0 +1,117 @@
+_wandb:
+    value:
+        cli_version: 0.19.8
+        m: []
+        python_version: 3.11.10
+        t:
+            "1":
+                - 1
+                - 5
+                - 11
+                - 49
+                - 51
+                - 53
+                - 55
+                - 71
+            "2":
+                - 1
+                - 5
+                - 11
+                - 41
+                - 49
+                - 51
+                - 53
+                - 55
+                - 71
+            "3":
+                - 13
+                - 16
+                - 23
+                - 55
+            "4": 3.11.10
+            "5": 0.19.8
+            "6": 4.49.0
+            "8":
+                - 5
+            "12": 0.19.8
+            "13": linux-x86_64
+adam_beta1:
+    value: 0.9
+adam_beta2:
+    value: 0.999
+adam_epsilon:
+    value: 1e-08
+auto_adjust_lambda:
+    value: true
+batch_size:
+    value: 4
+cuda_version:
+    value: "12.4"
+device:
+    value: cuda
+gpu_memory_total:
+    value: 139.718505859375
+gpu_name:
+    value: NVIDIA H200
+grad_accum:
+    value: 1
+hidden_size:
+    value: 2048
+lambda_reg:
+    value: 0.01
+learning_rate:
+    value: 3e-05
+logging_steps:
+    value: 10
+lr_scheduler_type:
+    value: linear
+max_grad_norm:
+    value: 1
+max_length:
+    value: 1024
+max_steps:
+    value: 10000
+model_name:
+    value: ./bilinear_tinyllama_chat
+model_path:
+    value: ./bilinear_tinyllama_chat
+num_layers:
+    value: 22
+output_dim:
+    value: 1
+output_dir:
+    value: ./bilinear_tinyllama_regularized
+precision:
+    value: float16
+probe_weights_paths:
+    value: /workspace/bilinear-steering/finetuning/linear_probes/model_layers_10_mlp/probe.pt,/workspace/bilinear-steering/finetuning/linear_probes/model_layers_11_mlp/probe.pt
+save_steps:
+    value: 0
+save_to_wandb:
+    value: false
+seed:
+    value: 42
+target_blocks:
+    value:
+        - 10
+        - 11
+total_tokens:
+    value: 100000000
+transformer_indices:
+    value: 10,11
+use_bf16:
+    value: false
+vocab_size:
+    value: 32000
+wandb_entity:
+    value: null
+wandb_name:
+    value: null
+wandb_project:
+    value: bilinear-tinyllama
+wandb_tags:
+    value: null
+warmup_steps:
+    value: 100
+weight_decay:
+    value: 0.01

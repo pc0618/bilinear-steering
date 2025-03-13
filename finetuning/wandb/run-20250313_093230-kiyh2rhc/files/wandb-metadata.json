@@ -1,0 +1,63 @@
+{
+  "os": "Linux-6.8.0-53-generic-x86_64-with-glibc2.35",
+  "python": "CPython 3.11.10",
+  "startedAt": "2025-03-13T09:32:30.670374Z",
+  "args": [
+    "--model_path",
+    "./bilinear_tinyllama_chat",
+    "--output_dir",
+    "./bilinear_tinyllama_regularized",
+    "--transformer_indices",
+    "10,11",
+    "--batch_size",
+    "4",
+    "--grad_accum",
+    "1",
+    "--learning_rate",
+    "3e-5",
+    "--total_tokens",
+    "100000000",
+    "--lambda_reg",
+    "0.01",
+    "--auto_adjust_lambda",
+    "--probe_weights_paths",
+    "/workspace/bilinear-steering/finetuning/linear_probes/model_layers_10_mlp/probe.pt,/workspace/bilinear-steering/finetuning/linear_probes/model_layers_11_mlp/probe.pt"
+  ],
+  "program": "/workspace/bilinear-steering/finetuning/interaction_matrix_reg_finetuning.py",
+  "codePath": "finetuning/interaction_matrix_reg_finetuning.py",
+  "git": {
+    "remote": "https://github.com/pc0618/bilinear-steering.git",
+    "commit": "3074f5960652d81b83d4888f1acc6e2875063acf"
+  },
+  "email": "pranshu@stanford.edu",
+  "root": "/workspace/bilinear-steering/finetuning",
+  "host": "fb1d2af0f7db",
+  "executable": "/usr/bin/python",
+  "codePathLocal": "interaction_matrix_reg_finetuning.py",
+  "cpu_count": 96,
+  "cpu_count_logical": 192,
+  "gpu": "NVIDIA H200",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "64424509440",
+      "used": "15467126784"
+    }
+  },
+  "memory": {
+    "total": "2164181393408"
+  },
+  "cpu": {
+    "count": 96,
+    "countLogical": 192
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA H200",
+      "memoryTotal": "150754820096",
+      "cudaCores": 16896,
+      "architecture": "Hopper"
+    }
+  ],
+  "cudaVersion": "12.4"
+}

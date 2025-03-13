@@ -1,0 +1,26 @@
+2025-03-13 09:11:31,521 INFO    MainThread:216755 [wandb_setup.py:_flush():67] Current SDK version is 0.19.8
+2025-03-13 09:11:31,521 INFO    MainThread:216755 [wandb_setup.py:_flush():67] Configure stats pid to 216755
+2025-03-13 09:11:31,522 INFO    MainThread:216755 [wandb_setup.py:_flush():67] Loading settings from /root/.config/wandb/settings
+2025-03-13 09:11:31,522 INFO    MainThread:216755 [wandb_setup.py:_flush():67] Loading settings from /workspace/bilinear-steering/finetuning/wandb/settings
+2025-03-13 09:11:31,522 INFO    MainThread:216755 [wandb_setup.py:_flush():67] Loading settings from environment variables
+2025-03-13 09:11:31,522 INFO    MainThread:216755 [wandb_init.py:setup_run_log_directory():647] Logging user logs to /workspace/bilinear-steering/finetuning/wandb/run-20250313_091131-5hjlmso2/logs/debug.log
+2025-03-13 09:11:31,522 INFO    MainThread:216755 [wandb_init.py:setup_run_log_directory():648] Logging internal logs to /workspace/bilinear-steering/finetuning/wandb/run-20250313_091131-5hjlmso2/logs/debug-internal.log
+2025-03-13 09:11:31,522 INFO    MainThread:216755 [wandb_init.py:init():761] calling init triggers
+2025-03-13 09:11:31,522 INFO    MainThread:216755 [wandb_init.py:init():766] wandb.init called with sweep_config: {}
+config: {'model_path': './bilinear_tinyllama_chat', 'output_dir': './bilinear_tinyllama_regularized', 'transformer_indices': '10,11', 'probe_weights_paths': '/workspace/bilinear-steering/finetuning/linear_probes/model_layers_10_mlp/probe.pt,/workspace/bilinear-steering/finetuning/linear_probes/model_layers_11_mlp/probe.pt', 'output_dim': 1, 'batch_size': 4, 'grad_accum': 1, 'learning_rate': 3e-05, 'max_steps': 10000, 'warmup_steps': 100, 'max_length': 1024, 'lambda_reg': 0.01, 'auto_adjust_lambda': True, 'weight_decay': 0.01, 'adam_beta1': 0.9, 'adam_beta2': 0.999, 'adam_epsilon': 1e-08, 'max_grad_norm': 1.0, 'lr_scheduler_type': 'linear', 'total_tokens': 100000000, 'logging_steps': 10, 'save_steps': 0, 'wandb_project': 'bilinear-tinyllama', 'wandb_entity': None, 'wandb_name': None, 'wandb_tags': None, 'save_to_wandb': False, 'seed': 42, 'use_bf16': False, '_wandb': {}}
+2025-03-13 09:11:31,522 INFO    MainThread:216755 [wandb_init.py:init():784] starting backend
+2025-03-13 09:11:31,522 INFO    MainThread:216755 [wandb_init.py:init():788] sending inform_init request
+2025-03-13 09:11:31,524 INFO    MainThread:216755 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-03-13 09:11:31,524 INFO    MainThread:216755 [wandb_init.py:init():798] backend started and connected
+2025-03-13 09:11:31,525 INFO    MainThread:216755 [wandb_init.py:init():891] updated telemetry
+2025-03-13 09:11:31,527 INFO    MainThread:216755 [wandb_init.py:init():915] communicating run to backend with 90.0 second timeout
+2025-03-13 09:11:31,866 INFO    MainThread:216755 [wandb_init.py:init():990] starting run threads in backend
+2025-03-13 09:11:31,951 INFO    MainThread:216755 [wandb_run.py:_console_start():2375] atexit reg
+2025-03-13 09:11:31,951 INFO    MainThread:216755 [wandb_run.py:_redirect():2227] redirect: wrap_raw
+2025-03-13 09:11:31,951 INFO    MainThread:216755 [wandb_run.py:_redirect():2292] Wrapping output streams.
+2025-03-13 09:11:31,951 INFO    MainThread:216755 [wandb_run.py:_redirect():2315] Redirects installed.
+2025-03-13 09:11:31,952 INFO    MainThread:216755 [wandb_init.py:init():1032] run started, returning control to user process
+2025-03-13 09:11:34,349 INFO    MainThread:216755 [wandb_run.py:_config_callback():1261] config_cb None None {'model_name': './bilinear_tinyllama_chat', 'target_blocks': [10, 11], 'device': 'cuda', 'precision': 'float16', 'hidden_size': 2048, 'vocab_size': 32000, 'num_layers': 22}
+2025-03-13 09:11:34,349 INFO    MainThread:216755 [wandb_run.py:_config_callback():1261] config_cb None None {'gpu_name': 'NVIDIA H200', 'gpu_memory_total': 139.718505859375, 'cuda_version': '12.4'}
+2025-03-13 09:11:46,286 INFO    MainThread:216755 [wandb_run.py:_config_callback():1261] config_cb None None {'trainable_parameters': 46137344, 'total_parameters': 1163487232, 'trainable_percentage': 3.9654362103047127}
+2025-03-13 09:11:48,053 INFO    MsgRouterThr:216755 [mailbox.py:close():129] Closing mailbox, abandoning 1 handles.

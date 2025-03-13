@@ -1,0 +1,405 @@
+2025-03-13 00:12:46,313 - __main__ - INFO - Loading TinyLlama model and tokenizer
+tokenizer_config.json: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1.29k/1.29k [00:00<00:00, 10.3MB/s]
+tokenizer.model: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 500k/500k [00:00<00:00, 19.8MB/s]
+tokenizer.json: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1.84M/1.84M [00:01<00:00, 1.48MB/s]
+special_tokens_map.json: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 551/551 [00:00<00:00, 4.65MB/s]
+config.json: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 608/608 [00:00<00:00, 5.86MB/s]
+model.safetensors: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2.20G/2.20G [00:09<00:00, 233MB/s]
+generation_config.json: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 124/124 [00:00<00:00, 1.22MB/s]
+2025-03-13 00:12:59,180 - __main__ - INFO - Model loaded in 12.87 seconds
+2025-03-13 00:12:59,180 - __main__ - INFO - Model has 1,100,048,384 parameters
+2025-03-13 00:12:59,180 - __main__ - INFO - Loading FineWeb dataset
+README.md: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 43.1k/43.1k [00:00<00:00, 199MB/s]
+Resolving data files: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25868/25868 [00:04<00:00, 5569.33it/s]
+Resolving data files: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 25868/25868 [00:00<00:00, 868653.17it/s]
+2025-03-13 00:13:37,430 - __main__ - INFO - Training config: 500,000,000 tokens, 15,258 steps, 1 GPUs
+2025-03-13 00:13:37,430 - __main__ - INFO - First 4,577 steps (30%) will interpolate β to 0
+2025-03-13 00:13:37,430 - __main__ - INFO - Preparing sample batch for hook-based replacer
+2025-03-13 00:13:37,913 - __main__ - INFO - Running hook-based SiLU replacement
+2025-03-13 00:13:37,913 - hook_solution - INFO - Starting full SiLU replacement process...
+2025-03-13 00:13:37,913 - hook_solution - INFO - Collecting SiLU activations...
+2025-03-13 00:13:37,913 - hook_solution - INFO - Finding SiLU modules in the model...
+2025-03-13 00:13:37,914 - hook_solution - INFO - Found 22 SiLU modules in 0.00 seconds
+2025-03-13 00:13:37,914 - hook_solution - INFO - Sample paths: ['model.layers.0.mlp.act_fn', 'model.layers.1.mlp.act_fn', 'model.layers.2.mlp.act_fn']
+2025-03-13 00:13:38,276 - hook_solution - INFO - Collected 22 activations in 0.36 seconds
+2025-03-13 00:13:38,277 - hook_solution - INFO - Computing bilinear approximations...
+2025-03-13 00:13:38,277 - hook_solution - INFO - Module 0: Input dtype: torch.float32, shape: torch.Size([10, 1024, 5632])
+2025-03-13 00:13:38,501 - hook_solution - INFO - Module 0: Input shape torch.Size([10, 1024, 5632]), feature dim 5632, solution shape torch.Size([5632, 5632])
+2025-03-13 00:13:38,501 - hook_solution - INFO - Module 1: Input dtype: torch.float32, shape: torch.Size([10, 1024, 5632])
+2025-03-13 00:13:38,627 - hook_solution - INFO - Module 1: Input shape torch.Size([10, 1024, 5632]), feature dim 5632, solution shape torch.Size([5632, 5632])
+2025-03-13 00:13:38,627 - hook_solution - INFO - Module 2: Input dtype: torch.float32, shape: torch.Size([10, 1024, 5632])
+2025-03-13 00:13:38,753 - hook_solution - INFO - Module 2: Input shape torch.Size([10, 1024, 5632]), feature dim 5632, solution shape torch.Size([5632, 5632])
+2025-03-13 00:13:38,753 - hook_solution - INFO - Module 3: Input dtype: torch.float32, shape: torch.Size([10, 1024, 5632])
+2025-03-13 00:13:38,878 - hook_solution - INFO - Module 4: Input dtype: torch.float32, shape: torch.Size([10, 1024, 5632])
+2025-03-13 00:13:39,004 - hook_solution - INFO - Module 5: Input dtype: torch.float32, shape: torch.Size([10, 1024, 5632])
+2025-03-13 00:13:39,130 - hook_solution - INFO - Module 6: Input dtype: torch.float32, shape: torch.Size([10, 1024, 5632])
+2025-03-13 00:13:39,256 - hook_solution - INFO - Module 7: Input dtype: torch.float32, shape: torch.Size([10, 1024, 5632])
+2025-03-13 00:13:39,382 - hook_solution - INFO - Module 8: Input dtype: torch.float32, shape: torch.Size([10, 1024, 5632])
+2025-03-13 00:13:39,507 - hook_solution - INFO - Module 9: Input dtype: torch.float32, shape: torch.Size([10, 1024, 5632])
+2025-03-13 00:13:39,633 - hook_solution - INFO - Module 10: Input dtype: torch.float32, shape: torch.Size([10, 1024, 5632])
+2025-03-13 00:13:39,759 - hook_solution - INFO - Module 11: Input dtype: torch.float32, shape: torch.Size([10, 1024, 5632])
+2025-03-13 00:13:39,885 - hook_solution - INFO - Module 12: Input dtype: torch.float32, shape: torch.Size([10, 1024, 5632])
+2025-03-13 00:13:40,011 - hook_solution - INFO - Module 13: Input dtype: torch.float32, shape: torch.Size([10, 1024, 5632])
+2025-03-13 00:13:40,137 - hook_solution - INFO - Module 14: Input dtype: torch.float32, shape: torch.Size([10, 1024, 5632])
+2025-03-13 00:13:40,262 - hook_solution - INFO - Module 15: Input dtype: torch.float32, shape: torch.Size([10, 1024, 5632])
+2025-03-13 00:13:40,388 - hook_solution - INFO - Module 16: Input dtype: torch.float32, shape: torch.Size([10, 1024, 5632])
+2025-03-13 00:13:40,514 - hook_solution - INFO - Module 17: Input dtype: torch.float32, shape: torch.Size([10, 1024, 5632])
+2025-03-13 00:13:40,640 - hook_solution - INFO - Module 18: Input dtype: torch.float32, shape: torch.Size([10, 1024, 5632])
+2025-03-13 00:13:40,766 - hook_solution - INFO - Module 19: Input dtype: torch.float32, shape: torch.Size([10, 1024, 5632])
+2025-03-13 00:13:40,892 - hook_solution - INFO - Module 20: Input dtype: torch.float32, shape: torch.Size([10, 1024, 5632])
+2025-03-13 00:13:41,018 - hook_solution - INFO - Module 21: Input dtype: torch.float32, shape: torch.Size([10, 1024, 5632])
+2025-03-13 00:13:41,143 - hook_solution - INFO - Computed 22 bilinear approximations in 2.87 seconds
+2025-03-13 00:13:41,144 - hook_solution - INFO - Replacing SiLU modules with InterpolatedSiLU...
+2025-03-13 00:13:41,144 - hook_solution - INFO - Finding SiLU modules in the model...
+2025-03-13 00:13:41,144 - hook_solution - INFO - Found 22 SiLU modules in 0.00 seconds
+2025-03-13 00:13:41,144 - hook_solution - INFO - Sample paths: ['model.layers.0.mlp.act_fn', 'model.layers.1.mlp.act_fn', 'model.layers.2.mlp.act_fn']
+2025-03-13 00:13:41,144 - hook_solution - INFO - Using input dimensions from forward pass: samples [5632, 5632, 5632]...
+2025-03-13 00:13:41,144 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.0.mlp.act_fn
+2025-03-13 00:13:41,314 - hook_solution - INFO - Replaced SiLU at model.layers.0.mlp.act_fn
+2025-03-13 00:13:41,314 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.1.mlp.act_fn
+2025-03-13 00:13:41,476 - hook_solution - INFO - Replaced SiLU at model.layers.1.mlp.act_fn
+2025-03-13 00:13:41,476 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.2.mlp.act_fn
+2025-03-13 00:13:41,639 - hook_solution - INFO - Replaced SiLU at model.layers.2.mlp.act_fn
+2025-03-13 00:13:41,639 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.3.mlp.act_fn
+2025-03-13 00:13:41,802 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.4.mlp.act_fn
+2025-03-13 00:13:41,965 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.5.mlp.act_fn
+2025-03-13 00:13:42,126 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.6.mlp.act_fn
+2025-03-13 00:13:42,288 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.7.mlp.act_fn
+2025-03-13 00:13:42,451 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.8.mlp.act_fn
+2025-03-13 00:13:42,612 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.9.mlp.act_fn
+2025-03-13 00:13:42,773 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.10.mlp.act_fn
+2025-03-13 00:13:42,936 - hook_solution - INFO - Replaced SiLU at model.layers.10.mlp.act_fn
+2025-03-13 00:13:42,936 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.11.mlp.act_fn
+2025-03-13 00:13:43,098 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.12.mlp.act_fn
+2025-03-13 00:13:43,259 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.13.mlp.act_fn
+2025-03-13 00:13:43,421 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.14.mlp.act_fn
+2025-03-13 00:13:43,582 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.15.mlp.act_fn
+2025-03-13 00:13:43,748 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.16.mlp.act_fn
+2025-03-13 00:13:43,910 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.17.mlp.act_fn
+2025-03-13 00:13:44,073 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.18.mlp.act_fn
+2025-03-13 00:13:44,237 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.19.mlp.act_fn
+2025-03-13 00:13:44,399 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.20.mlp.act_fn
+2025-03-13 00:13:44,562 - hook_solution - INFO - Replaced SiLU at model.layers.20.mlp.act_fn
+2025-03-13 00:13:44,563 - hook_solution - INFO - Creating InterpolatedSiLU with input dimension 5632 for model.layers.21.mlp.act_fn
+2025-03-13 00:13:44,723 - hook_solution - INFO - Replaced 22 SiLU modules in 3.58 seconds
+2025-03-13 00:13:44,723 - hook_solution - INFO - Updating bilinear approximations in model...
+2025-03-13 00:13:44,801 - hook_solution - INFO - Updated module 0 (model.layers.0.mlp.act_fn)
+2025-03-13 00:13:44,873 - hook_solution - INFO - Updated module 1 (model.layers.1.mlp.act_fn)
+2025-03-13 00:13:44,944 - hook_solution - INFO - Updated module 2 (model.layers.2.mlp.act_fn)
+2025-03-13 00:13:45,516 - hook_solution - INFO - Updated module 10 (model.layers.10.mlp.act_fn)
+2025-03-13 00:13:46,228 - hook_solution - INFO - Updated module 20 (model.layers.20.mlp.act_fn)
+2025-03-13 00:13:46,300 - hook_solution - INFO - Updated 22 modules in 1.58 seconds
+2025-03-13 00:13:46,300 - hook_solution - INFO - SiLU replacement process completed
+2025-03-13 00:13:46,401 - __main__ - INFO - Starting training
+[34m[1mwandb[0m: [33mWARNING[0m The `run_name` is currently set to the same value as `TrainingArguments.output_dir`. If this was not intended, please specify a different run name by setting the `TrainingArguments.run_name` parameter.
+  0%|                                                                                                                                                                          | 0/15258 [00:00<?, ?it/s]2025-03-13 00:13:54,667 - __main__ - INFO - Step 0/15258: alpha = 0.0000, beta = 1.0000, updated 22 modules
+  0%|                                                                                                                                                               | 1/15258 [00:08<37:05:48,  8.75s/it]2025-03-13 00:13:55,795 - __main__ - INFO - Step 1/15258: alpha = 0.0002, beta = 0.9998, updated 22 modules
+  1%|█                                                                                                                                                             | 100/15258 [01:48<4:15:02,  1.01s/it]2025-03-13 00:15:35,434 - __main__ - INFO - Step 100/15258: alpha = 0.0218, beta = 0.9782, updated 22 modules
+{'loss': 2.334, 'grad_norm': 2.3035333156585693, 'learning_rate': 1.9736842105263158e-05, 'epoch': 0.01}
+  1%|██                                                                                                                                                            | 200/15258 [03:29<4:11:57,  1.00s/it]2025-03-13 00:17:16,171 - __main__ - INFO - Step 200/15258: alpha = 0.0437, beta = 0.9563, updated 22 modules
+{'loss': 2.3335, 'grad_norm': 3.621241569519043, 'learning_rate': 2.9904673639613397e-05, 'epoch': 0.01}
+  2%|███                                                                                                                                                           | 300/15258 [05:09<4:10:24,  1.00s/it]2025-03-13 00:18:56,809 - __main__ - INFO - Step 300/15258: alpha = 0.0655, beta = 0.9345, updated 22 modules
+{'loss': 2.3738, 'grad_norm': 4.222360610961914, 'learning_rate': 2.9706077055474648e-05, 'epoch': 0.02}
+  3%|████▏                                                                                                                                                         | 400/15258 [06:50<4:09:06,  1.01s/it]2025-03-13 00:20:37,672 - __main__ - INFO - Step 400/15258: alpha = 0.0874, beta = 0.9126, updated 22 modules
+{'loss': 2.3513, 'grad_norm': 4.918943405151367, 'learning_rate': 2.9507480471335892e-05, 'epoch': 0.03}
+  3%|█████▏                                                                                                                                                        | 500/15258 [08:31<4:08:03,  1.01s/it]2025-03-13 00:22:18,479 - __main__ - INFO - Step 500/15258: alpha = 0.1092, beta = 0.8908, updated 22 modules
+{'loss': 2.4042, 'grad_norm': 4.995400428771973, 'learning_rate': 2.9308883887197142e-05, 'epoch': 0.03}
+  4%|██████▏                                                                                                                                                       | 600/15258 [10:12<4:05:41,  1.01s/it]2025-03-13 00:23:59,147 - __main__ - INFO - Step 600/15258: alpha = 0.1311, beta = 0.8689, updated 22 modules
+{'loss': 2.3559, 'grad_norm': 6.547990798950195, 'learning_rate': 2.911028730305839e-05, 'epoch': 0.04}
+  5%|███████▏                                                                                                                                                      | 700/15258 [11:52<4:03:57,  1.01s/it]2025-03-13 00:25:39,762 - __main__ - INFO - Step 700/15258: alpha = 0.1529, beta = 0.8471, updated 22 modules
+{'loss': 2.357, 'grad_norm': 9.336172103881836, 'learning_rate': 2.8911690718919633e-05, 'epoch': 0.05}
+  5%|████████▎                                                                                                                                                     | 800/15258 [13:33<4:02:41,  1.01s/it]2025-03-13 00:27:20,555 - __main__ - INFO - Step 800/15258: alpha = 0.1748, beta = 0.8252, updated 22 modules
+{'loss': 2.3668, 'grad_norm': 7.058199882507324, 'learning_rate': 2.8713094134780884e-05, 'epoch': 0.05}
+  6%|█████████▎                                                                                                                                                    | 900/15258 [15:14<4:01:10,  1.01s/it]2025-03-13 00:29:01,274 - __main__ - INFO - Step 900/15258: alpha = 0.1966, beta = 0.8034, updated 22 modules
+{'loss': 2.3817, 'grad_norm': 8.045928955078125, 'learning_rate': 2.851449755064213e-05, 'epoch': 0.06}
+  7%|██████████▎                                                                                                                                                  | 1000/15258 [16:54<3:59:02,  1.01s/it]2025-03-13 00:30:41,952 - __main__ - INFO - Step 1000/15258: alpha = 0.2185, beta = 0.7815, updated 22 modules
+{'loss': 2.3596, 'grad_norm': 7.907477378845215, 'learning_rate': 2.8315900966503378e-05, 'epoch': 0.07}
+  7%|███████████▎                                                                                                                                                 | 1100/15258 [18:35<3:57:52,  1.01s/it]2025-03-13 00:32:22,405 - __main__ - INFO - Step 1100/15258: alpha = 0.2403, beta = 0.7597, updated 22 modules
+{'loss': 2.394, 'grad_norm': 9.132675170898438, 'learning_rate': 2.8117304382364625e-05, 'epoch': 0.07}
+  8%|████████████▎                                                                                                                                                | 1200/15258 [20:16<3:55:57,  1.01s/it]2025-03-13 00:34:03,081 - __main__ - INFO - Step 1200/15258: alpha = 0.2622, beta = 0.7378, updated 22 modules
+{'loss': 2.4238, 'grad_norm': 9.75940990447998, 'learning_rate': 2.791870779822587e-05, 'epoch': 0.08}
+  9%|█████████████▍                                                                                                                                               | 1300/15258 [21:56<3:55:00,  1.01s/it]2025-03-13 00:35:43,773 - __main__ - INFO - Step 1300/15258: alpha = 0.2840, beta = 0.7160, updated 22 modules
+{'loss': 2.4633, 'grad_norm': 8.87774658203125, 'learning_rate': 2.772011121408712e-05, 'epoch': 0.09}
+  9%|██████████████▍                                                                                                                                              | 1400/15258 [23:37<3:52:41,  1.01s/it]2025-03-13 00:37:24,466 - __main__ - INFO - Step 1400/15258: alpha = 0.3059, beta = 0.6941, updated 22 modules
+{'loss': 2.449, 'grad_norm': 11.221599578857422, 'learning_rate': 2.7521514629948366e-05, 'epoch': 0.09}
+ 10%|███████████████▍                                                                                                                                             | 1500/15258 [25:17<3:52:01,  1.01s/it]2025-03-13 00:39:04,846 - __main__ - INFO - Step 1500/15258: alpha = 0.3277, beta = 0.6723, updated 22 modules
+{'loss': 2.4812, 'grad_norm': 9.93542194366455, 'learning_rate': 2.732291804580961e-05, 'epoch': 0.1}
+ 10%|████████████████▍                                                                                                                                            | 1600/15258 [27:14<3:49:38,  1.01s/it]2025-03-13 00:41:01,069 - __main__ - INFO - Step 1600/15258: alpha = 0.3496, beta = 0.6504, updated 22 modules
+{'loss': 2.5459, 'grad_norm': 10.782183647155762, 'learning_rate': 2.712432146167086e-05, 'epoch': 0.1}
+ 11%|█████████████████▍                                                                                                                                           | 1700/15258 [28:54<3:47:22,  1.01s/it]2025-03-13 00:42:41,872 - __main__ - INFO - Step 1700/15258: alpha = 0.3714, beta = 0.6286, updated 22 modules
+{'loss': 2.6066, 'grad_norm': 14.186295509338379, 'learning_rate': 2.6925724877532108e-05, 'epoch': 0.11}
+ 12%|██████████████████▌                                                                                                                                          | 1800/15258 [30:35<3:46:35,  1.01s/it]2025-03-13 00:44:22,688 - __main__ - INFO - Step 1800/15258: alpha = 0.3933, beta = 0.6067, updated 22 modules
+{'loss': 2.5761, 'grad_norm': 12.803816795349121, 'learning_rate': 2.6727128293393355e-05, 'epoch': 0.12}
+ 12%|███████████████████▌                                                                                                                                         | 1900/15258 [32:16<3:44:41,  1.01s/it]2025-03-13 00:46:03,582 - __main__ - INFO - Step 1900/15258: alpha = 0.4151, beta = 0.5849, updated 22 modules
+{'loss': 2.6027, 'grad_norm': 11.907342910766602, 'learning_rate': 2.6528531709254602e-05, 'epoch': 0.12}
+ 13%|████████████████████▌                                                                                                                                        | 2000/15258 [33:57<3:42:20,  1.01s/it]2025-03-13 00:47:44,420 - __main__ - INFO - Step 2000/15258: alpha = 0.4370, beta = 0.5630, updated 22 modules
+{'loss': 2.6123, 'grad_norm': 13.96627140045166, 'learning_rate': 2.6329935125115846e-05, 'epoch': 0.13}
+ 14%|█████████████████████▌                                                                                                                                       | 2100/15258 [35:38<3:41:52,  1.01s/it]2025-03-13 00:49:25,214 - __main__ - INFO - Step 2100/15258: alpha = 0.4588, beta = 0.5412, updated 22 modules
+{'loss': 2.5805, 'grad_norm': 14.334277153015137, 'learning_rate': 2.6131338540977096e-05, 'epoch': 0.14}
+ 14%|██████████████████████▋                                                                                                                                      | 2200/15258 [37:19<3:38:57,  1.01s/it]2025-03-13 00:51:06,119 - __main__ - INFO - Step 2200/15258: alpha = 0.4807, beta = 0.5193, updated 22 modules
+{'loss': 2.5691, 'grad_norm': 15.740021705627441, 'learning_rate': 2.5932741956838343e-05, 'epoch': 0.14}
+ 15%|███████████████████████▋                                                                                                                                     | 2300/15258 [38:59<3:37:11,  1.01s/it]2025-03-13 00:52:46,932 - __main__ - INFO - Step 2300/15258: alpha = 0.5025, beta = 0.4975, updated 22 modules
+{'loss': 2.5668, 'grad_norm': 13.861474990844727, 'learning_rate': 2.573414537269959e-05, 'epoch': 0.15}
+ 16%|████████████████████████▋                                                                                                                                    | 2400/15258 [40:40<3:35:56,  1.01s/it]2025-03-13 00:54:27,626 - __main__ - INFO - Step 2400/15258: alpha = 0.5244, beta = 0.4756, updated 22 modules
+{'loss': 2.5721, 'grad_norm': 15.07784652709961, 'learning_rate': 2.5535548788560838e-05, 'epoch': 0.16}
+ 16%|█████████████████████████▋                                                                                                                                   | 2500/15258 [42:21<3:34:19,  1.01s/it]2025-03-13 00:56:08,406 - __main__ - INFO - Step 2500/15258: alpha = 0.5462, beta = 0.4538, updated 22 modules
+{'loss': 2.5534, 'grad_norm': 13.654273986816406, 'learning_rate': 2.5336952204422085e-05, 'epoch': 0.16}
+ 17%|██████████████████████████▊                                                                                                                                  | 2600/15258 [44:02<3:32:28,  1.01s/it]2025-03-13 00:57:49,148 - __main__ - INFO - Step 2600/15258: alpha = 0.5681, beta = 0.4319, updated 22 modules
+{'loss': 2.5779, 'grad_norm': 16.333335876464844, 'learning_rate': 2.5138355620283332e-05, 'epoch': 0.17}
+ 18%|███████████████████████████▊                                                                                                                                 | 2700/15258 [45:42<3:30:49,  1.01s/it]2025-03-13 00:59:29,797 - __main__ - INFO - Step 2700/15258: alpha = 0.5899, beta = 0.4101, updated 22 modules
+{'loss': 2.5748, 'grad_norm': 15.327141761779785, 'learning_rate': 2.493975903614458e-05, 'epoch': 0.18}
+ 18%|████████████████████████████▊                                                                                                                                | 2800/15258 [47:23<3:28:51,  1.01s/it]2025-03-13 01:01:10,584 - __main__ - INFO - Step 2800/15258: alpha = 0.6118, beta = 0.3882, updated 22 modules
+{'loss': 2.6164, 'grad_norm': 16.758625030517578, 'learning_rate': 2.4741162452005826e-05, 'epoch': 0.18}
+ 19%|█████████████████████████████▊                                                                                                                               | 2900/15258 [49:04<3:28:00,  1.01s/it]2025-03-13 01:02:51,367 - __main__ - INFO - Step 2900/15258: alpha = 0.6336, beta = 0.3664, updated 22 modules
+{'loss': 2.6126, 'grad_norm': 14.401774406433105, 'learning_rate': 2.4542565867867073e-05, 'epoch': 0.19}
+ 20%|██████████████████████████████▊                                                                                                                              | 3000/15258 [50:45<3:25:52,  1.01s/it]2025-03-13 01:04:32,070 - __main__ - INFO - Step 3000/15258: alpha = 0.6555, beta = 0.3445, updated 22 modules
+{'loss': 2.6422, 'grad_norm': 15.34946346282959, 'learning_rate': 2.434396928372832e-05, 'epoch': 0.2}
+ 20%|███████████████████████████████▉                                                                                                                             | 3100/15258 [52:41<3:24:42,  1.01s/it]2025-03-13 01:06:28,173 - __main__ - INFO - Step 3100/15258: alpha = 0.6773, beta = 0.3227, updated 22 modules
+{'loss': 2.6936, 'grad_norm': 16.984359741210938, 'learning_rate': 2.4145372699589567e-05, 'epoch': 0.2}
+ 21%|████████████████████████████████▉                                                                                                                            | 3200/15258 [54:21<3:22:45,  1.01s/it]2025-03-13 01:08:08,608 - __main__ - INFO - Step 3200/15258: alpha = 0.6991, beta = 0.3009, updated 22 modules
+{'loss': 2.6879, 'grad_norm': 15.524641036987305, 'learning_rate': 2.3946776115450815e-05, 'epoch': 0.21}
+ 22%|█████████████████████████████████▉                                                                                                                           | 3300/15258 [56:02<3:21:46,  1.01s/it]2025-03-13 01:09:49,414 - __main__ - INFO - Step 3300/15258: alpha = 0.7210, beta = 0.2790, updated 22 modules
+{'loss': 2.7036, 'grad_norm': 14.352285385131836, 'learning_rate': 2.374817953131206e-05, 'epoch': 0.22}
+ 22%|██████████████████████████████████▉                                                                                                                          | 3400/15258 [57:43<3:19:20,  1.01s/it]2025-03-13 01:11:30,152 - __main__ - INFO - Step 3400/15258: alpha = 0.7428, beta = 0.2572, updated 22 modules
+{'loss': 2.7249, 'grad_norm': 17.633174896240234, 'learning_rate': 2.354958294717331e-05, 'epoch': 0.22}
+ 23%|████████████████████████████████████                                                                                                                         | 3500/15258 [59:23<3:17:39,  1.01s/it]2025-03-13 01:13:10,979 - __main__ - INFO - Step 3500/15258: alpha = 0.7647, beta = 0.2353, updated 22 modules
+{'loss': 2.711, 'grad_norm': 17.1572265625, 'learning_rate': 2.3350986363034556e-05, 'epoch': 0.23}
+ 24%|████████████████████████████████████▌                                                                                                                      | 3600/15258 [1:01:04<3:16:30,  1.01s/it]2025-03-13 01:14:51,831 - __main__ - INFO - Step 3600/15258: alpha = 0.7865, beta = 0.2135, updated 22 modules
+{'loss': 2.6868, 'grad_norm': 17.47140121459961, 'learning_rate': 2.3152389778895806e-05, 'epoch': 0.24}
+ 24%|█████████████████████████████████████▌                                                                                                                     | 3700/15258 [1:02:45<3:13:31,  1.00s/it]2025-03-13 01:16:32,531 - __main__ - INFO - Step 3700/15258: alpha = 0.8084, beta = 0.1916, updated 22 modules
+{'loss': 2.6614, 'grad_norm': 19.4215145111084, 'learning_rate': 2.295379319475705e-05, 'epoch': 0.24}
+ 25%|██████████████████████████████████████▌                                                                                                                    | 3800/15258 [1:04:26<3:12:48,  1.01s/it]2025-03-13 01:18:13,413 - __main__ - INFO - Step 3800/15258: alpha = 0.8302, beta = 0.1698, updated 22 modules
+{'loss': 2.6695, 'grad_norm': 17.739294052124023, 'learning_rate': 2.2755196610618297e-05, 'epoch': 0.25}
+ 26%|███████████████████████████████████████▌                                                                                                                   | 3900/15258 [1:06:07<3:11:09,  1.01s/it]2025-03-13 01:19:54,223 - __main__ - INFO - Step 3900/15258: alpha = 0.8521, beta = 0.1479, updated 22 modules
+{'loss': 2.6443, 'grad_norm': 16.909944534301758, 'learning_rate': 2.2556600026479544e-05, 'epoch': 0.26}
+ 26%|████████████████████████████████████████▋                                                                                                                  | 4000/15258 [1:07:47<3:09:04,  1.01s/it]2025-03-13 01:21:34,972 - __main__ - INFO - Step 4000/15258: alpha = 0.8739, beta = 0.1261, updated 22 modules
+{'loss': 2.6344, 'grad_norm': 18.47677993774414, 'learning_rate': 2.235800344234079e-05, 'epoch': 0.26}
+ 27%|█████████████████████████████████████████▋                                                                                                                 | 4100/15258 [1:09:28<3:07:37,  1.01s/it]2025-03-13 01:23:15,552 - __main__ - INFO - Step 4100/15258: alpha = 0.8958, beta = 0.1042, updated 22 modules
+{'loss': 2.6777, 'grad_norm': 17.511552810668945, 'learning_rate': 2.2159406858202042e-05, 'epoch': 0.27}
+ 28%|██████████████████████████████████████████▋                                                                                                                | 4200/15258 [1:11:09<3:05:59,  1.01s/it]2025-03-13 01:24:56,115 - __main__ - INFO - Step 4200/15258: alpha = 0.9176, beta = 0.0824, updated 22 modules
+{'loss': 2.6745, 'grad_norm': 19.017309188842773, 'learning_rate': 2.1960810274063286e-05, 'epoch': 0.28}
+ 28%|███████████████████████████████████████████▋                                                                                                               | 4300/15258 [1:12:49<3:03:19,  1.00s/it]2025-03-13 01:26:36,940 - __main__ - INFO - Step 4300/15258: alpha = 0.9395, beta = 0.0605, updated 22 modules
+{'loss': 2.6703, 'grad_norm': 20.009477615356445, 'learning_rate': 2.1762213689924533e-05, 'epoch': 0.28}
+ 29%|████████████████████████████████████████████▋                                                                                                              | 4400/15258 [1:14:30<3:01:54,  1.01s/it]2025-03-13 01:28:17,670 - __main__ - INFO - Step 4400/15258: alpha = 0.9613, beta = 0.0387, updated 22 modules
+{'loss': 2.6618, 'grad_norm': 20.733715057373047, 'learning_rate': 2.1563617105785783e-05, 'epoch': 0.29}
+ 29%|█████████████████████████████████████████████▋                                                                                                             | 4500/15258 [1:16:11<3:01:02,  1.01s/it]2025-03-13 01:29:58,459 - __main__ - INFO - Step 4500/15258: alpha = 0.9832, beta = 0.0168, updated 22 modules
+{'loss': 2.6975, 'grad_norm': 17.766462326049805, 'learning_rate': 2.1365020521647027e-05, 'epoch': 0.29}
+ 30%|██████████████████████████████████████████████▋                                                                                                            | 4600/15258 [1:18:07<2:58:49,  1.01s/it]2025-03-13 01:31:54,804 - __main__ - INFO - Step 4600/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.7273, 'grad_norm': 19.004194259643555, 'learning_rate': 2.1166423937508274e-05, 'epoch': 0.3}
+ 31%|███████████████████████████████████████████████▋                                                                                                           | 4700/15258 [1:19:48<2:57:31,  1.01s/it]2025-03-13 01:33:35,525 - __main__ - INFO - Step 4700/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.7424, 'grad_norm': 17.81661033630371, 'learning_rate': 2.0967827353369525e-05, 'epoch': 0.31}
+ 31%|████████████████████████████████████████████████▊                                                                                                          | 4800/15258 [1:21:29<2:54:51,  1.00s/it]2025-03-13 01:35:16,278 - __main__ - INFO - Step 4800/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.708, 'grad_norm': 19.280784606933594, 'learning_rate': 2.076923076923077e-05, 'epoch': 0.31}
+ 32%|█████████████████████████████████████████████████▊                                                                                                         | 4900/15258 [1:23:10<2:54:26,  1.01s/it]2025-03-13 01:36:57,096 - __main__ - INFO - Step 4900/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.7272, 'grad_norm': 16.830760955810547, 'learning_rate': 2.057063418509202e-05, 'epoch': 0.32}
+ 33%|██████████████████████████████████████████████████▊                                                                                                        | 5000/15258 [1:24:50<2:52:15,  1.01s/it]2025-03-13 01:38:37,904 - __main__ - INFO - Step 5000/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.7096, 'grad_norm': 17.946678161621094, 'learning_rate': 2.0372037600953263e-05, 'epoch': 0.33}
+ 33%|███████████████████████████████████████████████████▊                                                                                                       | 5100/15258 [1:26:31<2:50:55,  1.01s/it]2025-03-13 01:40:18,689 - __main__ - INFO - Step 5100/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.6901, 'grad_norm': 17.2210636138916, 'learning_rate': 2.017344101681451e-05, 'epoch': 0.33}
+ 34%|████████████████████████████████████████████████████▊                                                                                                      | 5200/15258 [1:28:12<2:49:07,  1.01s/it]2025-03-13 01:41:59,463 - __main__ - INFO - Step 5200/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.6491, 'grad_norm': 16.954967498779297, 'learning_rate': 1.997484443267576e-05, 'epoch': 0.34}
+ 35%|█████████████████████████████████████████████████████▊                                                                                                     | 5300/15258 [1:29:53<2:47:01,  1.01s/it]2025-03-13 01:43:40,380 - __main__ - INFO - Step 5300/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.6428, 'grad_norm': 19.47580337524414, 'learning_rate': 1.9776247848537004e-05, 'epoch': 0.35}
+ 35%|██████████████████████████████████████████████████████▊                                                                                                    | 5400/15258 [1:31:34<2:45:22,  1.01s/it]2025-03-13 01:45:21,088 - __main__ - INFO - Step 5400/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.6435, 'grad_norm': 17.447694778442383, 'learning_rate': 1.9577651264398255e-05, 'epoch': 0.35}
+ 36%|███████████████████████████████████████████████████████▊                                                                                                   | 5500/15258 [1:33:14<2:44:13,  1.01s/it]2025-03-13 01:47:01,840 - __main__ - INFO - Step 5500/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.6217, 'grad_norm': 17.009681701660156, 'learning_rate': 1.93790546802595e-05, 'epoch': 0.36}
+ 37%|████████████████████████████████████████████████████████▉                                                                                                  | 5600/15258 [1:34:55<2:42:14,  1.01s/it]2025-03-13 01:48:42,578 - __main__ - INFO - Step 5600/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.6116, 'grad_norm': 18.842985153198242, 'learning_rate': 1.9180458096120745e-05, 'epoch': 0.37}
+ 37%|█████████████████████████████████████████████████████████▉                                                                                                 | 5700/15258 [1:36:36<2:40:36,  1.01s/it]2025-03-13 01:50:23,381 - __main__ - INFO - Step 5700/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.6106, 'grad_norm': 18.18210220336914, 'learning_rate': 1.8981861511981996e-05, 'epoch': 0.37}
+ 38%|██████████████████████████████████████████████████████████▉                                                                                                | 5800/15258 [1:38:16<2:38:31,  1.01s/it]2025-03-13 01:52:04,010 - __main__ - INFO - Step 5800/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5954, 'grad_norm': 20.475446701049805, 'learning_rate': 1.878326492784324e-05, 'epoch': 0.38}
+ 39%|███████████████████████████████████████████████████████████▉                                                                                               | 5900/15258 [1:39:57<2:37:59,  1.01s/it]2025-03-13 01:53:44,832 - __main__ - INFO - Step 5900/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.6024, 'grad_norm': 16.19169044494629, 'learning_rate': 1.8584668343704487e-05, 'epoch': 0.39}
+ 39%|████████████████████████████████████████████████████████████▉                                                                                              | 6000/15258 [1:41:38<2:35:02,  1.00s/it]2025-03-13 01:55:25,663 - __main__ - INFO - Step 6000/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.6266, 'grad_norm': 19.822494506835938, 'learning_rate': 1.8386071759565737e-05, 'epoch': 0.39}
+ 40%|█████████████████████████████████████████████████████████████▉                                                                                             | 6100/15258 [1:43:19<2:33:33,  1.01s/it]2025-03-13 01:57:21,529 - __main__ - INFO - Step 6100/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.6493, 'grad_norm': 18.213232040405273, 'learning_rate': 1.818747517542698e-05, 'epoch': 0.4}
+ 41%|██████████████████████████████████████████████████████████████▉                                                                                            | 6200/15258 [1:45:15<2:32:00,  1.01s/it]2025-03-13 01:59:02,127 - __main__ - INFO - Step 6200/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.6675, 'grad_norm': 18.03868293762207, 'learning_rate': 1.798887859128823e-05, 'epoch': 0.41}
+ 41%|███████████████████████████████████████████████████████████████▉                                                                                           | 6300/15258 [1:46:55<2:30:17,  1.01s/it]2025-03-13 02:00:42,938 - __main__ - INFO - Step 6300/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.6714, 'grad_norm': 19.17255973815918, 'learning_rate': 1.779028200714948e-05, 'epoch': 0.41}
+ 42%|█████████████████████████████████████████████████████████████████                                                                                          | 6400/15258 [1:48:36<2:28:47,  1.01s/it]2025-03-13 02:02:23,677 - __main__ - INFO - Step 6400/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.6338, 'grad_norm': 18.011823654174805, 'learning_rate': 1.7591685423010722e-05, 'epoch': 0.42}
+ 43%|██████████████████████████████████████████████████████████████████                                                                                         | 6500/15258 [1:50:17<2:27:06,  1.01s/it]2025-03-13 02:04:04,340 - __main__ - INFO - Step 6500/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.6275, 'grad_norm': 16.283334732055664, 'learning_rate': 1.7393088838871973e-05, 'epoch': 0.43}
+ 43%|███████████████████████████████████████████████████████████████████                                                                                        | 6600/15258 [1:51:58<2:26:05,  1.01s/it]2025-03-13 02:05:45,131 - __main__ - INFO - Step 6600/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.6268, 'grad_norm': 16.90870475769043, 'learning_rate': 1.719449225473322e-05, 'epoch': 0.43}
+ 44%|████████████████████████████████████████████████████████████████████                                                                                       | 6700/15258 [1:53:38<2:23:43,  1.01s/it]2025-03-13 02:07:25,895 - __main__ - INFO - Step 6700/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.6081, 'grad_norm': 17.282257080078125, 'learning_rate': 1.6995895670594467e-05, 'epoch': 0.44}
+ 45%|█████████████████████████████████████████████████████████████████████                                                                                      | 6800/15258 [1:55:19<2:22:29,  1.01s/it]2025-03-13 02:09:06,661 - __main__ - INFO - Step 6800/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5805, 'grad_norm': 17.18797492980957, 'learning_rate': 1.6797299086455714e-05, 'epoch': 0.45}
+ 45%|██████████████████████████████████████████████████████████████████████                                                                                     | 6900/15258 [1:57:00<2:20:36,  1.01s/it]2025-03-13 02:10:47,360 - __main__ - INFO - Step 6900/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5625, 'grad_norm': 16.522729873657227, 'learning_rate': 1.6598702502316958e-05, 'epoch': 0.45}
+ 46%|███████████████████████████████████████████████████████████████████████                                                                                    | 7000/15258 [1:58:41<2:18:18,  1.00s/it]2025-03-13 02:12:28,200 - __main__ - INFO - Step 7000/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5675, 'grad_norm': 20.534366607666016, 'learning_rate': 1.640010591817821e-05, 'epoch': 0.46}
+ 47%|████████████████████████████████████████████████████████████████████████▏                                                                                  | 7100/15258 [2:00:21<2:16:55,  1.01s/it]2025-03-13 02:14:08,929 - __main__ - INFO - Step 7100/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.558, 'grad_norm': 17.553394317626953, 'learning_rate': 1.6201509334039456e-05, 'epoch': 0.47}
+ 47%|█████████████████████████████████████████████████████████████████████████▏                                                                                 | 7200/15258 [2:02:02<2:15:23,  1.01s/it]2025-03-13 02:15:49,695 - __main__ - INFO - Step 7200/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5423, 'grad_norm': 17.726381301879883, 'learning_rate': 1.6002912749900703e-05, 'epoch': 0.47}
+ 48%|██████████████████████████████████████████████████████████████████████████▏                                                                                | 7300/15258 [2:03:42<2:14:05,  1.01s/it]2025-03-13 02:17:29,926 - __main__ - INFO - Step 7300/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5579, 'grad_norm': 15.58874797821045, 'learning_rate': 1.580431616576195e-05, 'epoch': 0.48}
+ 48%|███████████████████████████████████████████████████████████████████████████▏                                                                               | 7400/15258 [2:05:23<2:11:56,  1.01s/it]2025-03-13 02:19:10,684 - __main__ - INFO - Step 7400/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5691, 'grad_norm': 18.71318244934082, 'learning_rate': 1.5605719581623197e-05, 'epoch': 0.48}
+ 49%|████████████████████████████████████████████████████████████████████████████▏                                                                              | 7500/15258 [2:07:04<2:09:59,  1.01s/it]2025-03-13 02:20:51,400 - __main__ - INFO - Step 7500/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5809, 'grad_norm': 17.629226684570312, 'learning_rate': 1.5407122997484444e-05, 'epoch': 0.49}
+ 50%|█████████████████████████████████████████████████████████████████████████████▏                                                                             | 7600/15258 [2:08:45<2:08:56,  1.01s/it]2025-03-13 02:22:32,224 - __main__ - INFO - Step 7600/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5873, 'grad_norm': 16.415491104125977, 'learning_rate': 1.5208526413345691e-05, 'epoch': 0.5}
+ 50%|██████████████████████████████████████████████████████████████████████████████▏                                                                            | 7700/15258 [2:10:41<2:07:10,  1.01s/it]2025-03-13 02:24:28,436 - __main__ - INFO - Step 7700/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.6082, 'grad_norm': 18.572479248046875, 'learning_rate': 1.5009929829206937e-05, 'epoch': 0.5}
+ 51%|███████████████████████████████████████████████████████████████████████████████▏                                                                           | 7800/15258 [2:12:22<2:05:29,  1.01s/it]2025-03-13 02:26:09,291 - __main__ - INFO - Step 7800/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.62, 'grad_norm': 16.529659271240234, 'learning_rate': 1.4811333245068185e-05, 'epoch': 0.51}
+ 52%|████████████████████████████████████████████████████████████████████████████████▎                                                                          | 7900/15258 [2:14:03<2:03:38,  1.01s/it]2025-03-13 02:27:50,179 - __main__ - INFO - Step 7900/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5795, 'grad_norm': 17.484153747558594, 'learning_rate': 1.4612736660929431e-05, 'epoch': 0.52}
+ 52%|█████████████████████████████████████████████████████████████████████████████████▎                                                                         | 8000/15258 [2:15:43<2:01:53,  1.01s/it]2025-03-13 02:29:30,970 - __main__ - INFO - Step 8000/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5515, 'grad_norm': 16.8758487701416, 'learning_rate': 1.441414007679068e-05, 'epoch': 0.52}
+ 53%|██████████████████████████████████████████████████████████████████████████████████▎                                                                        | 8100/15258 [2:17:24<2:00:19,  1.01s/it]2025-03-13 02:31:11,873 - __main__ - INFO - Step 8100/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5746, 'grad_norm': 17.86188507080078, 'learning_rate': 1.4215543492651927e-05, 'epoch': 0.53}
+ 54%|███████████████████████████████████████████████████████████████████████████████████▎                                                                       | 8200/15258 [2:19:05<1:59:03,  1.01s/it]2025-03-13 02:32:52,724 - __main__ - INFO - Step 8200/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5646, 'grad_norm': 17.610815048217773, 'learning_rate': 1.4016946908513174e-05, 'epoch': 0.54}
+ 54%|████████████████████████████████████████████████████████████████████████████████████▎                                                                      | 8300/15258 [2:20:46<1:57:07,  1.01s/it]2025-03-13 02:34:33,491 - __main__ - INFO - Step 8300/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5441, 'grad_norm': 16.721166610717773, 'learning_rate': 1.3818350324374421e-05, 'epoch': 0.54}
+ 55%|█████████████████████████████████████████████████████████████████████████████████████▎                                                                     | 8400/15258 [2:22:26<1:55:00,  1.01s/it]2025-03-13 02:36:13,945 - __main__ - INFO - Step 8400/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5252, 'grad_norm': 18.968135833740234, 'learning_rate': 1.3619753740235668e-05, 'epoch': 0.55}
+ 56%|██████████████████████████████████████████████████████████████████████████████████████▎                                                                    | 8500/15258 [2:24:07<1:53:17,  1.01s/it]2025-03-13 02:37:54,744 - __main__ - INFO - Step 8500/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5407, 'grad_norm': 19.595294952392578, 'learning_rate': 1.3421157156096915e-05, 'epoch': 0.56}
+ 56%|███████████████████████████████████████████████████████████████████████████████████████▎                                                                   | 8600/15258 [2:25:48<1:52:02,  1.01s/it]2025-03-13 02:39:35,572 - __main__ - INFO - Step 8600/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.524, 'grad_norm': 17.766454696655273, 'learning_rate': 1.3222560571958162e-05, 'epoch': 0.56}
+ 57%|████████████████████████████████████████████████████████████████████████████████████████▍                                                                  | 8700/15258 [2:27:29<1:50:01,  1.01s/it]2025-03-13 02:41:16,131 - __main__ - INFO - Step 8700/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5155, 'grad_norm': 19.132463455200195, 'learning_rate': 1.3023963987819411e-05, 'epoch': 0.57}
+ 58%|█████████████████████████████████████████████████████████████████████████████████████████▍                                                                 | 8800/15258 [2:29:10<1:48:29,  1.01s/it]2025-03-13 02:42:57,040 - __main__ - INFO - Step 8800/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5035, 'grad_norm': 16.753713607788086, 'learning_rate': 1.2825367403680657e-05, 'epoch': 0.58}
+ 58%|██████████████████████████████████████████████████████████████████████████████████████████▍                                                                | 8900/15258 [2:30:50<1:46:48,  1.01s/it]2025-03-13 02:44:37,934 - __main__ - INFO - Step 8900/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5518, 'grad_norm': 17.518707275390625, 'learning_rate': 1.2626770819541904e-05, 'epoch': 0.58}
+ 59%|███████████████████████████████████████████████████████████████████████████████████████████▍                                                               | 9000/15258 [2:32:31<1:45:27,  1.01s/it]2025-03-13 02:46:18,702 - __main__ - INFO - Step 9000/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5523, 'grad_norm': 16.095468521118164, 'learning_rate': 1.2428174235403151e-05, 'epoch': 0.59}
+ 60%|████████████████████████████████████████████████████████████████████████████████████████████▍                                                              | 9100/15258 [2:34:12<1:43:37,  1.01s/it]2025-03-13 02:47:59,500 - __main__ - INFO - Step 9100/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5539, 'grad_norm': 16.4648380279541, 'learning_rate': 1.22295776512644e-05, 'epoch': 0.6}
+ 60%|█████████████████████████████████████████████████████████████████████████████████████████████▍                                                             | 9200/15258 [2:36:08<1:41:46,  1.01s/it]2025-03-13 02:49:55,578 - __main__ - INFO - Step 9200/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5733, 'grad_norm': 16.84153175354004, 'learning_rate': 1.2030981067125645e-05, 'epoch': 0.6}
+ 61%|██████████████████████████████████████████████████████████████████████████████████████████████▍                                                            | 9300/15258 [2:37:49<1:39:48,  1.01s/it]2025-03-13 02:51:36,349 - __main__ - INFO - Step 9300/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.578, 'grad_norm': 18.624431610107422, 'learning_rate': 1.1832384482986892e-05, 'epoch': 0.61}
+ 62%|███████████████████████████████████████████████████████████████████████████████████████████████▍                                                           | 9400/15258 [2:39:30<1:38:23,  1.01s/it]2025-03-13 02:53:17,130 - __main__ - INFO - Step 9400/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5648, 'grad_norm': 19.101207733154297, 'learning_rate': 1.163378789884814e-05, 'epoch': 0.62}
+ 62%|████████████████████████████████████████████████████████████████████████████████████████████████▌                                                          | 9500/15258 [2:41:11<1:37:00,  1.01s/it]2025-03-13 02:54:58,056 - __main__ - INFO - Step 9500/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5343, 'grad_norm': 16.749021530151367, 'learning_rate': 1.1435191314709388e-05, 'epoch': 0.62}
+ 63%|█████████████████████████████████████████████████████████████████████████████████████████████████▌                                                         | 9600/15258 [2:42:51<1:35:30,  1.01s/it]2025-03-13 02:56:38,924 - __main__ - INFO - Step 9600/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5151, 'grad_norm': 16.120786666870117, 'learning_rate': 1.1236594730570635e-05, 'epoch': 0.63}
+ 64%|██████████████████████████████████████████████████████████████████████████████████████████████████▌                                                        | 9700/15258 [2:44:32<1:32:54,  1.00s/it]2025-03-13 02:58:19,624 - __main__ - INFO - Step 9700/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5236, 'grad_norm': 18.268918991088867, 'learning_rate': 1.103799814643188e-05, 'epoch': 0.64}
+ 64%|███████████████████████████████████████████████████████████████████████████████████████████████████▌                                                       | 9800/15258 [2:46:13<1:31:37,  1.01s/it]2025-03-13 03:00:00,455 - __main__ - INFO - Step 9800/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5085, 'grad_norm': 19.736467361450195, 'learning_rate': 1.0839401562293128e-05, 'epoch': 0.64}
+ 65%|████████████████████████████████████████████████████████████████████████████████████████████████████▌                                                      | 9900/15258 [2:47:54<1:30:04,  1.01s/it]2025-03-13 03:01:41,206 - __main__ - INFO - Step 9900/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.511, 'grad_norm': 19.1195068359375, 'learning_rate': 1.0640804978154377e-05, 'epoch': 0.65}
+ 66%|████████████████████████████████████████████████████████████████████████████████████████████████████▉                                                     | 10000/15258 [2:49:34<1:28:06,  1.01s/it]2025-03-13 03:03:21,825 - __main__ - INFO - Step 10000/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5172, 'grad_norm': 16.88068199157715, 'learning_rate': 1.0442208394015624e-05, 'epoch': 0.66}
+ 66%|█████████████████████████████████████████████████████████████████████████████████████████████████████▉                                                    | 10100/15258 [2:51:15<1:26:27,  1.01s/it]2025-03-13 03:05:02,594 - __main__ - INFO - Step 10100/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5181, 'grad_norm': 19.372533798217773, 'learning_rate': 1.024361180987687e-05, 'epoch': 0.66}
+ 67%|██████████████████████████████████████████████████████████████████████████████████████████████████████▉                                                   | 10200/15258 [2:52:56<1:25:05,  1.01s/it]2025-03-13 03:06:43,399 - __main__ - INFO - Step 10200/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.4987, 'grad_norm': 17.20720100402832, 'learning_rate': 1.0045015225738118e-05, 'epoch': 0.67}
+ 68%|███████████████████████████████████████████████████████████████████████████████████████████████████████▉                                                  | 10300/15258 [2:54:37<1:23:21,  1.01s/it]2025-03-13 03:08:24,242 - __main__ - INFO - Step 10300/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5136, 'grad_norm': 19.137531280517578, 'learning_rate': 9.846418641599365e-06, 'epoch': 0.68}
+ 68%|████████████████████████████████████████████████████████████████████████████████████████████████████████▉                                                 | 10400/15258 [2:56:18<1:21:38,  1.01s/it]2025-03-13 03:10:05,125 - __main__ - INFO - Step 10400/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5384, 'grad_norm': 16.92116355895996, 'learning_rate': 9.647822057460612e-06, 'epoch': 0.68}
+ 69%|█████████████████████████████████████████████████████████████████████████████████████████████████████████▉                                                | 10500/15258 [2:57:58<1:19:43,  1.01s/it]2025-03-13 03:11:45,900 - __main__ - INFO - Step 10500/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5054, 'grad_norm': 18.253385543823242, 'learning_rate': 9.449225473321858e-06, 'epoch': 0.69}
+ 69%|██████████████████████████████████████████████████████████████████████████████████████████████████████████▉                                               | 10600/15258 [2:59:39<1:18:09,  1.01s/it]2025-03-13 03:13:26,671 - __main__ - INFO - Step 10600/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5089, 'grad_norm': 17.144466400146484, 'learning_rate': 9.250628889183107e-06, 'epoch': 0.69}
+ 70%|███████████████████████████████████████████████████████████████████████████████████████████████████████████▉                                              | 10700/15258 [3:01:35<1:16:16,  1.00s/it]2025-03-13 03:15:22,556 - __main__ - INFO - Step 10700/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5022, 'grad_norm': 17.75122833251953, 'learning_rate': 9.052032305044354e-06, 'epoch': 0.7}
+ 71%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████                                             | 10800/15258 [3:03:16<1:14:46,  1.01s/it]2025-03-13 03:17:03,259 - __main__ - INFO - Step 10800/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.485, 'grad_norm': 17.4322566986084, 'learning_rate': 8.8534357209056e-06, 'epoch': 0.71}
+ 71%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████                                            | 10900/15258 [3:04:57<1:13:09,  1.01s/it]2025-03-13 03:18:44,038 - __main__ - INFO - Step 10900/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.4766, 'grad_norm': 19.075483322143555, 'learning_rate': 8.654839136766848e-06, 'epoch': 0.71}
+ 72%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████                                           | 11000/15258 [3:06:37<1:11:36,  1.01s/it]2025-03-13 03:20:24,945 - __main__ - INFO - Step 11000/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.4953, 'grad_norm': 17.468353271484375, 'learning_rate': 8.456242552628095e-06, 'epoch': 0.72}
+ 73%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                          | 11100/15258 [3:08:18<1:09:42,  1.01s/it]2025-03-13 03:22:05,667 - __main__ - INFO - Step 11100/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.493, 'grad_norm': 18.99028778076172, 'learning_rate': 8.257645968489342e-06, 'epoch': 0.73}
+ 73%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                         | 11200/15258 [3:09:59<1:08:07,  1.01s/it]2025-03-13 03:23:46,492 - __main__ - INFO - Step 11200/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5389, 'grad_norm': 18.9328670501709, 'learning_rate': 8.05904938435059e-06, 'epoch': 0.73}
+ 74%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                        | 11300/15258 [3:11:40<1:06:31,  1.01s/it]2025-03-13 03:25:27,285 - __main__ - INFO - Step 11300/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5436, 'grad_norm': 17.239713668823242, 'learning_rate': 7.860452800211836e-06, 'epoch': 0.74}
+ 75%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                       | 11400/15258 [3:13:21<1:05:08,  1.01s/it]2025-03-13 03:27:08,116 - __main__ - INFO - Step 11400/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5674, 'grad_norm': 16.537076950073242, 'learning_rate': 7.661856216073084e-06, 'epoch': 0.75}
+ 75%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                      | 11500/15258 [3:15:01<1:03:12,  1.01s/it]2025-03-13 03:28:49,017 - __main__ - INFO - Step 11500/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5444, 'grad_norm': 17.004573822021484, 'learning_rate': 7.463259631934331e-06, 'epoch': 0.75}
+ 76%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                     | 11600/15258 [3:16:42<1:01:22,  1.01s/it]2025-03-13 03:30:29,830 - __main__ - INFO - Step 11600/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5269, 'grad_norm': 17.34409523010254, 'learning_rate': 7.264663047795578e-06, 'epoch': 0.76}
+ 77%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                    | 11700/15258 [3:18:23<59:44,  1.01s/it]2025-03-13 03:32:10,545 - __main__ - INFO - Step 11700/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.4807, 'grad_norm': 17.324369430541992, 'learning_rate': 7.066066463656826e-06, 'epoch': 0.77}
+ 77%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                   | 11800/15258 [3:20:04<58:18,  1.01s/it]2025-03-13 03:33:51,416 - __main__ - INFO - Step 11800/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5026, 'grad_norm': 15.865705490112305, 'learning_rate': 6.867469879518072e-06, 'epoch': 0.77}
+ 78%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                  | 11900/15258 [3:21:45<56:20,  1.01s/it]2025-03-13 03:35:32,144 - __main__ - INFO - Step 11900/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.4538, 'grad_norm': 18.590770721435547, 'learning_rate': 6.66887329537932e-06, 'epoch': 0.78}
+ 79%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                 | 12000/15258 [3:23:25<54:47,  1.01s/it]2025-03-13 03:37:12,917 - __main__ - INFO - Step 12000/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.4883, 'grad_norm': 17.83466148376465, 'learning_rate': 6.470276711240566e-06, 'epoch': 0.79}
+ 79%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                                | 12100/15258 [3:25:06<53:05,  1.01s/it]2025-03-13 03:38:53,662 - __main__ - INFO - Step 12100/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.4711, 'grad_norm': 17.287717819213867, 'learning_rate': 6.271680127101814e-06, 'epoch': 0.79}
+ 80%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▋                               | 12200/15258 [3:26:47<51:17,  1.01s/it]2025-03-13 03:40:49,905 - __main__ - INFO - Step 12200/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.4998, 'grad_norm': 18.936622619628906, 'learning_rate': 6.073083542963061e-06, 'epoch': 0.8}
+ 81%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                              | 12300/15258 [3:28:43<49:35,  1.01s/it]2025-03-13 03:42:30,514 - __main__ - INFO - Step 12300/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.4561, 'grad_norm': 17.562294006347656, 'learning_rate': 5.8744869588243085e-06, 'epoch': 0.81}
+ 81%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                             | 12400/15258 [3:30:24<48:04,  1.01s/it]2025-03-13 03:44:11,135 - __main__ - INFO - Step 12400/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.4874, 'grad_norm': 15.848466873168945, 'learning_rate': 5.675890374685556e-06, 'epoch': 0.81}
+ 82%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                            | 12500/15258 [3:32:04<46:19,  1.01s/it]2025-03-13 03:45:51,917 - __main__ - INFO - Step 12500/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.4949, 'grad_norm': 16.439970016479492, 'learning_rate': 5.477293790546803e-06, 'epoch': 0.82}
+ 83%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                           | 12600/15258 [3:33:45<44:33,  1.01s/it]2025-03-13 03:47:32,740 - __main__ - INFO - Step 12600/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5378, 'grad_norm': 18.06338882446289, 'learning_rate': 5.27869720640805e-06, 'epoch': 0.83}
+ 83%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                          | 12700/15258 [3:35:26<42:52,  1.01s/it]2025-03-13 03:49:13,457 - __main__ - INFO - Step 12700/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.4943, 'grad_norm': 18.723796844482422, 'learning_rate': 5.080100622269297e-06, 'epoch': 0.83}
+ 84%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊                         | 12800/15258 [3:37:07<41:10,  1.01s/it]2025-03-13 03:50:54,285 - __main__ - INFO - Step 12800/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.4942, 'grad_norm': 19.60062026977539, 'learning_rate': 4.881504038130545e-06, 'epoch': 0.84}
+ 85%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                        | 12900/15258 [3:38:48<39:37,  1.01s/it]2025-03-13 03:52:35,164 - __main__ - INFO - Step 12900/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5128, 'grad_norm': 17.348312377929688, 'learning_rate': 4.682907453991791e-06, 'epoch': 0.85}
+ 85%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                       | 13000/15258 [3:40:28<37:56,  1.01s/it]2025-03-13 03:54:15,872 - __main__ - INFO - Step 13000/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5247, 'grad_norm': 18.322269439697266, 'learning_rate': 4.484310869853039e-06, 'epoch': 0.85}
+ 86%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                      | 13100/15258 [3:42:09<36:22,  1.01s/it]2025-03-13 03:55:56,668 - __main__ - INFO - Step 13100/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.4863, 'grad_norm': 16.12702178955078, 'learning_rate': 4.2857142857142855e-06, 'epoch': 0.86}
+ 87%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                     | 13200/15258 [3:43:50<34:34,  1.01s/it]2025-03-13 03:57:37,416 - __main__ - INFO - Step 13200/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.4643, 'grad_norm': 17.50624656677246, 'learning_rate': 4.0871177015755334e-06, 'epoch': 0.87}
+ 87%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                    | 13300/15258 [3:45:31<32:49,  1.01s/it]2025-03-13 03:59:18,181 - __main__ - INFO - Step 13300/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.4981, 'grad_norm': 17.86962890625, 'learning_rate': 3.88852111743678e-06, 'epoch': 0.87}
+ 88%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                   | 13400/15258 [3:47:11<31:10,  1.01s/it]2025-03-13 04:00:58,952 - __main__ - INFO - Step 13400/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.4329, 'grad_norm': 18.820049285888672, 'learning_rate': 3.6899245332980277e-06, 'epoch': 0.88}
+ 88%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                  | 13500/15258 [3:48:52<29:31,  1.01s/it]2025-03-13 04:02:39,602 - __main__ - INFO - Step 13500/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.4341, 'grad_norm': 17.67627716064453, 'learning_rate': 3.491327949159275e-06, 'epoch': 0.88}
+ 89%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                 | 13600/15258 [3:50:33<27:46,  1.01s/it]2025-03-13 04:04:20,349 - __main__ - INFO - Step 13600/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.4843, 'grad_norm': 19.514114379882812, 'learning_rate': 3.292731365020522e-06, 'epoch': 0.89}
+ 90%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                | 13700/15258 [3:52:13<26:10,  1.01s/it]2025-03-13 04:06:00,965 - __main__ - INFO - Step 13700/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.4994, 'grad_norm': 17.523588180541992, 'learning_rate': 3.094134780881769e-06, 'epoch': 0.9}
+ 90%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████               | 13800/15258 [3:54:09<24:30,  1.01s/it]2025-03-13 04:07:56,822 - __main__ - INFO - Step 13800/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.4645, 'grad_norm': 16.617921829223633, 'learning_rate': 2.895538196743016e-06, 'epoch': 0.9}
+ 91%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████              | 13900/15258 [3:55:50<22:47,  1.01s/it]2025-03-13 04:09:37,560 - __main__ - INFO - Step 13900/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.4653, 'grad_norm': 18.579872131347656, 'learning_rate': 2.6969416126042633e-06, 'epoch': 0.91}
+ 92%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏            | 14000/15258 [3:57:31<21:05,  1.01s/it]2025-03-13 04:11:18,307 - __main__ - INFO - Step 14000/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5007, 'grad_norm': 17.071338653564453, 'learning_rate': 2.4983450284655104e-06, 'epoch': 0.92}
+ 92%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏           | 14100/15258 [3:59:12<19:28,  1.01s/it]2025-03-13 04:12:59,102 - __main__ - INFO - Step 14100/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5097, 'grad_norm': 16.175495147705078, 'learning_rate': 2.2997484443267575e-06, 'epoch': 0.92}
+ 93%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏          | 14200/15258 [4:00:52<17:46,  1.01s/it]2025-03-13 04:14:39,834 - __main__ - INFO - Step 14200/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.4965, 'grad_norm': 16.775493621826172, 'learning_rate': 2.1011518601880046e-06, 'epoch': 0.93}
+ 94%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏         | 14300/15258 [4:02:33<16:06,  1.01s/it]2025-03-13 04:16:20,560 - __main__ - INFO - Step 14300/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.4796, 'grad_norm': 18.083934783935547, 'learning_rate': 1.902555276049252e-06, 'epoch': 0.94}
+ 94%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏        | 14400/15258 [4:04:14<14:24,  1.01s/it]2025-03-13 04:18:01,330 - __main__ - INFO - Step 14400/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.5014, 'grad_norm': 18.46259307861328, 'learning_rate': 1.7039586919104993e-06, 'epoch': 0.94}
+ 95%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎       | 14500/15258 [4:05:55<12:42,  1.01s/it]2025-03-13 04:19:42,067 - __main__ - INFO - Step 14500/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.502, 'grad_norm': 17.773662567138672, 'learning_rate': 1.5053621077717464e-06, 'epoch': 0.95}
+ 96%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎      | 14600/15258 [4:07:35<11:03,  1.01s/it]2025-03-13 04:21:22,758 - __main__ - INFO - Step 14600/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.464, 'grad_norm': 16.014934539794922, 'learning_rate': 1.3067655236329936e-06, 'epoch': 0.96}
+ 96%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎     | 14700/15258 [4:09:16<09:21,  1.01s/it]2025-03-13 04:23:03,513 - __main__ - INFO - Step 14700/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.4623, 'grad_norm': 18.18324851989746, 'learning_rate': 1.1081689394942407e-06, 'epoch': 0.96}
+ 97%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎    | 14800/15258 [4:10:57<07:41,  1.01s/it]2025-03-13 04:24:44,287 - __main__ - INFO - Step 14800/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.4816, 'grad_norm': 17.642948150634766, 'learning_rate': 9.095723553554879e-07, 'epoch': 0.97}
+ 98%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎   | 14900/15258 [4:12:38<06:01,  1.01s/it]2025-03-13 04:26:25,064 - __main__ - INFO - Step 14900/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.4507, 'grad_norm': 16.10247802734375, 'learning_rate': 7.109757712167351e-07, 'epoch': 0.98}
+ 98%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎  | 15000/15258 [4:14:18<04:19,  1.01s/it]2025-03-13 04:28:05,727 - __main__ - INFO - Step 15000/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.4277, 'grad_norm': 17.161697387695312, 'learning_rate': 5.123791870779822e-07, 'epoch': 0.98}
+ 99%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍ | 15100/15258 [4:15:59<02:39,  1.01s/it]2025-03-13 04:29:46,589 - __main__ - INFO - Step 15100/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.4774, 'grad_norm': 18.202754974365234, 'learning_rate': 3.137826029392295e-07, 'epoch': 0.99}
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍| 15200/15258 [4:17:40<00:58,  1.01s/it]2025-03-13 04:31:27,487 - __main__ - INFO - Step 15200/15258: alpha = 1.0000, beta = 0.0000, updated 22 modules
+{'loss': 2.4631, 'grad_norm': 16.456439971923828, 'learning_rate': 1.1518601880047662e-07, 'epoch': 1.0}
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 15258/15258 [4:19:09<00:00,  1.02s/it]
+{'train_runtime': 15549.0251, 'train_samples_per_second': 31.401, 'train_steps_per_second': 0.981, 'train_loss': 2.546275078976884, 'epoch': 1.0}
+2025-03-13 04:32:56,247 - __main__ - INFO - Training completed, saving model
+2025-03-13 04:33:02,622 - __main__ - INFO - Model saved to ./bilinear_tinyllama_chat
+2025-03-13 04:33:02,622 - __main__ - INFO - Finetuning complete!

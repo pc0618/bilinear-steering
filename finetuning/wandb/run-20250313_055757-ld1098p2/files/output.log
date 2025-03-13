@@ -1,0 +1,25 @@
+  0%|                                                                                                                              | 216/488281 [00:24<16:48:47,  8.06it/s]Traceback (most recent call last):
+{'loss': 1.4215, 'grad_norm': 7.28125, 'learning_rate': 9.997951998951424e-06, 'epoch': 0.0, 'alpha': 0.000682667016192179}
+{'loss': 1.3784, 'grad_norm': 8.25, 'learning_rate': 9.995903997902848e-06, 'epoch': 0.0, 'alpha': 0.001365334032384358}
+  File "/workspace/bilinear-steering/finetuning/dooms_finetuning.py", line 403, in <module>
+    main()
+  File "/workspace/bilinear-steering/finetuning/dooms_finetuning.py", line 394, in main
+    trainer.train()
+  File "/usr/local/lib/python3.11/dist-packages/transformers/trainer.py", line 2241, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/trainer.py", line 2548, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/transformers/trainer.py", line 3740, in training_step
+    self.accelerator.backward(loss, **kwargs)
+  File "/usr/local/lib/python3.11/dist-packages/accelerate/accelerator.py", line 2359, in backward
+    loss.backward(**kwargs)
+  File "/usr/local/lib/python3.11/dist-packages/torch/_tensor.py", line 521, in backward
+    torch.autograd.backward(
+  File "/usr/local/lib/python3.11/dist-packages/torch/autograd/__init__.py", line 289, in backward
+    _engine_run_backward(
+  File "/usr/local/lib/python3.11/dist-packages/torch/autograd/graph.py", line 769, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

@@ -2,3 +2,4 @@
 __pycache__/
 *.py[cod]
 finetuning/bilinear_tinyllama
+finetuning/bilinear_tinyllama_chat/

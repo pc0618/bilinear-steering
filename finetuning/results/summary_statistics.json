@@ -1,0 +1,46 @@
+{
+  "overall": {
+    "control": 5.65,
+    "steered_4block": 5.33,
+    "steered_2block": 5.89
+  },
+  "positive_prompts": {
+    "control": 7.723404255319149,
+    "steered_4block": 7.382978723404255,
+    "steered_2block": 7.829787234042553
+  },
+  "negative_prompts": {
+    "control": 3.811320754716981,
+    "steered_4block": 3.509433962264151,
+    "steered_2block": 4.169811320754717
+  },
+  "shifts": {
+    "steered_4block_vs_control": {
+      "mean_shift": -0.32,
+      "median_shift": 0.0,
+      "percent_more_negative": 48.0,
+      "percent_unchanged": 27.0,
+      "percent_more_positive": 25.0,
+      "positive_prompts_shift": -0.3404255319148936,
+      "negative_prompts_shift": -0.3018867924528302
+    },
+    "steered_2block_vs_control": {
+      "mean_shift": 0.24,
+      "median_shift": 0.0,
+      "percent_more_negative": 31.0,
+      "percent_unchanged": 37.0,
+      "percent_more_positive": 32.0,
+      "positive_prompts_shift": 0.10638297872340426,
+      "negative_prompts_shift": 0.3584905660377358
+    },
+    "steered_2block_vs_steered_4block": {
+      "mean_shift": 0.56,
+      "median_shift": 0.0,
+      "percent_more_negative": 21.0,
+      "percent_unchanged": 34.0,
+      "percent_more_positive": 45.0,
+      "positive_prompts_shift": 0.44680851063829785,
+      "negative_prompts_shift": 0.660377358490566
+    }
+  }
+}
